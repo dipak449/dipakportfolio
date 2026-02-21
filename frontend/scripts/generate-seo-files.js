@@ -3,12 +3,12 @@ const path = require("path");
 
 function normalizeBaseUrl(raw) {
   const value = String(raw || "").trim();
-  if (!value) return "https://example.com";
+  if (!value) return "https://dynamic-portfolio-website-with-cms.vercel.app";
   try {
     const u = new URL(value.startsWith("http") ? value : `https://${value}`);
     return u.origin;
   } catch {
-    return "https://example.com";
+    return "https://dynamic-portfolio-website-with-cms.vercel.app";
   }
 }
 

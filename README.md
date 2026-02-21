@@ -1,8 +1,8 @@
 # Rabina Portfolio (MERN + Admin CMS)
 
-Production-ready portfolio with:
+Production portfolio with:
 - Public website (Home, About, Service, Project, Blog, Contact, Certifications)
-- Admin CMS for dynamic content
+- Admin CMS for dynamic content management
 - Node/Express API + MongoDB + Cloudinary
 
 ## 1) Project Structure
@@ -43,7 +43,7 @@ Default local URLs:
 - `PORT=8001`
 - `MONGODB_URI=...`
 - `JWT_SECRET=...`
-- `CORS_ORIGINS=https://your-frontend-domain.com`
+- `CORS_ORIGINS=https://dynamic-portfolio-website-with-cms.vercel.app`
 - `CLOUDINARY_CLOUD_NAME=...`
 - `CLOUDINARY_API_KEY=...`
 - `CLOUDINARY_API_SECRET=...`
@@ -51,8 +51,8 @@ Default local URLs:
 
 ### Frontend (`frontend/.env`)
 
-- `REACT_APP_API_URL=https://your-backend-domain.com/api`
-- `REACT_APP_SITE_URL=https://your-frontend-domain.com`
+- `REACT_APP_API_URL=https://rabina-portfolio-api.onrender.com/api`
+- `REACT_APP_SITE_URL=https://dynamic-portfolio-website-with-cms.vercel.app`
 
 `robots.txt` and `sitemap.xml` are auto-generated at build time from `REACT_APP_SITE_URL`.
 
@@ -65,7 +65,7 @@ Default local URLs:
 3. `render.yaml` will create backend service automatically.
 4. Set backend environment variables from section 3.
 5. Deploy and verify:
-   - `https://your-backend-domain.com/api/health`
+   - `https://rabina-portfolio-api.onrender.com/api/health`
 
 ## Frontend on Vercel
 
@@ -73,12 +73,16 @@ Default local URLs:
 2. Root directory: `frontend`
 3. Build command: `npm run build`
 4. Add frontend environment variables:
-   - `REACT_APP_SITE_URL=https://your-vercel-domain.vercel.app` (or custom domain)
-   - `REACT_APP_API_URL=https://your-render-backend.onrender.com/api`
+   - `REACT_APP_SITE_URL=https://dynamic-portfolio-website-with-cms.vercel.app` (or your custom domain)
+   - `REACT_APP_API_URL=https://rabina-portfolio-api.onrender.com/api`
 5. Deploy.
 
 `frontend/vercel.json` already includes SPA rewrite + security headers.
 `npm run build` auto-generates `robots.txt` and `sitemap.xml` from `REACT_APP_SITE_URL`.
+
+Important:
+- Keep frontend root directory as `frontend` in Vercel.
+- If `/admin/login` shows Vercel 404, confirm `frontend/vercel.json` exists and redeploy.
 
 ## 5) Pre-Go-Live Checklist
 
@@ -94,7 +98,7 @@ Default local URLs:
 - Verify resume download and certification pages.
 - Verify contact form message submission.
 - Verify API health endpoint:
-  - `https://your-render-backend.onrender.com/api/health`
+  - `https://rabina-portfolio-api.onrender.com/api/health`
 
 ## 6) Security and Performance Notes
 

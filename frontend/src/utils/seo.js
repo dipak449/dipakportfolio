@@ -11,7 +11,16 @@ export const SITE_CONFIG = {
     (typeof window !== "undefined" ? window.location.origin : "http://localhost:3001"),
   image: "/og-image.png",
   twitterHandle: "@rabinadahal",
+  author: "Rabina Dahal",
+  email: "rabinadahal64@gmail.com",
 };
+
+function toAbsoluteUrl(value) {
+  const raw = String(value || "").trim();
+  if (!raw) return `${SITE_CONFIG.url}${SITE_CONFIG.image}`;
+  if (/^https?:\/\//i.test(raw)) return raw;
+  return `${SITE_CONFIG.url}${raw.startsWith("/") ? raw : `/${raw}`}`;
+}
 
 /**
  * Build page metadata
@@ -26,12 +35,13 @@ export function buildPageMeta(page = {}) {
   } = page;
 
   const url = `${SITE_CONFIG.url}${path}`;
+  const absoluteImage = toAbsoluteUrl(image);
 
   return {
     title: `${title} | ${SITE_CONFIG.title}`.replace(/\s+\|\s+\|\s+/, " | "),
     description: description.substring(0, 160),
     url,
-    image,
+    image: absoluteImage,
     type,
     canonical: url,
   };
@@ -44,9 +54,10 @@ export function createStructuredData(type = "Person", data = {}) {
   const baseSchema = {
     "@context": "https://schema.org",
     "@type": type,
-    name: "Rabina Dahal",
+    name: SITE_CONFIG.author,
     url: SITE_CONFIG.url,
-    image: `${SITE_CONFIG.url}${SITE_CONFIG.image}`,
+    email: SITE_CONFIG.email,
+    image: toAbsoluteUrl(SITE_CONFIG.image),
     sameAs: [
       "https://facebook.com/rabinadahal",
       "https://instagram.com/rabinadahal",
@@ -66,7 +77,7 @@ export function createOrganizationSchema() {
     "@type": "Organization",
     name: "Rabina Dahal Portfolio",
     url: SITE_CONFIG.url,
-    logo: `${SITE_CONFIG.url}/logo.png`,
+    logo: `${SITE_CONFIG.url}/logo192.png`,
     description: SITE_CONFIG.description,
     sameAs: [
       "https://facebook.com/rabinadahal",
@@ -95,7 +106,7 @@ export function createArticleSchema(article = {}) {
     "@type": "Article",
     headline: title,
     description: description,
-    image: `${SITE_CONFIG.url}${image}`,
+    image: toAbsoluteUrl(image),
     datePublished: datePublished,
     dateModified: dateModified,
     author: {

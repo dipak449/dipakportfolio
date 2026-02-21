@@ -8,16 +8,16 @@ import AdminLayout from "../layout/AdminLayout";
 import ProtectedRoute from "../components/common/ProtectedRoute";
 import { useDarkMode } from "../context/DarkModeContext";
 
-// Admin
-import AdminLogin from "../pages/admin/Login";
-import Dashboard from "../pages/admin/Dashboard";
-import Posts from "../pages/admin/Posts";
-import ServicesAdmin from "../pages/admin/Services";
-import GalleryAdmin from "../pages/admin/Gallery";
-import Inbox from "../pages/admin/Inbox";
-import HomePageAdmin from "../pages/admin/HomePage";
-import AboutAdmin from "../pages/admin/About";
-import SocialLinksAdmin from "../pages/admin/SocialLinks";
+// Admin (lazy for better initial bundle size)
+const AdminLogin = lazy(() => import("../pages/admin/Login"));
+const Dashboard = lazy(() => import("../pages/admin/Dashboard"));
+const Posts = lazy(() => import("../pages/admin/Posts"));
+const ServicesAdmin = lazy(() => import("../pages/admin/Services"));
+const GalleryAdmin = lazy(() => import("../pages/admin/Gallery"));
+const Inbox = lazy(() => import("../pages/admin/Inbox"));
+const HomePageAdmin = lazy(() => import("../pages/admin/HomePage"));
+const AboutAdmin = lazy(() => import("../pages/admin/About"));
+const SocialLinksAdmin = lazy(() => import("../pages/admin/SocialLinks"));
 
 // Lazy public pages
 const TemplatePage = lazy(() => import("../pages/public/TemplatePage"));
@@ -43,7 +43,11 @@ export default function AppRoutes() {
       <Suspense fallback={<LoadingScreen />}>{element}</Suspense>
     </PageTransition>
   );
-  const withAdminLayout = (element) => <AdminLayout>{element}</AdminLayout>;
+  const withAdminLayout = (element) => (
+    <Suspense fallback={<LoadingScreen />}>
+      <AdminLayout>{element}</AdminLayout>
+    </Suspense>
+  );
 
   return (
     <AnimatePresence mode="wait">
@@ -64,7 +68,14 @@ export default function AppRoutes() {
         <Route path="/certifications/:slug" element={withTransition(<TemplatePage page="certifications" />)} />
 
         {/* Admin */}
-        <Route path="/admin/login" element={<AdminLogin />} />
+        <Route
+          path="/admin/login"
+          element={
+            <Suspense fallback={<LoadingScreen />}>
+              <AdminLogin />
+            </Suspense>
+          }
+        />
         <Route
           path="/admin/dashboard"
           element={

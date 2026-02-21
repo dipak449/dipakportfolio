@@ -65,10 +65,10 @@ export default function AboutAdmin() {
           <h2 className="text-xl sm:text-2xl font-extrabold text-white">Manage About</h2>
         </div>
 
-        <Card className="p-5 mt-6">
+        <Card className="mt-6 p-5">
           <div className="grid gap-3">
             <input
-              className="rounded-2xl border border-black/10 px-4 py-3"
+              className="w-full min-w-0 rounded-2xl border border-black/10 px-4 py-3"
               placeholder="About image URL"
               value={imageUrl}
               onChange={(e) => setImageUrl(e.target.value)}
@@ -84,20 +84,20 @@ export default function AboutAdmin() {
               </div>
             ) : null}
             <textarea
-              className="min-h-[110px] rounded-2xl border border-black/10 px-4 py-3"
+              className="min-h-[110px] w-full min-w-0 rounded-2xl border border-black/10 px-4 py-3"
               placeholder="About description"
               value={description}
               onChange={(e) => setDescription(e.target.value)}
             />
             <input
-              className="rounded-2xl border border-black/10 px-4 py-3"
+              className="w-full min-w-0 rounded-2xl border border-black/10 px-4 py-3"
               placeholder="Resume URL"
               value={resumeUrl}
               onChange={(e) => setResumeUrl(e.target.value)}
             />
             <div className="text-sm text-white/70">Facts format: each line `Label | Value`</div>
             <textarea
-              className="min-h-[140px] rounded-2xl border border-black/10 px-4 py-3"
+              className="min-h-[140px] w-full min-w-0 rounded-2xl border border-black/10 px-4 py-3"
               placeholder={"Name | Rabina Dahal\nAge | 26\nPhone | +1 111 111 1111"}
               value={factLines}
               onChange={(e) => setFactLines(e.target.value)}
@@ -106,19 +106,19 @@ export default function AboutAdmin() {
               <h3 className="text-lg font-bold text-white">Certification Management</h3>
               <div className="mt-3 grid gap-3">
                 <input
-                  className="rounded-2xl border border-black/10 px-4 py-3"
+                  className="w-full min-w-0 rounded-2xl border border-black/10 px-4 py-3"
                   placeholder="Certification title"
                   value={certForm.title}
                   onChange={(e) => setCertForm((prev) => ({ ...prev, title: e.target.value }))}
                 />
                 <input
-                  className="rounded-2xl border border-black/10 px-4 py-3"
+                  className="w-full min-w-0 rounded-2xl border border-black/10 px-4 py-3"
                   placeholder="Certificate full image URL"
                   value={certForm.certificateUrl}
                   onChange={(e) => setCertForm((prev) => ({ ...prev, certificateUrl: e.target.value }))}
                 />
                 <textarea
-                  className="min-h-[90px] rounded-2xl border border-black/10 px-4 py-3"
+                  className="min-h-[90px] w-full min-w-0 rounded-2xl border border-black/10 px-4 py-3"
                   placeholder="Certification short description"
                   value={certForm.description}
                   onChange={(e) => setCertForm((prev) => ({ ...prev, description: e.target.value }))}
@@ -156,7 +156,7 @@ export default function AboutAdmin() {
                 <div className="mt-4 grid gap-3">
                   {certifications.map((cert, idx) => (
                     <div key={`${cert.title}-${idx}`} className="rounded-2xl border border-white/10 bg-black/20 p-3">
-                      <div className="flex items-center gap-3">
+                      <div className="flex flex-col items-start gap-3 sm:flex-row sm:items-center">
                         {cert.certificateUrl ? (
                           <img
                             src={cert.certificateUrl}
@@ -169,9 +169,9 @@ export default function AboutAdmin() {
                           <div className="mt-1 text-xs text-white/70 line-clamp-1">{cert.description || "No description"}</div>
                           <div className="mt-1 text-xs text-white/70">{cert.isPublished ? "Published" : "Unpublished"}</div>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex w-full flex-wrap items-center gap-2 sm:w-auto sm:flex-nowrap">
                           <Button
-                            className="border border-white/30 bg-white/10 text-white"
+                            className="w-full border border-white/30 bg-white/10 text-white sm:w-auto"
                             onClick={() => {
                               setCertForm({
                                 title: cert.title || "",
@@ -185,7 +185,7 @@ export default function AboutAdmin() {
                             Edit
                           </Button>
                           <Button
-                            className="border border-red-300/70 bg-red-500/10 text-red-200"
+                            className="w-full border border-red-300/70 bg-red-500/10 text-red-200 sm:w-auto"
                             onClick={() => {
                               setCertifications((prev) => prev.filter((_, i) => i !== idx));
                               if (editingCertIndex === idx) {
