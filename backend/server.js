@@ -37,12 +37,17 @@ const corsOrigins = (process.env.CORS_ORIGINS || "http://localhost:3001")
   .split(",")
   .map((x) => toOrigin(x))
   .filter(Boolean);
+const fallbackAllowedOrigins = [
+  "http://localhost:3001",
+  "https://dynamic-portfolio-website-with-cms.vercel.app",
+];
 const allowVercelPreviews = String(process.env.CORS_ALLOW_VERCEL_PREVIEWS || "").toLowerCase() === "true";
 
 function isAllowedOrigin(origin = "") {
   const normalizedOrigin = toOrigin(origin);
   if (!normalizedOrigin) return false;
   if (corsOrigins.includes(normalizedOrigin)) return true;
+  if (fallbackAllowedOrigins.includes(normalizedOrigin)) return true;
   if (allowVercelPreviews) {
     try {
       const host = new URL(normalizedOrigin).hostname.toLowerCase();
@@ -59,6 +64,9 @@ app.use(
     origin: (origin, cb) => {
       if (!origin) return cb(null, true);
       if (isAllowedOrigin(origin)) return cb(null, true);
+      if (process.env.NODE_ENV !== "production") {
+        console.warn("Blocked CORS origin:", origin);
+      }
       const err = new Error("CORS blocked");
       err.status = 403;
       return cb(err);
