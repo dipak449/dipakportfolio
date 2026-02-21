@@ -1,144 +1,109 @@
-# 🌟 Dynamic Portfolio Website with CMS
+# Rabina Portfolio (MERN + Admin CMS)
 
-A full-stack MERN (MongoDB, Express, React, Node.js) portfolio website with a powerful Admin Content Management System (CMS).
+Production-ready portfolio with:
+- Public website (Home, About, Service, Project, Blog, Contact, Certifications)
+- Admin CMS for dynamic content
+- Node/Express API + MongoDB + Cloudinary
 
-This project allows dynamic content management for a personal portfolio, including posts about, services, resume, blog and contact messages — all controlled from a secure admin panel.
+## 1) Project Structure
 
----
+- `frontend/` React app (CRA)
+- `backend/` Express API
+- `render.yaml` Render deployment config for backend
 
-## 🚀 Features
-
-### 🌐 Public Website
-- Modern Responsive UI
-- Dynamic Hero Section
-- About Section
-- Certifications Section
-- Gallery with Lightbox
-- Latest Updates
-- Contact Form
-- Smooth Animations
-
-### 🔐 Admin CMS Panel
-- Secure Admin Authentication (JWT)
-- Create / Edit / Delete Posts
-- Manage Certifications
-- Manage Gallery Images
-- Cloudinary Image Upload
-- View Contact Messages
-
----
-
-## 🛠 Tech Stack
-
-### Frontend
-- React (Create React App)
-- React Router
-- Axios
-- Framer Motion
-- Modern CSS Styling
+## 2) Local Setup
 
 ### Backend
-- Node.js
-- Express.js
-- MongoDB (Mongoose)
-- JWT Authentication
-- Cloudinary Integration
 
----
-
-## 📁 Project Structure
-
-
-backend/
-└── src/
-├── config/
-├── controllers/
-├── middleware/
-├── models/
-├── routes/
-└── server.js
-
-frontend/
-└── src/
-├── components/
-├── layout/
-├── pages/
-├── routes/
-├── services/
-└── theme/
-
-
----
-
-## ⚙️ Installation Guide
-
-### 1️⃣ Clone Repository
-
-
-git clone https://github.com/rabina315/Dynamic-portfolio-website-with-CMS.git
-
-
----
-
-### 2️⃣ Backend Setup
-
-
+```powershell
 cd backend
 npm install
+copy .env.example .env
 npm run dev
+```
 
+### Frontend
 
-Create a `.env` file inside backend folder and add:
-
-
-PORT=
-MONGO_URI=
-JWT_SECRET=
-CLOUDINARY_CLOUD_NAME=
-CLOUDINARY_API_KEY=
-CLOUDINARY_API_SECRET=
-
-
----
-
-### 3️⃣ Frontend Setup
-
-
+```powershell
 cd frontend
 npm install
+copy .env.example .env
 npm start
+```
 
+Default local URLs:
+- Frontend: `http://localhost:3001`
+- Backend: `http://localhost:8001`
 
-Frontend runs on:
+## 3) Required Environment Variables
 
-http://localhost:3001
+### Backend (`backend/.env`)
 
+- `NODE_ENV=production`
+- `PORT=8001`
+- `MONGODB_URI=...`
+- `JWT_SECRET=...`
+- `CORS_ORIGINS=https://your-frontend-domain.com`
+- `CLOUDINARY_CLOUD_NAME=...`
+- `CLOUDINARY_API_KEY=...`
+- `CLOUDINARY_API_SECRET=...`
+- Optional: `DNS_SERVERS=1.1.1.1,8.8.8.8`
 
-Backend runs on:
+### Frontend (`frontend/.env`)
 
-http://localhost:8001
+- `REACT_APP_API_URL=https://your-backend-domain.com/api`
+- `REACT_APP_SITE_URL=https://your-frontend-domain.com`
 
+`robots.txt` and `sitemap.xml` are auto-generated at build time from `REACT_APP_SITE_URL`.
 
----
+## 4) Hosting (Your Setup)
 
-## 🔐 Admin Routes
+## Backend on Render
 
-- POST `/admin/setup`
-- POST `/admin/login`
-- GET `/admin/me`
+1. Push repo to GitHub.
+2. In Render: New + Blueprint, select this repo.
+3. `render.yaml` will create backend service automatically.
+4. Set backend environment variables from section 3.
+5. Deploy and verify:
+   - `https://your-backend-domain.com/api/health`
 
----
+## Frontend on Vercel
 
-## 📌 Future Improvements
+1. Import project from GitHub.
+2. Root directory: `frontend`
+3. Build command: `npm run build`
+4. Add frontend environment variables:
+   - `REACT_APP_SITE_URL=https://your-vercel-domain.vercel.app` (or custom domain)
+   - `REACT_APP_API_URL=https://your-render-backend.onrender.com/api`
+5. Deploy.
 
-- Role-based authentication
-- SEO optimization
-- Performance improvements
-- Production deployment
+`frontend/vercel.json` already includes SPA rewrite + security headers.
+`npm run build` auto-generates `robots.txt` and `sitemap.xml` from `REACT_APP_SITE_URL`.
 
----
+## 5) Pre-Go-Live Checklist
 
-## 👩‍💻 Developed By
+- Backend `CORS_ORIGINS` includes your Vercel production domain.
+- If you want preview deployments to work, set:
+  - `CORS_ALLOW_VERCEL_PREVIEWS=true`
+- `JWT_SECRET` is long/random.
+- MongoDB user is least-privilege.
+- Cloudinary credentials are production keys.
+- `REACT_APP_API_URL` points to production backend `/api`.
+- `REACT_APP_SITE_URL` matches frontend production domain.
+- Verify admin login and all CMS sections.
+- Verify resume download and certification pages.
+- Verify contact form message submission.
+- Verify API health endpoint:
+  - `https://your-render-backend.onrender.com/api/health`
 
-Rabina Dahal  
-Full Stack MERN Developer
+## 6) Security and Performance Notes
+
+- Backend already includes:
+  - security headers
+  - request body limits
+  - auth/contact route limits
+  - global API rate limit
+  - no-store cache policy on sensitive admin/auth endpoints
+- Frontend build is optimized via `react-scripts build`.
+
+Note: `npm audit` issues in frontend are mainly from CRA (`react-scripts`) transitive dependencies. Full elimination typically requires migration from CRA to Vite/Next.

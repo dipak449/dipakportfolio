@@ -1,6 +1,7 @@
 require("dotenv").config();
 const express = require("express");
 const cors = require("cors");
+const { rateLimit } = require("./src/middleware/rate-limit.middleware");
 
 const connectDB = require("./src/config/db");
 
@@ -25,13 +26,29 @@ const corsOrigins = (process.env.CORS_ORIGINS || "http://localhost:3001")
   .split(",")
   .map((x) => x.trim())
   .filter(Boolean);
+const allowVercelPreviews = String(process.env.CORS_ALLOW_VERCEL_PREVIEWS || "").toLowerCase() === "true";
+
+function isAllowedOrigin(origin = "") {
+  if (corsOrigins.includes(origin)) return true;
+  if (allowVercelPreviews) {
+    try {
+      const host = new URL(origin).hostname.toLowerCase();
+      if (host.endsWith(".vercel.app")) return true;
+    } catch {
+      return false;
+    }
+  }
+  return false;
+}
 
 app.use(
   cors({
     origin: (origin, cb) => {
       if (!origin) return cb(null, true);
-      if (corsOrigins.includes(origin)) return cb(null, true);
-      return cb(new Error("CORS blocked"));
+      if (isAllowedOrigin(origin)) return cb(null, true);
+      const err = new Error("CORS blocked");
+      err.status = 403;
+      return cb(err);
     },
     credentials: true,
   })
@@ -54,6 +71,18 @@ app.use((req, res, next) => {
 app.use(express.json({ limit: "1mb" }));
 app.use(express.urlencoded({ extended: true, limit: "1mb" }));
 
+// Global API rate limit guard (route-level stricter limits still apply where configured)
+const globalApiRateLimit = rateLimit({ windowMs: 60_000, max: 120, keyPrefix: "api" });
+app.use("/api", globalApiRateLimit);
+
+// Prevent sensitive API responses from being cached
+app.use((req, res, next) => {
+  if (req.path.startsWith("/api/auth") || /\/api\/.+\/admin(\/|$)/.test(req.path)) {
+    res.setHeader("Cache-Control", "no-store");
+  }
+  next();
+});
+
 /* =========================
    ROUTES
 ========================= */
@@ -72,7 +101,7 @@ app.use("/api/social-links", socialLinksRoutes);
 app.get("/api/health", (req, res) => {
   res.json({
     ok: true,
-    time: new Date().toISOString()
+    time: new Date().toISOString(),
   });
 });
 
@@ -83,7 +112,7 @@ app.use((req, res) => {
 app.use((err, req, res, next) => {
   const status = Number(err?.status || err?.statusCode || 500);
   const safeStatus = status >= 400 && status < 600 ? status : 500;
-  const message = safeStatus >= 500 ? "Internal server error" : (err?.message || "Request failed");
+  const message = safeStatus >= 500 ? "Internal server error" : err?.message || "Request failed";
   if (process.env.NODE_ENV !== "production") {
     console.error(err);
   }
@@ -96,7 +125,16 @@ app.use((err, req, res, next) => {
 const PORT = process.env.PORT || 8001;
 
 connectDB().then(() => {
-  app.listen(PORT, () => {
-    console.log(`✅ Backend running on http://localhost:${PORT}`);
+  const server = app.listen(PORT, () => {
+    console.log(`Backend running on http://localhost:${PORT}`);
   });
+
+  function shutdown(signal) {
+    console.log(`Received ${signal}. Shutting down gracefully...`);
+    server.close(() => process.exit(0));
+    setTimeout(() => process.exit(1), 10_000).unref();
+  }
+
+  process.on("SIGINT", () => shutdown("SIGINT"));
+  process.on("SIGTERM", () => shutdown("SIGTERM"));
 });

@@ -1,0 +1,2499 @@
+.hafiz-theme {
+  --hafiz-bg: #7c8596;
+  --hafiz-bg-deep: #2a3142;
+  --hafiz-card: #2d3446;
+  --hafiz-text: #f3f6fb;
+  --hafiz-muted: #d5dbe4;
+  --hafiz-accent: #1ee56f;
+}
+
+.hafiz-theme main {
+  background: linear-gradient(180deg, #7f8898 0%, #707a8d 36%, #2e3546 100%);
+  color: var(--hafiz-text);
+}
+
+.hafiz-home {
+  background: linear-gradient(180deg, #7f8898 0%, #707a8d 36%, #2e3546 100%);
+  color: var(--hafiz-text);
+}
+
+.hafiz-theme a {
+  color: inherit;
+}
+
+.hafiz-theme .ui-section-title {
+  text-transform: none;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: 0.01em;
+}
+
+.hafiz-theme .ui-section-title .text-brand-500,
+.hafiz-theme [class*="text-brand-500"] {
+  color: var(--hafiz-accent) !important;
+}
+
+.hafiz-theme .ui-section-subtitle {
+  color: var(--hafiz-muted) !important;
+}
+
+.hafiz-theme .ui-card {
+  background: #1a1c24 !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  box-shadow: none !important;
+  color: var(--hafiz-text);
+}
+
+.hafiz-theme .ui-btn {
+  background: rgba(78, 220, 139, 0.12) !important;
+  border: 1px solid rgba(78, 220, 139, 0.65) !important;
+  color: #83f4b3 !important;
+}
+
+.hafiz-theme .ui-btn:hover {
+  background: rgba(78, 220, 139, 0.2) !important;
+}
+
+.hafiz-theme input,
+.hafiz-theme textarea,
+.hafiz-theme select {
+  background: #161821 !important;
+  color: #eef3f7 !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+.hafiz-theme ::placeholder {
+  color: rgba(234, 240, 248, 0.45);
+}
+
+.hafiz-theme [class*="bg-white"] {
+  background-color: #1a1c24 !important;
+}
+
+.hafiz-theme [class*="text-black"] {
+  color: #eaf1f7 !important;
+}
+
+.hafiz-theme [class*="text-black/"],
+.hafiz-theme [class*="text-white/"] {
+  color: var(--hafiz-muted) !important;
+}
+
+.hafiz-theme [class*="border-black"] {
+  border-color: rgba(255, 255, 255, 0.14) !important;
+}
+
+.hafiz-theme [class*="hover:bg-black"]:hover,
+.hafiz-theme [class*="hover:bg-white"]:hover {
+  background-color: rgba(255, 255, 255, 0.06) !important;
+}
+
+.hafiz-theme [class*="bg-blue-"],
+.hafiz-theme [class*="from-blue-"],
+.hafiz-theme [class*="to-blue-"] {
+  background: #1a1f2a !important;
+}
+
+.hafiz-theme [class*="columns-"] img {
+  filter: saturate(0.94);
+}
+
+.hafiz-theme table {
+  color: var(--hafiz-text);
+}
+
+.hafiz-theme table th,
+.hafiz-theme table td {
+  border-color: rgba(255, 255, 255, 0.12) !important;
+}
+
+.hafiz-theme .shadow-soft,
+.hafiz-theme .shadow-sm,
+.hafiz-theme .shadow {
+  box-shadow: none !important;
+}
+
+.hafiz-hero {
+  position: relative;
+  min-height: 88vh;
+  display: grid;
+  align-items: center;
+  background-size: cover;
+  background-position: right center;
+}
+
+.hafiz-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(88, 98, 116, 0.92) 0%, rgba(88, 98, 116, 0.88) 46%, rgba(58, 67, 86, 0.62) 100%);
+}
+
+.hafiz-particles {
+  position: absolute;
+  inset: 0;
+  opacity: 0.6;
+  background-image: radial-gradient(circle at 10% 20%, #ffffff99 2px, transparent 2px),
+    radial-gradient(circle at 70% 35%, #ffffff80 1.5px, transparent 1.5px),
+    radial-gradient(circle at 30% 70%, #ffffffb0 2px, transparent 2px),
+    radial-gradient(circle at 85% 75%, #ffffff99 1.8px, transparent 1.8px);
+  background-size: 260px 220px;
+}
+
+.hafiz-hero-content {
+  position: relative;
+  z-index: 2;
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  text-align: left;
+  padding: 4rem 1rem;
+}
+
+.hafiz-hero-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+  align-items: end;
+}
+
+.hafiz-hero-photo-wrap {
+  justify-self: end;
+  width: min(420px, 100%);
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  background: rgba(32, 41, 58, 0.35);
+  backdrop-filter: blur(1px);
+  padding: 0.45rem;
+}
+
+.hafiz-hero-photo {
+  width: 100%;
+  max-height: 68vh;
+  object-fit: cover;
+  filter: grayscale(12%);
+}
+
+.hafiz-hero-content h1 {
+  font-size: clamp(2.4rem, 6vw, 5.5rem);
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  max-width: 620px;
+  line-height: 1.08;
+}
+
+.hafiz-hero-content p {
+  margin-top: 1rem;
+  max-width: 500px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #f1f5f9cc;
+}
+
+.hafiz-hero-buttons {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.hafiz-hero-buttons a,
+.hafiz-outline-btn {
+  border: 1.5px solid var(--hafiz-accent);
+  color: var(--hafiz-accent);
+  border-radius: 999px;
+  padding: 0.7rem 1.4rem;
+  font-weight: 700;
+  transition: all 0.2s ease;
+}
+
+.hafiz-hero-buttons a:hover,
+.hafiz-outline-btn:hover {
+  background: rgba(78, 220, 139, 0.15);
+}
+
+.hafiz-section {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  padding: 5.4rem 0 2.8rem;
+}
+
+.hafiz-title-wrap {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 3rem;
+}
+
+.hafiz-title-wrap h2 {
+  text-transform: uppercase;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  letter-spacing: 0.08em;
+}
+
+.hafiz-title-wrap h2 span {
+  color: var(--hafiz-accent);
+}
+
+.hafiz-title-wrap p {
+  color: var(--hafiz-muted);
+  margin-top: 1rem;
+}
+
+.hafiz-line {
+  width: 76px;
+  height: 2px;
+  margin: 1.4rem auto 0;
+  background: var(--hafiz-accent);
+}
+
+.hafiz-about-grid {
+  display: grid;
+  gap: 2rem;
+  grid-template-columns: 1fr;
+}
+
+.hafiz-about-image {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  padding: 0.7rem;
+  background: #16181f;
+}
+
+.hafiz-about-image img {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.hafiz-about-content h3 {
+  text-transform: uppercase;
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  letter-spacing: 0.05em;
+}
+
+.hafiz-about-content h3 span {
+  color: var(--hafiz-accent);
+}
+
+.hafiz-about-content p {
+  margin-top: 1rem;
+  color: var(--hafiz-muted);
+  line-height: 1.8;
+}
+
+.hafiz-about-content ul {
+  margin: 1.3rem 0 1.5rem;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.hafiz-services-grid {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.hafiz-service-card {
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--hafiz-card);
+  padding: 1.7rem;
+  min-height: 180px;
+}
+
+.hafiz-service-card h4 {
+  color: #f7f8fb;
+  text-transform: uppercase;
+  font-size: 1.35rem;
+  letter-spacing: 0.06em;
+}
+
+.hafiz-service-card p {
+  color: var(--hafiz-muted);
+  margin-top: 0.7rem;
+  line-height: 1.7;
+}
+
+.admin-theme [class*="bg-white"] {
+  background-color: #2d3446 !important;
+}
+
+.admin-theme [class*="text-black"] {
+  color: #edf2f7 !important;
+}
+
+.admin-theme [class*="border-black"] {
+  border-color: rgba(255, 255, 255, 0.15) !important;
+}
+
+.admin-theme input,
+.admin-theme textarea,
+.admin-theme select {
+  background: #232a3a !important;
+  color: #f0f3f7 !important;
+  border-color: rgba(255, 255, 255, 0.18) !important;
+}
+
+/* Admin UX polish */
+.admin-theme {
+  --admin-accent: #4edc8b;
+  --admin-accent-soft: rgba(78, 220, 139, 0.16);
+}
+
+.admin-theme * {
+  transition: background-color 0.22s ease, border-color 0.22s ease, color 0.22s ease, transform 0.22s ease, box-shadow 0.22s ease, opacity 0.22s ease;
+}
+
+.admin-theme :focus-visible {
+  outline: 2px solid rgba(78, 220, 139, 0.95);
+  outline-offset: 2px;
+}
+
+.admin-header {
+  box-shadow: 0 6px 22px rgba(5, 10, 19, 0.28);
+}
+
+.admin-nav-wrap {
+  scrollbar-width: thin;
+}
+
+.admin-nav-pill {
+  position: relative;
+}
+
+.admin-nav-pill::after {
+  content: "";
+  position: absolute;
+  left: 16%;
+  right: 16%;
+  bottom: -5px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent 0%, var(--admin-accent) 50%, transparent 100%);
+  opacity: 0;
+  transform: scaleX(0);
+  transition: transform 0.24s ease, opacity 0.24s ease;
+}
+
+.admin-nav-pill:hover::after,
+.admin-nav-pill[aria-current="page"]::after {
+  opacity: 1;
+  transform: scaleX(1);
+}
+
+.admin-ghost-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 8px 20px rgba(78, 220, 139, 0.16);
+}
+
+.admin-theme .ui-card {
+  border-color: rgba(255, 255, 255, 0.16) !important;
+  box-shadow: 0 10px 28px rgba(6, 10, 20, 0.22) !important;
+}
+
+.admin-theme .ui-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 34px rgba(5, 9, 18, 0.3) !important;
+}
+
+.admin-theme .ui-btn {
+  border-radius: 14px;
+  font-weight: 700;
+}
+
+.admin-theme .ui-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 10px 22px rgba(78, 220, 139, 0.16);
+}
+
+.admin-theme .ui-btn:active {
+  transform: translateY(0);
+}
+
+.admin-theme input,
+.admin-theme textarea,
+.admin-theme select {
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.admin-theme input:focus,
+.admin-theme textarea:focus,
+.admin-theme select:focus {
+  border-color: rgba(78, 220, 139, 0.72) !important;
+  box-shadow: 0 0 0 3px rgba(78, 220, 139, 0.12);
+}
+
+.admin-dashboard-grid > a {
+  transform: translateY(0);
+}
+
+.admin-dashboard-grid > a:hover {
+  transform: translateY(-2px);
+}
+
+.admin-theme main {
+  animation: adminFadeIn 0.35s ease;
+}
+
+@keyframes adminFadeIn {
+  from { opacity: 0.72; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Admin login UX polish */
+.admin-login-page {
+  position: relative;
+  overflow: hidden;
+}
+
+.admin-login-page::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(38rem 22rem at 18% 10%, rgba(78, 220, 139, 0.1), transparent 60%),
+    radial-gradient(36rem 20rem at 85% 88%, rgba(78, 220, 139, 0.08), transparent 62%),
+    linear-gradient(180deg, #121520 0%, #10131c 100%);
+  pointer-events: none;
+}
+
+.admin-login-card {
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 18px 44px rgba(6, 10, 20, 0.36);
+  backdrop-filter: blur(8px);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.admin-login-card:hover {
+  transform: translateY(-3px);
+  border-color: rgba(78, 220, 139, 0.36);
+  box-shadow: 0 24px 52px rgba(6, 10, 20, 0.45);
+}
+
+.admin-login-input {
+  transition: border-color 0.22s ease, box-shadow 0.22s ease, background-color 0.22s ease;
+}
+
+.admin-login-input:focus {
+  border-color: rgba(78, 220, 139, 0.78) !important;
+  box-shadow: 0 0 0 3px rgba(78, 220, 139, 0.14);
+}
+
+.admin-login-btn {
+  font-weight: 800;
+  transform: translateY(0);
+  box-shadow: 0 10px 22px rgba(78, 220, 139, 0.22);
+}
+
+.admin-login-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 28px rgba(78, 220, 139, 0.28);
+}
+
+.admin-login-btn:active {
+  transform: translateY(0);
+}
+
+@media (min-width: 900px) {
+  .hafiz-hero-grid {
+    grid-template-columns: 1.12fr 0.88fr;
+  }
+
+  .hafiz-about-grid {
+    grid-template-columns: 1fr 1.2fr;
+    align-items: start;
+    gap: 3rem;
+  }
+}
+
+.wix-page {
+  background: #1d1f28;
+  color: #f3f5f8;
+}
+
+.wix-hero {
+  position: relative;
+  min-height: 78vh;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  align-items: center;
+}
+
+.wix-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(38, 49, 78, 0.62);
+}
+
+.wix-network {
+  position: absolute;
+  inset: 0;
+  opacity: 0.5;
+  background-image: radial-gradient(circle at 14% 24%, #ffffffcc 2px, transparent 2px),
+    radial-gradient(circle at 76% 42%, #ffffffb3 1.6px, transparent 1.6px),
+    radial-gradient(circle at 35% 68%, #ffffffcc 2px, transparent 2px);
+  background-size: 260px 220px;
+}
+
+.wix-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.wix-hero-inner h1 {
+  font-size: clamp(2rem, 6vw, 4rem);
+  letter-spacing: 0.06em;
+}
+
+.wix-hero-inner p {
+  margin-top: 0.8rem;
+  color: #e3e8f0;
+}
+
+.wix-actions {
+  margin-top: 1.6rem;
+  display: flex;
+  justify-content: center;
+  gap: 0.8rem;
+  flex-wrap: wrap;
+}
+
+.wix-actions a {
+  border: 1.5px solid #1ee56f;
+  color: #1ee56f;
+  border-radius: 999px;
+  padding: 0.65rem 1.2rem;
+  font-weight: 700;
+}
+
+.wix-section {
+  width: min(1100px, 92vw);
+  margin: 0 auto;
+  padding: 5rem 0;
+  text-align: center;
+}
+
+.wix-section h2 {
+  font-size: clamp(2rem, 4vw, 3.2rem);
+}
+
+.wix-section h2 span {
+  color: #1ee56f;
+}
+
+.wix-section > p {
+  margin: 1rem auto 0;
+  max-width: 760px;
+  color: #c8cfda;
+}
+
+.wix-line {
+  width: 72px;
+  height: 2px;
+  margin: 1.3rem auto 0;
+  background: #1ee56f;
+}
+
+.wix-grid {
+  margin-top: 2.2rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 1.2rem;
+}
+
+.wix-card {
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #242836;
+  padding: 1.25rem;
+  transition: transform 0.24s ease, border-color 0.24s ease;
+}
+
+.wix-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(30, 229, 111, 0.52);
+}
+
+.wix-card h3 {
+  color: #1ee56f;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+.wix-card h4 {
+  margin-top: 0.35rem;
+  color: #eef2f8;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+}
+
+.wix-card p {
+  margin-top: 0.55rem;
+  color: #c8cfda;
+}
+
+.wix-card small {
+  display: block;
+  margin-top: 0.6rem;
+  color: #9ca8bb;
+}
+
+.wix-link {
+  display: inline-block;
+  margin-top: 0.7rem;
+  color: #1ee56f;
+  font-weight: 700;
+}
+
+.wix-card-img {
+  width: 100%;
+  height: 185px;
+  object-fit: cover;
+  margin-bottom: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.wix-empty {
+  margin-top: 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #242836;
+  padding: 1rem;
+  color: #c8cfda;
+}
+
+.wix-about-layout {
+  margin-top: 2.4rem;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  text-align: left;
+}
+
+.wix-about-photo {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  padding: 0.6rem;
+  background: #242836;
+}
+
+.wix-about-photo img {
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  filter: grayscale(100%);
+}
+
+.wix-about-text h3 {
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.wix-about-text p {
+  margin-top: 1rem;
+  color: #c8cfda;
+  line-height: 1.8;
+}
+
+.wix-about-text ul {
+  margin-top: 1.1rem;
+  display: grid;
+  gap: 0.55rem;
+}
+
+.wix-about-text li {
+  color: #dbe2ec;
+}
+
+.wix-about-btn {
+  display: inline-block;
+  margin-top: 1.3rem;
+  border: 1px solid #1ee56f;
+  color: #1ee56f;
+  border-radius: 999px;
+  padding: 0.55rem 1.1rem;
+  font-weight: 700;
+}
+
+.wix-timeline {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.wix-timeline-item {
+  position: relative;
+  text-align: left;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #242836;
+  padding: 1.2rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.wix-dot {
+  position: absolute;
+  left: -7px;
+  top: 1rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 999px;
+  background: #1ee56f;
+  box-shadow: 0 0 0 4px rgba(30, 229, 111, 0.2);
+}
+
+.wix-timeline-item h3 {
+  color: #1ee56f;
+  text-transform: uppercase;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.wix-timeline-item h4 {
+  margin-top: 0.35rem;
+  color: #f0f4fa;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.wix-timeline-item p {
+  margin-top: 0.6rem;
+  color: #c8cfda;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.wix-timeline-item small {
+  display: block;
+  margin-top: 0.6rem;
+  color: #9aa7ba;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.wix-resume-thumb-wrap {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  background: rgba(20, 26, 39, 0.55);
+  margin-bottom: 0.9rem;
+  padding: 0.5rem;
+  display: block;
+  cursor: zoom-in;
+  appearance: none;
+  text-align: left;
+}
+
+.wix-resume-thumb {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.wix-image-modal {
+  position: fixed;
+  inset: 0;
+  z-index: 120;
+  background: rgba(7, 11, 20, 0.86);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.wix-image-modal-dialog {
+  width: min(1100px, 96vw);
+  max-height: 92vh;
+  background: #1d2434;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 0.8rem;
+  overflow: auto;
+}
+
+.wix-image-modal-close {
+  display: inline-block;
+  border: 1px solid #16df66;
+  color: #16df66;
+  background: transparent;
+  padding: 0.32rem 0.72rem;
+  margin-bottom: 0.7rem;
+  cursor: pointer;
+}
+
+.wix-image-modal-img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.wix-contact-layout {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.wix-contact-form {
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #242836;
+  padding: 1rem;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.wix-contact-form input,
+.wix-contact-form textarea {
+  background: #1d2130;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 0.75rem 0.9rem;
+  color: #eef3f8;
+}
+
+.wix-contact-form textarea {
+  min-height: 120px;
+}
+
+.wix-contact-form button {
+  border: 1px solid #1ee56f;
+  color: #1ee56f;
+  background: transparent;
+  padding: 0.7rem 1rem;
+  font-weight: 700;
+}
+
+@media (min-width: 900px) {
+  .wix-about-layout {
+    grid-template-columns: 0.9fr 1.1fr;
+    align-items: start;
+  }
+
+  .wix-contact-layout {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+  }
+}
+
+.wix-nav-logo {
+  position: relative;
+  width: 44px;
+  height: 44px;
+  border: 2px solid #16df66;
+  border-left-color: transparent;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: #16df66;
+  font-weight: 700;
+  font-size: 1.85rem;
+}
+
+.wix-homepage {
+  background: #727d92;
+  color: #f4f7fb;
+}
+
+.wix-homepage > section {
+  min-height: calc(100vh - 80px);
+}
+
+.wix-home-hero {
+  min-height: calc(100vh - 80px);
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  background: #7d8799;
+}
+
+.wix-home-hero-left {
+  display: grid;
+  align-content: center;
+  justify-content: center;
+  padding: 4rem 1.5rem;
+}
+
+.wix-home-hero-left h1 {
+  font-size: clamp(2.6rem, 6.7vw, 6.1rem);
+  line-height: 1;
+  letter-spacing: 0.06em;
+  font-weight: 800;
+}
+
+.wix-home-hero-left h1 span {
+  display: block;
+}
+
+.wix-home-hero-left h1 span:first-child::after,
+.wix-home-hero-left h1 span:last-child::after {
+  content: "";
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  margin-left: 10px;
+  border-radius: 999px;
+  background: #16df66;
+  vertical-align: middle;
+}
+
+.wix-home-hero-left p {
+  margin-top: 2rem;
+  font-size: clamp(1rem, 1.9vw, 1.65rem);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: #e8edf6;
+}
+
+.wix-home-hero-right {
+  background-size: cover;
+  background-position: center right;
+  filter: grayscale(15%) brightness(1.04);
+}
+
+.wix-home-intro-bg,
+.wix-home-skills,
+.wix-home-exp,
+.wix-home-contact {
+  position: relative;
+  background-size: cover;
+  background-position: center;
+}
+
+.wix-home-intro-bg {
+  padding: 6.5rem 1rem 5rem;
+}
+
+.wix-home-intro-card {
+  width: min(880px, 92vw);
+  margin: 0 auto;
+  background: #343d57;
+  padding: 4rem 3.5rem;
+  text-align: center;
+}
+
+.wix-mark {
+  margin: 0 auto 2.2rem;
+  width: 76px;
+  height: 76px;
+  border: 2px solid #16df66;
+  border-left-color: transparent;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  color: #16df66;
+  font-size: 2.5rem;
+  font-weight: 800;
+}
+
+.wix-home-intro-card p {
+  max-width: 740px;
+  margin: 0 auto;
+  line-height: 2;
+  font-size: 1.05rem;
+  color: #edf1f7;
+}
+
+.wix-home-intro-card a {
+  display: inline-block;
+  margin-top: 2.5rem;
+  border: 1px solid #16df66;
+  padding: 0.9rem 2.2rem;
+  text-transform: uppercase;
+  color: #edf1f7;
+}
+
+.wix-home-skills {
+  padding: 5.5rem 1rem;
+}
+
+.wix-home-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(55, 63, 82, 0.78);
+}
+
+.wix-home-inner {
+  position: relative;
+  z-index: 2;
+  width: min(1080px, 94vw);
+  margin: 0 auto;
+}
+
+.wix-home-inner h2 {
+  text-align: center;
+  font-size: clamp(2.2rem, 4.2vw, 3.9rem);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+}
+
+.wix-home-inner h3 {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: clamp(0.95rem, 2.1vw, 1.85rem);
+  letter-spacing: 0.14em;
+  color: #e5eaf3;
+  text-transform: uppercase;
+}
+
+.wix-skill-list {
+  margin-top: 3.2rem;
+  display: grid;
+  gap: 1.4rem;
+}
+
+.wix-skill-row {
+  display: grid;
+  grid-template-columns: 180px 1fr 64px;
+  gap: 1rem;
+  align-items: center;
+}
+
+.wix-skill-row span,
+.wix-skill-row b {
+  color: #e6ebf4;
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
+.wix-skill-row div {
+  height: 20px;
+  background: rgba(255, 255, 255, 0.14);
+}
+
+.wix-skill-row div i {
+  display: block;
+  height: 100%;
+  background: #16df66;
+}
+
+.wix-home-portfolio {
+  background: #5f687f;
+  padding: 5.7rem 1rem;
+}
+
+.wix-portfolio-page {
+  background: #5f687f;
+}
+
+.wix-portfolio-hero {
+  padding: 5.75rem 1rem 6.5rem;
+  min-height: calc(100vh - 80px);
+  display: grid;
+  align-items: start;
+}
+
+.wix-home-portfolio-grid {
+  margin-top: 2.8rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.wix-home-portfolio-grid-page {
+  max-width: 1020px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wix-home-portfolio-grid article {
+  position: relative;
+  height: 300px;
+  background-size: cover;
+  background-position: center;
+}
+
+.wix-home-portfolio-grid article > div {
+  position: absolute;
+  inset: 0;
+  background: rgba(35, 47, 71, 0.42);
+}
+
+.wix-home-portfolio-grid h4 {
+  position: absolute;
+  left: 2rem;
+  bottom: 2rem;
+  z-index: 2;
+  font-size: 1.7rem;
+  font-weight: 800;
+}
+
+.wix-project-list-grid {
+  margin-top: 2.2rem;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.2rem;
+}
+
+.wix-project-card {
+  display: block;
+  background: #2e3750;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  text-decoration: none;
+  color: inherit;
+  transform: translateY(0);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+  overflow: hidden;
+}
+
+.wix-project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.25);
+  border-color: rgba(30, 229, 111, 0.45);
+}
+
+.wix-project-image-wrap {
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+.wix-project-image-wrap::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(16, 21, 34, 0.45), rgba(16, 21, 34, 0.1));
+}
+
+.wix-project-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: contain;
+  transition: transform 0.45s ease;
+}
+
+.wix-project-card:hover .wix-project-image {
+  transform: scale(1.06);
+}
+
+.wix-project-info {
+  padding: 1rem 1rem 1.15rem;
+}
+
+.wix-project-info h4 {
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.02em;
+}
+
+.wix-project-info p {
+  margin-top: 0.45rem;
+  color: #d5deea;
+  line-height: 1.55;
+  overflow-wrap: anywhere;
+}
+
+.wix-project-info small {
+  margin-top: 0.65rem;
+  display: block;
+  color: #16df66;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.wix-project-detail-card {
+  margin-top: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: #242b3d;
+  padding: 1rem;
+  text-align: left;
+}
+
+.wix-project-detail-card p {
+  color: #d9e2ef;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.wix-project-detail-description {
+  margin: 0;
+  font-size: 1.06rem;
+}
+
+.wix-project-detail-meta {
+  margin-top: 0.9rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.55rem;
+}
+
+.wix-project-detail-pill {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 0.15rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(9, 16, 42, 0.55);
+  border-radius: 999px;
+  padding: 0.45rem 0.8rem;
+  color: #dce5f2;
+  font-size: 0.92rem;
+  line-height: 1.2;
+}
+
+.wix-project-detail-pill strong {
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #ff5f6d;
+}
+
+.wix-project-detail-card small {
+  margin-top: 0.65rem;
+  display: block;
+  color: #16df66;
+  font-weight: 700;
+}
+
+.wix-project-detail-actions {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.wix-link-btn {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(9, 16, 42, 0.5);
+  color: #e8eef9;
+  border-radius: 999px;
+  padding: 0.45rem 0.9rem;
+  margin-top: 0;
+}
+
+.wix-project-detail-image-btn {
+  width: 100%;
+  border: none;
+  background: transparent;
+  padding: 0;
+  cursor: zoom-in;
+}
+
+.wix-project-detail-image {
+  width: auto;
+  height: auto;
+  max-width: 100%;
+  max-height: none;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+}
+
+.wix-home-exp {
+  padding: 5.5rem 1rem 4rem;
+  overflow: hidden;
+}
+
+.wix-exp-line {
+  display: none;
+}
+
+.wix-exp-list {
+  position: relative;
+  margin: 3.25rem auto 0;
+  padding: 0.4rem 0 0.9rem;
+  max-width: 980px;
+  display: grid;
+  gap: 2.7rem;
+}
+
+.wix-exp-list::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 0.3rem;
+  bottom: 0.7rem;
+  width: 2px;
+  background: #16df66;
+}
+
+.wix-exp-list article {
+  position: relative;
+  width: min(340px, calc(50% - 5.4rem));
+  padding: 0.2rem;
+}
+
+.wix-exp-list article.left {
+  justify-self: start;
+  text-align: right;
+}
+
+.wix-exp-list article.right {
+  justify-self: end;
+  text-align: left;
+}
+
+.wix-exp-list article::before {
+  content: "";
+  position: absolute;
+  top: 0.3rem;
+  width: 16px;
+  height: 16px;
+  border-radius: 999px;
+  background: #16df66;
+  box-shadow: 0 0 0 4px rgba(22, 223, 102, 0.12);
+}
+
+.wix-exp-list article.left::before {
+  right: -5.95rem;
+}
+
+.wix-exp-list article.right::before {
+  left: -5.95rem;
+}
+
+.wix-exp-list em {
+  color: #16df66;
+  font-style: normal;
+  font-size: 1.15rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.wix-exp-list h4 {
+  margin-top: 0.75rem;
+  font-size: 2.05rem;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+  line-height: 1.08;
+  text-transform: uppercase;
+}
+
+.wix-exp-list strong {
+  display: block;
+  margin-top: 1rem;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+.wix-exp-list p {
+  margin-top: 0.9rem;
+  color: #d5deea;
+  line-height: 1.72;
+  font-size: 0.95rem;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.wix-home-contact {
+  padding: 5.2rem 1rem 2rem;
+}
+
+.wix-contact-page {
+  background: #59627a;
+}
+
+.wix-contact-page-wrap {
+  position: relative;
+  min-height: calc(100vh - 80px);
+  padding: 5.2rem 1rem 4rem;
+  background-size: cover;
+  background-position: center;
+}
+
+.wix-contact-page-card {
+  position: relative;
+  z-index: 2;
+  width: min(1060px, 94vw);
+  margin: 0 auto;
+  background: #343d57;
+  padding: 3.2rem 3rem 2.6rem;
+  display: grid;
+  grid-template-columns: 1fr 1.15fr;
+  gap: 2rem;
+}
+
+.wix-home-contact-card {
+  position: relative;
+  z-index: 2;
+  width: min(1060px, 94vw);
+  margin: 0 auto;
+  background: #343d57;
+  padding: 3rem 3rem 2.6rem;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 2rem;
+}
+
+.wix-home-contact-left h3 {
+  font-size: 2.05rem;
+  font-weight: 500;
+}
+
+.wix-home-contact-left p {
+  margin-top: 1rem;
+  line-height: 1.8;
+  color: #ecf1f8;
+  font-size: 0.95rem;
+}
+
+.wix-home-contact-form {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.9rem;
+}
+
+.wix-home-contact-form .full {
+  grid-column: 1 / -1;
+}
+
+.wix-home-contact-form label {
+  display: block;
+  margin-bottom: 0.4rem;
+  color: #e8edf5;
+  font-size: 0.95rem;
+}
+
+.wix-home-contact-form input,
+.wix-home-contact-form textarea {
+  width: 100%;
+  border: none;
+  background: #fff !important;
+  color: #151a26 !important;
+  padding: 0.72rem 0.85rem;
+}
+
+.wix-home-contact-form textarea {
+  min-height: 110px;
+}
+
+.wix-home-contact-form button {
+  border: none;
+  background: #16df66;
+  color: #fff;
+  font-size: 1rem;
+  padding: 0.9rem 1rem;
+  font-weight: 700;
+  transform: translateY(0);
+  box-shadow: 0 8px 18px rgba(255, 95, 109, 0.18);
+}
+
+.wix-home-contact-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 24px rgba(255, 95, 109, 0.28);
+}
+
+.wix-home-contact-form button:active {
+  transform: translateY(0);
+}
+
+.wix-home-contact-form button:focus-visible {
+  outline: 2px solid rgba(255, 95, 109, 0.9);
+  outline-offset: 3px;
+}
+
+.wix-home-social {
+  grid-column: 1 / -1;
+  text-align: center;
+  margin-top: 1.3rem;
+  letter-spacing: 0.5em;
+  color: #e8edf5;
+}
+
+.wix-home-bottom {
+  position: relative;
+  z-index: 2;
+  width: min(1060px, 94vw);
+  margin: 1.5rem auto 0;
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  color: #d6deea;
+}
+
+.wix-home-bottom .wix-nav-logo {
+  width: 34px;
+  height: 34px;
+  font-size: 1.4rem;
+}
+
+.wix-home-bottom p {
+  font-size: 0.98rem;
+}
+
+@media (max-width: 1000px) {
+  .wix-home-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .wix-home-hero-right {
+    min-height: 54vh;
+  }
+
+  .wix-skill-row {
+    grid-template-columns: 1fr;
+  }
+
+  .wix-home-portfolio-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wix-project-list-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .wix-project-image-wrap {
+    height: auto;
+  }
+
+  .wix-home-contact-card {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.2rem;
+  }
+
+  .wix-contact-page-card {
+    grid-template-columns: 1fr;
+    padding: 2rem 1.2rem;
+  }
+
+  .wix-home-contact-form {
+    grid-template-columns: 1fr;
+  }
+
+  .wix-exp-line {
+    display: none;
+  }
+
+  .wix-exp-list {
+    margin-top: 2rem;
+    padding: 0;
+    max-width: none;
+  }
+
+  .wix-exp-list::before {
+    display: none;
+  }
+
+  .wix-exp-list article {
+    width: 100%;
+    text-align: left !important;
+    justify-self: stretch !important;
+    padding-left: 1.35rem;
+  }
+
+  .wix-exp-list article::before,
+  .wix-exp-list article.left::before,
+  .wix-exp-list article.right::before {
+    left: 0;
+    right: auto;
+    width: 10px;
+    height: 10px;
+    box-shadow: none;
+  }
+
+  .wix-exp-list em {
+    font-size: 1.1rem;
+  }
+
+  .wix-exp-list h4 {
+    font-size: 1.35rem;
+    margin-top: 0.45rem;
+  }
+
+  .wix-exp-list strong {
+    margin-top: 0.7rem;
+    font-size: 1rem;
+  }
+
+  .wix-exp-list p {
+    margin-top: 0.55rem;
+    font-size: 0.95rem;
+  }
+}
+
+/* ===============================
+   Yazen-inspired portfolio theme
+   =============================== */
+
+.yazen-public {
+  --yazen-bg: #121528;
+  --yazen-surface: #1a1f3a;
+  --yazen-surface-2: #191e35;
+  --yazen-text: #f0f2fb;
+  --yazen-muted: #b8bed8;
+  --yazen-accent: #ff5f6d;
+  --yazen-border: rgba(255, 106, 120, 0.5);
+  background: var(--yazen-bg);
+  color: var(--yazen-text);
+}
+
+.yazen-header {
+  position: sticky;
+  top: 0;
+  z-index: 70;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(8px);
+}
+
+.yazen-header.is-home {
+  background: rgba(13, 17, 32, 0.8);
+}
+
+.yazen-header.is-inner {
+  background: rgba(15, 20, 38, 0.96);
+}
+
+.yazen-header-inner {
+  width: min(1180px, 94vw);
+  margin: 0 auto;
+  min-height: 82px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.yazen-logo {
+  font-size: 1.8rem;
+  font-weight: 800;
+  text-decoration: none;
+  color: #fff;
+}
+
+.yazen-logo span {
+  background: linear-gradient(90deg, #ffffff 0%, #ffffff 40%, var(--yazen-accent) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.yazen-nav-link {
+  color: rgba(255, 255, 255, 0.8);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: color 0.25s ease;
+}
+
+.yazen-nav-link:hover,
+.yazen-nav-link.is-active {
+  color: var(--yazen-accent);
+}
+
+.yazen-contact-btn {
+  border: 1px solid var(--yazen-border);
+  color: var(--yazen-accent);
+  padding: 0.72rem 1.15rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.yazen-mobile {
+  position: absolute;
+  top: calc(100% + 8px);
+  left: 50%;
+  transform: translateX(-50%);
+  width: min(94vw, 460px);
+  z-index: 80;
+  padding: 0.9rem 0.9rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  background: rgba(15, 20, 38, 0.98);
+  box-shadow: 0 20px 44px rgba(4, 8, 18, 0.38);
+  animation: yazenMobileIn 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.yazen-mobile-backdrop {
+  position: fixed;
+  inset: 0;
+  border: 0;
+  background: rgba(4, 8, 18, 0.45);
+  z-index: 75;
+}
+
+.yazen-mobile-toggle {
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.yazen-mobile-toggle:active {
+  transform: scale(0.97);
+}
+
+.yazen-mobile-link {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.85);
+  padding: 0.72rem 0.7rem;
+  border-radius: 10px;
+  font-weight: 600;
+}
+
+.yazen-mobile-link.is-active {
+  color: var(--yazen-accent);
+  background: rgba(255, 95, 109, 0.13);
+}
+
+.yazen-mobile-link:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+
+@keyframes yazenMobileIn {
+  from {
+    opacity: 0;
+    transform: translateX(-50%) translateY(-8px) scale(0.98);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0) scale(1);
+  }
+}
+
+.yazen-page-shell {
+  background: var(--yazen-bg);
+  color: var(--yazen-text);
+}
+
+.yazen-hero {
+  min-height: calc(100vh - 82px);
+  position: relative;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  align-items: center;
+}
+
+.yazen-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10, 14, 29, 0.66), rgba(10, 14, 29, 0.82));
+}
+
+.yazen-hero-inner {
+  position: relative;
+  z-index: 2;
+  width: min(980px, 92vw);
+  margin: 0 auto;
+  text-align: center;
+  padding: 3rem 0 4rem;
+}
+
+.yazen-avatar-wrap {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  margin: 0 auto 1.4rem;
+  overflow: hidden;
+  border: 3px solid rgba(255, 255, 255, 0.13);
+  animation: yazenFloat 4.2s ease-in-out infinite;
+}
+
+.yazen-avatar-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.yazen-hero-inner h1 {
+  font-size: clamp(1.6rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin: 0;
+  text-transform: none;
+  color: var(--yazen-accent);
+}
+
+.yazen-hero-inner p {
+  margin-top: 0.5rem;
+  color: #e6eaf9;
+  font-size: 1.2rem;
+}
+
+.yazen-scroll-cue {
+  margin-top: 3rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.7rem;
+  color: #d2d8ea;
+  text-decoration: none;
+}
+
+.yazen-scroll-cue::before {
+  content: "";
+  width: 30px;
+  height: 1px;
+  background: #d2d8ea;
+}
+
+.yazen-about,
+.yazen-services,
+.wix-page {
+  background: var(--yazen-surface);
+}
+
+.yazen-container,
+.wix-section,
+.wix-home-inner {
+  width: min(1140px, 92vw);
+  margin: 0 auto;
+}
+
+.yazen-about {
+  padding: 6rem 0;
+}
+
+.yazen-about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  gap: 2rem;
+  align-items: start;
+}
+
+.yazen-about-image {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  height: auto;
+  overflow: visible;
+  align-self: start;
+  position: relative;
+  transform: translateY(0);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+}
+
+.yazen-about-image img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: initial;
+  display: block;
+  transition: transform 0.42s ease, filter 0.42s ease;
+}
+
+.yazen-about-image::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(120% 80% at 12% 0%, rgba(255, 95, 109, 0.16), transparent 56%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.yazen-about-image:hover {
+  transform: translateY(-5px);
+  border-color: rgba(255, 95, 109, 0.65);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.34);
+}
+
+.yazen-about-image:hover::before {
+  opacity: 1;
+}
+
+.yazen-about-image:hover img {
+  transform: scale(1.03);
+  filter: saturate(1.05);
+}
+
+.yazen-kicker {
+  color: var(--yazen-accent);
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.yazen-about-copy h2,
+.yazen-services h2,
+.wix-section h2 {
+  font-size: clamp(2rem, 5vw, 3.6rem);
+  margin-top: 0.25rem;
+  text-transform: none;
+}
+
+.yazen-about-copy p,
+.wix-section > p {
+  margin-top: 1rem;
+  color: var(--yazen-muted);
+  line-height: 1.9;
+}
+
+.yazen-info-grid {
+  margin-top: 1.4rem;
+  border: 1px solid var(--yazen-border);
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem 1rem;
+}
+
+.yazen-primary-btn {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background: var(--yazen-accent);
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  padding: 0.88rem 1.5rem;
+  font-weight: 700;
+}
+
+.yazen-services {
+  padding: 5rem 0 7rem;
+  background: var(--yazen-surface-2);
+}
+
+.yazen-service-grid,
+.wix-grid {
+  margin-top: 2rem;
+  display: grid;
+  gap: 1.3rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.yazen-service-card,
+.wix-card,
+.wix-project-card,
+.wix-timeline-item,
+.wix-empty {
+  background: rgba(21, 26, 49, 0.8);
+  border: 1px solid var(--yazen-border);
+}
+
+.yazen-service-card {
+  padding: 1.7rem;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.yazen-service-card:hover,
+.wix-card:hover,
+.wix-project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 26px rgba(0, 0, 0, 0.3);
+}
+
+.yazen-service-icon {
+  color: var(--yazen-accent);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.yazen-service-card h3 {
+  font-size: 1.75rem;
+  text-transform: none;
+}
+
+.yazen-service-card p {
+  margin-top: 0.65rem;
+  color: var(--yazen-muted);
+}
+
+.wix-page {
+  min-height: calc(100vh - 82px);
+}
+
+.wix-section {
+  padding: 5rem 0;
+  text-align: left;
+}
+
+.wix-section .wix-line {
+  margin-left: 0;
+  background: var(--yazen-accent);
+}
+
+.wix-card h3,
+.wix-timeline-item h3,
+.wix-project-info small,
+.wix-link {
+  color: var(--yazen-accent);
+}
+
+.wix-link {
+  text-decoration: none;
+}
+
+.wix-contact-page-wrap,
+.wix-home-contact {
+  background-color: var(--yazen-bg);
+}
+
+.wix-home-contact-card,
+.wix-contact-page-card {
+  background: rgba(18, 22, 41, 0.92);
+  border: 1px solid var(--yazen-border);
+}
+
+.wix-home-contact-form button {
+  background: var(--yazen-accent);
+}
+
+.wix-home-bottom {
+  color: var(--yazen-muted);
+}
+
+@keyframes yazenFloat {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-8px);
+  }
+}
+
+@media (max-width: 980px) {
+  .yazen-about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .yazen-info-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .yazen-service-grid,
+  .wix-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.yazen-inner-hero {
+  min-height: 44vh;
+  position: relative;
+  display: grid;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+}
+
+.yazen-inner-hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, rgba(10, 14, 29, 0.72), rgba(10, 14, 29, 0.86));
+}
+
+.yazen-inner-hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 4.2rem 0 3.2rem;
+}
+
+.yazen-section-number {
+  display: inline-block;
+  color: rgba(255, 255, 255, 0.25);
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.yazen-inner-hero-content h1 {
+  margin-top: 0.45rem;
+  text-transform: none;
+  font-size: clamp(2rem, 5vw, 3.3rem);
+}
+
+.yazen-inner-hero-content p {
+  margin-top: 0.6rem;
+  color: var(--yazen-muted);
+}
+
+.yazen-section-body {
+  padding-top: 3.5rem;
+}
+
+.yazen-subsection-title {
+  text-transform: none;
+  margin-bottom: 1rem;
+}
+
+.yazen-home-preview {
+  padding: 5rem 0 6rem;
+  background: var(--yazen-surface);
+}
+
+.yazen-home-preview-blog {
+  background: #161c34;
+}
+
+.yazen-home-preview h2 {
+  text-transform: none;
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-top: 0.45rem;
+  margin-bottom: 1rem;
+}
+
+.yazen-home-links {
+  margin-top: 1.8rem;
+  display: flex;
+  gap: 1rem;
+}
+
+.yazen-skill-mini {
+  grid-template-columns: 88px 1fr 52px;
+  margin-top: 1rem;
+}
+
+/* Homepage: each major section fits one screen */
+.yazen-page-shell > .yazen-about,
+.yazen-page-shell > .yazen-services,
+.yazen-page-shell > .yazen-home-preview,
+.yazen-page-shell > .wix-contact-page-wrap {
+  min-height: calc(100svh - 82px);
+  display: grid;
+  align-items: center;
+}
+
+.yazen-page-shell > .wix-contact-page-wrap {
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
+}
+
+@media (max-width: 980px) {
+  .yazen-page-shell > .yazen-about,
+  .yazen-page-shell > .yazen-services,
+  .yazen-page-shell > .yazen-home-preview,
+  .yazen-page-shell > .wix-contact-page-wrap {
+    min-height: auto;
+    display: block;
+  }
+}
+
+/* Reference-match overrides for About + Services */
+.yazen-about,
+.yazen-services {
+  position: relative;
+}
+
+.yazen-about .yazen-container,
+.yazen-services .yazen-container {
+  position: relative;
+}
+
+.yazen-side-number {
+  position: absolute;
+  right: 0;
+  top: 0.2rem;
+  color: rgba(196, 205, 233, 0.22);
+  font-size: clamp(2.4rem, 4.6vw, 4.3rem);
+  font-weight: 700;
+  line-height: 1;
+}
+
+.yazen-side-number::after {
+  content: "";
+  position: absolute;
+  left: calc(100% + 0.6rem);
+  top: 52%;
+  width: 36px;
+  height: 2px;
+  background: #ff5f6d;
+}
+
+.yazen-kicker {
+  font-size: 1.9rem;
+  line-height: 1;
+}
+
+.yazen-about-copy h2,
+.yazen-services h2 {
+  font-size: clamp(2.25rem, 5vw, 3.5rem);
+  font-weight: 700;
+  margin-top: 0.45rem;
+}
+
+.yazen-title-line {
+  width: 58px;
+  height: 2px;
+  background: #ff5f6d;
+  margin-top: 0.9rem;
+}
+
+.yazen-about-copy p {
+  max-width: 760px;
+  line-height: 1.95;
+}
+
+.yazen-info-grid {
+  margin-top: 1.55rem;
+  border: 1px solid rgba(255, 106, 120, 0.58);
+  padding: 1.1rem 1.15rem;
+}
+
+.yazen-primary-btn {
+  margin-top: 1.4rem;
+  background: #ff5f6d;
+}
+
+.yazen-services {
+  background: #1b2140;
+}
+
+.yazen-service-grid {
+  margin-top: 2.2rem;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.yazen-service-card {
+  min-height: 215px;
+  border: 1px solid rgba(255, 106, 120, 0.55);
+  background: transparent;
+}
+
+.yazen-service-icon {
+  font-size: 1.3rem;
+  margin-bottom: 0.8rem;
+}
+
+.yazen-service-card h3 {
+  font-size: 1.85rem;
+}
+
+.yazen-service-card p {
+  line-height: 1.8;
+}
+
+@media (max-width: 980px) {
+  .yazen-side-number {
+    display: none;
+  }
+
+  .yazen-service-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+
+/* Global UX polish */
+.yazen-public a,
+.yazen-public button,
+.yazen-public input,
+.yazen-public textarea {
+  transition:
+    background-color 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    color 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    transform 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 320ms cubic-bezier(0.22, 1, 0.36, 1),
+    filter 320ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.yazen-public :focus-visible {
+  outline: 2px solid rgba(255, 95, 109, 0.9);
+  outline-offset: 3px;
+}
+
+.yazen-nav-link {
+  position: relative;
+}
+
+.yazen-nav-link::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -6px;
+  height: 2px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, transparent 0%, var(--yazen-accent) 50%, transparent 100%);
+  transform: scaleX(0);
+  transform-origin: center;
+  opacity: 0;
+  transition: transform 220ms cubic-bezier(0.22, 1, 0.36, 1), opacity 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.yazen-nav-link:hover::after,
+.yazen-nav-link.is-active::after {
+  transform: scaleX(1);
+  opacity: 1;
+}
+
+.yazen-social-icon {
+  display: grid;
+  width: 2.9rem;
+  height: 2.9rem;
+  place-items: center;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.08), rgba(255, 255, 255, 0.03));
+  color: rgba(255, 255, 255, 0.85);
+  box-shadow: 0 10px 22px rgba(4, 6, 12, 0.24);
+  transform: translateY(0) scale(1);
+}
+
+.yazen-social-icon svg {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.yazen-social-tooltip {
+  position: relative;
+  display: inline-flex;
+}
+
+.yazen-social-tooltip-label {
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 10px);
+  transform: translateX(-50%) translateY(4px);
+  background: rgba(11, 15, 28, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+  font-size: 12px;
+  line-height: 1;
+  white-space: nowrap;
+  border-radius: 999px;
+  padding: 6px 10px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  z-index: 20;
+}
+
+.yazen-social-tooltip:hover .yazen-social-tooltip-label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+.yazen-social-tooltip--below .yazen-social-tooltip-label {
+  top: calc(100% + 10px);
+  bottom: auto;
+  transform: translateX(-50%) translateY(-4px);
+}
+
+.yazen-social-tooltip--below:hover .yazen-social-tooltip-label {
+  transform: translateX(-50%) translateY(0);
+}
+
+.yazen-social-icon:hover {
+  transform: translateY(-3px) scale(1.03);
+  border-color: rgba(255, 95, 109, 0.85);
+  color: #fff;
+  box-shadow: 0 14px 30px rgba(255, 95, 109, 0.18);
+}
+
+.yazen-social-icon:active {
+  transform: translateY(-1px) scale(0.98);
+}
+
+.yazen-primary-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 16px 28px rgba(255, 95, 109, 0.28);
+}
+
+.yazen-primary-btn:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+.yazen-scroll-cue {
+  animation: yazenCue 1.8s ease-in-out infinite;
+}
+
+.yazen-about-copy,
+.yazen-about-image,
+.yazen-service-card,
+.wix-card,
+.wix-contact-page-card {
+  will-change: transform, opacity;
+}
+
+.yazen-service-card,
+.wix-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.yazen-service-card::before,
+.wix-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(120% 80% at 10% 0%, rgba(255, 95, 109, 0.13), transparent 55%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.yazen-service-card:hover::before,
+.wix-card:hover::before {
+  opacity: 1;
+}
+
+.wix-card-img {
+  transition: transform 520ms cubic-bezier(0.22, 1, 0.36, 1), filter 520ms cubic-bezier(0.22, 1, 0.36, 1);
+  transform: scale(1);
+}
+
+.wix-card:hover .wix-card-img {
+  transform: scale(1.05);
+  filter: saturate(1.08) contrast(1.03);
+}
+
+.yazen-service-card:hover .wix-card-img {
+  transform: scale(1.05);
+  filter: saturate(1.08) contrast(1.03);
+}
+
+.yazen-certifications-preview .wix-card {
+  overflow: visible;
+}
+
+.yazen-certifications-preview .yazen-cert-card-img {
+  width: 100%;
+  height: auto;
+  max-height: none;
+  object-fit: contain;
+  background: rgba(8, 13, 34, 0.46);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.yazen-service-card:hover {
+  border-color: rgba(255, 95, 109, 0.68);
+  box-shadow: 0 18px 34px rgba(0, 0, 0, 0.36);
+}
+
+.yazen-page-shell > .yazen-about,
+.yazen-page-shell > .yazen-services,
+.yazen-page-shell > .yazen-home-preview,
+.yazen-page-shell > .wix-contact-page-wrap {
+  animation: yazenSectionFade 0.62s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@keyframes yazenCue {
+  0%, 100% { transform: translateY(0); opacity: 0.92; }
+  50% { transform: translateY(4px); opacity: 1; }
+}
+
+@keyframes yazenSectionFade {
+  from { opacity: 0.72; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yazen-public * {
+    animation: none !important;
+    transition: none !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Mobile-specific motion tuning: faster, shorter travel for buttery feel on phones */
+@media (max-width: 768px) {
+  .yazen-public a,
+  .yazen-public button,
+  .yazen-public input,
+  .yazen-public textarea {
+    transition-duration: 220ms;
+  }
+
+  .yazen-social-icon:hover {
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 10px 20px rgba(255, 95, 109, 0.16);
+  }
+
+  .yazen-primary-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 22px rgba(255, 95, 109, 0.24);
+  }
+
+  .yazen-service-card:hover,
+  .wix-card:hover,
+  .wix-project-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 22px rgba(0, 0, 0, 0.28);
+  }
+
+  .wix-card:hover .wix-card-img,
+  .yazen-service-card:hover .wix-card-img {
+    transform: scale(1.03);
+  }
+
+  .yazen-page-shell > .yazen-about,
+  .yazen-page-shell > .yazen-services,
+  .yazen-page-shell > .yazen-home-preview,
+  .yazen-page-shell > .wix-contact-page-wrap {
+    animation-duration: 0.42s;
+  }
+}

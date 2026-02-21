@@ -1,6 +1,6 @@
 const AboutSection = require("../models/AboutSection");
 const { importImageToCloudinary } = require("../utils/image-storage.util");
-const { normalizeImageFields } = require("../utils/image-url.util");
+const { normalizeImageFields, normalizeImageUrl } = require("../utils/image-url.util");
 const axios = require("axios");
 const path = require("path");
 
@@ -22,15 +22,25 @@ async function getOrCreate() {
 }
 
 function toResponse(doc) {
-  return normalizeImageFields(
+  const base = normalizeImageFields(
     {
       imageUrl: doc.imageUrl || "",
       description: doc.description || "",
       resumeUrl: doc.resumeUrl || "",
       facts: Array.isArray(doc.facts) ? doc.facts : [],
+      certifications: Array.isArray(doc.certifications) ? doc.certifications : [],
     },
     ["imageUrl"]
   );
+  return {
+    ...base,
+    certifications: (base.certifications || []).map((item) => ({
+      title: item?.title || "",
+      certificateUrl: normalizeImageUrl(item?.certificateUrl || ""),
+      description: item?.description || "",
+      isPublished: item?.isPublished !== false,
+    })),
+  };
 }
 
 exports.getPublic = async (req, res, next) => {
@@ -71,6 +81,16 @@ exports.updateAdmin = async (req, res, next) => {
           label: String(x.label || "").trim(),
           value: String(x.value || "").trim(),
         }));
+    }
+    if (Array.isArray(req.body.certifications)) {
+      doc.certifications = req.body.certifications
+        .map((x) => ({
+          title: String(x?.title || "").trim(),
+          certificateUrl: safeUrl(x?.certificateUrl || ""),
+          description: String(x?.description || "").trim(),
+          isPublished: x?.isPublished !== false,
+        }))
+        .filter((x) => x.title || x.certificateUrl || x.description);
     }
     await doc.save();
     res.json(toResponse(doc));
