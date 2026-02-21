@@ -22,17 +22,30 @@ app.set("trust proxy", 1);
 /* =========================
    MIDDLEWARE
 ========================= */
+function toOrigin(value = "") {
+  const raw = String(value || "").trim();
+  if (!raw) return "";
+  try {
+    const parsed = new URL(raw.startsWith("http") ? raw : `https://${raw}`);
+    return parsed.origin;
+  } catch {
+    return "";
+  }
+}
+
 const corsOrigins = (process.env.CORS_ORIGINS || "http://localhost:3001")
   .split(",")
-  .map((x) => x.trim())
+  .map((x) => toOrigin(x))
   .filter(Boolean);
 const allowVercelPreviews = String(process.env.CORS_ALLOW_VERCEL_PREVIEWS || "").toLowerCase() === "true";
 
 function isAllowedOrigin(origin = "") {
-  if (corsOrigins.includes(origin)) return true;
+  const normalizedOrigin = toOrigin(origin);
+  if (!normalizedOrigin) return false;
+  if (corsOrigins.includes(normalizedOrigin)) return true;
   if (allowVercelPreviews) {
     try {
-      const host = new URL(origin).hostname.toLowerCase();
+      const host = new URL(normalizedOrigin).hostname.toLowerCase();
       if (host.endsWith(".vercel.app")) return true;
     } catch {
       return false;
