@@ -44,13 +44,13 @@
 }
 
 .hafiz-theme .ui-btn {
-  background: rgba(78, 220, 139, 0.12) !important;
-  border: 1px solid rgba(78, 220, 139, 0.65) !important;
+  background: rgba(109, 123, 255, 0.12) !important;
+  border: 1px solid rgba(109, 123, 255, 0.65) !important;
   color: #83f4b3 !important;
 }
 
 .hafiz-theme .ui-btn:hover {
-  background: rgba(78, 220, 139, 0.2) !important;
+  background: rgba(109, 123, 255, 0.2) !important;
 }
 
 .hafiz-theme input,
@@ -206,7 +206,7 @@
 
 .hafiz-hero-buttons a:hover,
 .hafiz-outline-btn:hover {
-  background: rgba(78, 220, 139, 0.15);
+  background: rgba(109, 123, 255, 0.15);
 }
 
 .hafiz-section {
@@ -332,8 +332,8 @@
 
 /* Admin UX polish */
 .admin-theme {
-  --admin-accent: #4edc8b;
-  --admin-accent-soft: rgba(78, 220, 139, 0.16);
+  --admin-accent: #6d7bff;
+  --admin-accent-soft: rgba(109, 123, 255, 0.16);
 }
 
 .admin-theme * {
@@ -341,7 +341,7 @@
 }
 
 .admin-theme :focus-visible {
-  outline: 2px solid rgba(78, 220, 139, 0.95);
+  outline: 2px solid rgba(109, 123, 255, 0.95);
   outline-offset: 2px;
 }
 
@@ -379,7 +379,7 @@
 
 .admin-ghost-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 8px 20px rgba(78, 220, 139, 0.16);
+  box-shadow: 0 8px 20px rgba(109, 123, 255, 0.16);
 }
 
 .admin-theme .ui-card {
@@ -399,7 +399,7 @@
 
 .admin-theme .ui-btn:hover {
   transform: translateY(-1px);
-  box-shadow: 0 10px 22px rgba(78, 220, 139, 0.16);
+  box-shadow: 0 10px 22px rgba(109, 123, 255, 0.16);
 }
 
 .admin-theme .ui-btn:active {
@@ -415,8 +415,8 @@
 .admin-theme input:focus,
 .admin-theme textarea:focus,
 .admin-theme select:focus {
-  border-color: rgba(78, 220, 139, 0.72) !important;
-  box-shadow: 0 0 0 3px rgba(78, 220, 139, 0.12);
+  border-color: rgba(109, 123, 255, 0.72) !important;
+  box-shadow: 0 0 0 3px rgba(109, 123, 255, 0.12);
 }
 
 .admin-dashboard-grid > a {
@@ -447,8 +447,8 @@
   position: absolute;
   inset: 0;
   background:
-    radial-gradient(38rem 22rem at 18% 10%, rgba(78, 220, 139, 0.1), transparent 60%),
-    radial-gradient(36rem 20rem at 85% 88%, rgba(78, 220, 139, 0.08), transparent 62%),
+    radial-gradient(38rem 22rem at 18% 10%, rgba(109, 123, 255, 0.1), transparent 60%),
+    radial-gradient(36rem 20rem at 85% 88%, rgba(109, 123, 255, 0.08), transparent 62%),
     linear-gradient(180deg, #121520 0%, #10131c 100%);
   pointer-events: none;
 }
@@ -463,7 +463,7 @@
 
 .admin-login-card:hover {
   transform: translateY(-3px);
-  border-color: rgba(78, 220, 139, 0.36);
+  border-color: rgba(109, 123, 255, 0.36);
   box-shadow: 0 24px 52px rgba(6, 10, 20, 0.45);
 }
 
@@ -472,19 +472,19 @@
 }
 
 .admin-login-input:focus {
-  border-color: rgba(78, 220, 139, 0.78) !important;
-  box-shadow: 0 0 0 3px rgba(78, 220, 139, 0.14);
+  border-color: rgba(109, 123, 255, 0.78) !important;
+  box-shadow: 0 0 0 3px rgba(109, 123, 255, 0.14);
 }
 
 .admin-login-btn {
   font-weight: 800;
   transform: translateY(0);
-  box-shadow: 0 10px 22px rgba(78, 220, 139, 0.22);
+  box-shadow: 0 10px 22px rgba(109, 123, 255, 0.22);
 }
 
 .admin-login-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 14px 28px rgba(78, 220, 139, 0.28);
+  box-shadow: 0 14px 28px rgba(109, 123, 255, 0.28);
 }
 
 .admin-login-btn:active {
@@ -1229,7 +1229,7 @@
   font-size: 0.68rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: #ff5f6d;
+  color: #5b6dff;
 }
 
 .wix-project-detail-card small {
@@ -1460,12 +1460,12 @@
   padding: 0.9rem 1rem;
   font-weight: 700;
   transform: translateY(0);
-  box-shadow: 0 8px 18px rgba(255, 95, 109, 0.18);
+  box-shadow: 0 8px 18px rgba(91, 109, 255, 0.18);
 }
 
 .wix-home-contact-form button:hover {
   transform: translateY(-2px);
-  box-shadow: 0 12px 24px rgba(255, 95, 109, 0.28);
+  box-shadow: 0 12px 24px rgba(91, 109, 255, 0.28);
 }
 
 .wix-home-contact-form button:active {
@@ -1473,7 +1473,7 @@
 }
 
 .wix-home-contact-form button:focus-visible {
-  outline: 2px solid rgba(255, 95, 109, 0.9);
+  outline: 2px solid rgba(91, 109, 255, 0.9);
   outline-offset: 3px;
 }
 
@@ -1606,7 +1606,7 @@
   --yazen-surface-2: #191e35;
   --yazen-text: #f0f2fb;
   --yazen-muted: #b8bed8;
-  --yazen-accent: #ff5f6d;
+  --yazen-accent: #5b6dff;
   --yazen-border: rgba(255, 106, 120, 0.5);
   background: var(--yazen-bg);
   color: var(--yazen-text);
@@ -1714,7 +1714,7 @@
 
 .yazen-mobile-link.is-active {
   color: var(--yazen-accent);
-  background: rgba(255, 95, 109, 0.13);
+  background: rgba(91, 109, 255, 0.13);
 }
 
 .yazen-mobile-link:hover {
@@ -1736,6 +1736,264 @@
 .yazen-page-shell {
   background: var(--yazen-bg);
   color: var(--yazen-text);
+}
+
+/* ===============================
+   Dipak Neon Dark Theme Override
+   =============================== */
+
+.yazen-public {
+  --yazen-bg: #070a16;
+  --yazen-surface: #0f1428;
+  --yazen-surface-2: #121a31;
+  --yazen-text: #eef2ff;
+  --yazen-muted: #9ca5c7;
+  --yazen-accent: #4f70ff;
+  --yazen-accent-2: #7a3cff;
+  --yazen-border: rgba(122, 60, 255, 0.45);
+  --yazen-soft-border: rgba(255, 255, 255, 0.1);
+  --yazen-grid: rgba(95, 115, 195, 0.1);
+  background:
+    radial-gradient(circle at 8% -10%, rgba(100, 74, 255, 0.32), transparent 36%),
+    radial-gradient(circle at 98% 3%, rgba(58, 107, 255, 0.24), transparent 32%),
+    linear-gradient(180deg, #090d1d 0%, #060a16 48%, #070a16 100%);
+  color: var(--yazen-text);
+}
+
+.yazen-public main {
+  position: relative;
+  isolation: isolate;
+}
+
+.yazen-public main::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background-image:
+    linear-gradient(to right, transparent 0, transparent 47px, var(--yazen-grid) 48px),
+    linear-gradient(to bottom, transparent 0, transparent 47px, rgba(80, 101, 186, 0.06) 48px);
+  background-size: 48px 48px;
+  opacity: 0.35;
+  z-index: -1;
+}
+
+.yazen-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  box-shadow: 0 14px 34px rgba(2, 6, 18, 0.48);
+}
+
+.yazen-header.is-home,
+.yazen-header.is-inner {
+  background: rgba(8, 11, 24, 0.88);
+}
+
+.yazen-logo span {
+  background: linear-gradient(90deg, #ffffff 0%, #90a3ff 38%, #5a74ff 62%, #8d46ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.yazen-nav-link {
+  color: rgba(238, 242, 255, 0.74);
+}
+
+.yazen-nav-link:hover,
+.yazen-nav-link.is-active {
+  color: #8ea2ff;
+}
+
+.yazen-contact-btn {
+  border-color: rgba(105, 122, 255, 0.7);
+  color: #cdd6ff;
+  background: linear-gradient(90deg, rgba(79, 112, 255, 0.2), rgba(122, 60, 255, 0.2));
+  border-radius: 999px;
+  box-shadow: 0 10px 20px rgba(68, 69, 214, 0.28);
+}
+
+.yazen-contact-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 14px 26px rgba(78, 87, 238, 0.34);
+}
+
+.yazen-social-icon {
+  border: 1px solid var(--yazen-soft-border);
+  background: rgba(18, 25, 48, 0.72);
+  color: #d8deff;
+}
+
+.yazen-social-icon:hover {
+  border-color: rgba(116, 97, 255, 0.62);
+  color: #ffffff;
+  box-shadow: 0 0 18px rgba(86, 107, 255, 0.35);
+}
+
+.yazen-hero {
+  background: radial-gradient(circle at 74% 21%, rgba(82, 94, 245, 0.2), transparent 45%), #060a16;
+}
+
+.yazen-hero-overlay {
+  background: linear-gradient(90deg, rgba(6, 10, 22, 0.95) 0%, rgba(6, 10, 22, 0.79) 56%, rgba(12, 13, 30, 0.5) 100%);
+}
+
+.yazen-avatar-wrap {
+  border: 1px solid var(--yazen-soft-border);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.02));
+  box-shadow: 0 18px 36px rgba(1, 4, 14, 0.6);
+}
+
+.yazen-hero h1,
+.yazen-hero h2,
+.yazen-home-preview h2,
+.yazen-services h2,
+.yazen-about-copy h2 {
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+.yazen-hero h1 {
+  color: #f4f6ff;
+}
+
+.yazen-hero h2 {
+  color: #8ea2ff !important;
+}
+
+.yazen-hero p {
+  color: #b8c2e3;
+}
+
+.yazen-kicker {
+  color: #8ea2ff;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+}
+
+.yazen-title-line {
+  background: linear-gradient(90deg, rgba(88, 115, 255, 0.95), rgba(139, 75, 255, 0.95));
+}
+
+.yazen-primary-btn,
+.wix-link-btn,
+.wix-contact-form button,
+.wix-home-contact-form button {
+  border-radius: 999px;
+  border: 1px solid rgba(105, 122, 255, 0.7);
+  color: #e9eeff;
+  background: linear-gradient(92deg, #4f70ff 0%, #7a3cff 100%);
+  box-shadow: 0 12px 24px rgba(64, 74, 208, 0.35);
+}
+
+.yazen-primary-btn:hover,
+.wix-link-btn:hover,
+.wix-home-contact-form button:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 16px 28px rgba(64, 74, 208, 0.45);
+}
+
+.yazen-about,
+.yazen-services,
+.yazen-home-preview,
+.wix-section,
+.wix-contact-page-wrap {
+  background: transparent;
+}
+
+.wix-grid {
+  gap: 1.3rem;
+}
+
+.wix-card,
+.wix-empty,
+.wix-project-detail-card,
+.wix-contact-page-card,
+.wix-home-contact-card,
+.wix-contact-form {
+  background: linear-gradient(180deg, rgba(16, 22, 42, 0.92), rgba(10, 14, 30, 0.9));
+  border: 1px solid var(--yazen-soft-border);
+  border-radius: 14px;
+  box-shadow: 0 16px 32px rgba(3, 7, 20, 0.48);
+}
+
+.wix-card:hover {
+  border-color: rgba(109, 98, 255, 0.68);
+  box-shadow: 0 20px 38px rgba(4, 8, 22, 0.58), 0 0 22px rgba(88, 103, 255, 0.22);
+}
+
+.wix-card h3,
+.wix-link,
+.wix-project-info small {
+  color: #89a0ff;
+}
+
+.wix-card h4,
+.wix-project-info h4,
+.wix-home-contact-left h3 {
+  color: #f3f6ff;
+  text-transform: none;
+  letter-spacing: 0.01em;
+}
+
+.wix-card p,
+.wix-home-contact-left p,
+.yazen-about-copy p,
+.wix-project-info p {
+  color: #a8b2d2;
+}
+
+.wix-card-img,
+.wix-project-image,
+.wix-project-detail-image,
+.yazen-about-image img {
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+}
+
+.wix-home-overlay {
+  background: linear-gradient(180deg, rgba(6, 11, 24, 0.82), rgba(7, 11, 23, 0.94));
+}
+
+.wix-home-contact-form label {
+  color: #d5dcf6;
+}
+
+.wix-home-contact-form input,
+.wix-home-contact-form textarea,
+.wix-contact-form input,
+.wix-contact-form textarea {
+  background: rgba(8, 12, 24, 0.88) !important;
+  color: #e9eeff !important;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 12px;
+}
+
+.wix-home-contact-form input::placeholder,
+.wix-home-contact-form textarea::placeholder,
+.wix-contact-form input::placeholder,
+.wix-contact-form textarea::placeholder {
+  color: #8490b8;
+}
+
+.wix-home-contact-form input:focus,
+.wix-home-contact-form textarea:focus,
+.wix-contact-form input:focus,
+.wix-contact-form textarea:focus {
+  outline: none;
+  border-color: rgba(101, 123, 255, 0.86);
+  box-shadow: 0 0 0 3px rgba(98, 104, 255, 0.18);
+}
+
+@media (max-width: 900px) {
+  .yazen-public main::before {
+    opacity: 0.2;
+  }
+
+  .wix-contact-page-card,
+  .wix-home-contact-card {
+    padding: 1.6rem 1.1rem;
+  }
 }
 
 .yazen-hero {
@@ -1856,14 +2114,14 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(120% 80% at 12% 0%, rgba(255, 95, 109, 0.16), transparent 56%);
+  background: radial-gradient(120% 80% at 12% 0%, rgba(91, 109, 255, 0.16), transparent 56%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
 
 .yazen-about-image:hover {
   transform: translateY(-5px);
-  border-color: rgba(255, 95, 109, 0.65);
+  border-color: rgba(91, 109, 255, 0.65);
   box-shadow: 0 14px 30px rgba(0, 0, 0, 0.34);
 }
 
@@ -2168,7 +2426,7 @@
   top: 52%;
   width: 36px;
   height: 2px;
-  background: #ff5f6d;
+  background: #5b6dff;
 }
 
 .yazen-kicker {
@@ -2186,7 +2444,7 @@
 .yazen-title-line {
   width: 58px;
   height: 2px;
-  background: #ff5f6d;
+  background: #5b6dff;
   margin-top: 0.9rem;
 }
 
@@ -2197,13 +2455,15 @@
 
 .yazen-info-grid {
   margin-top: 1.55rem;
-  border: 1px solid rgba(255, 106, 120, 0.58);
-  padding: 1.1rem 1.15rem;
+  border: 1px solid rgba(101, 126, 255, 0.68);
+  border-radius: 999px;
+  background: rgba(79, 112, 255, 0.08);
+  padding: 1.1rem 1.25rem;
 }
 
 .yazen-primary-btn {
   margin-top: 1.4rem;
-  background: #ff5f6d;
+  background: #5b6dff;
 }
 
 .yazen-services {
@@ -2261,7 +2521,7 @@
 }
 
 .yazen-public :focus-visible {
-  outline: 2px solid rgba(255, 95, 109, 0.9);
+  outline: 2px solid rgba(91, 109, 255, 0.9);
   outline-offset: 3px;
 }
 
@@ -2349,9 +2609,9 @@
 
 .yazen-social-icon:hover {
   transform: translateY(-3px) scale(1.03);
-  border-color: rgba(255, 95, 109, 0.85);
+  border-color: rgba(91, 109, 255, 0.85);
   color: #fff;
-  box-shadow: 0 14px 30px rgba(255, 95, 109, 0.18);
+  box-shadow: 0 14px 30px rgba(91, 109, 255, 0.18);
 }
 
 .yazen-social-icon:active {
@@ -2360,7 +2620,7 @@
 
 .yazen-primary-btn:hover {
   transform: translateY(-3px);
-  box-shadow: 0 16px 28px rgba(255, 95, 109, 0.28);
+  box-shadow: 0 16px 28px rgba(91, 109, 255, 0.28);
 }
 
 .yazen-primary-btn:active {
@@ -2391,7 +2651,7 @@
   position: absolute;
   inset: 0;
   pointer-events: none;
-  background: radial-gradient(120% 80% at 10% 0%, rgba(255, 95, 109, 0.13), transparent 55%);
+  background: radial-gradient(120% 80% at 10% 0%, rgba(91, 109, 255, 0.13), transparent 55%);
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -2430,7 +2690,7 @@
 }
 
 .yazen-service-card:hover {
-  border-color: rgba(255, 95, 109, 0.68);
+  border-color: rgba(91, 109, 255, 0.68);
   box-shadow: 0 18px 34px rgba(0, 0, 0, 0.36);
 }
 
@@ -2459,6 +2719,275 @@
   }
 }
 
+/* Final visual tuning: closer to reference screenshot */
+.yazen-public {
+  background:
+    radial-gradient(circle at 8% -10%, rgba(106, 70, 255, 0.36), transparent 34%),
+    radial-gradient(circle at 100% 0%, rgba(78, 94, 255, 0.3), transparent 30%),
+    linear-gradient(180deg, #060811 0%, #03050c 54%, #05070f 100%);
+}
+
+.yazen-public main::before {
+  opacity: 0.24;
+}
+
+.yazen-header.is-home,
+.yazen-header.is-inner {
+  background: rgba(5, 8, 18, 0.9);
+}
+
+.yazen-header {
+  border-bottom-color: rgba(255, 255, 255, 0.05);
+  box-shadow: 0 18px 40px rgba(2, 5, 15, 0.58);
+}
+
+.yazen-header-inner {
+  min-height: 74px;
+}
+
+.yazen-nav-link {
+  font-size: 0.82rem;
+  letter-spacing: 0.02em;
+  color: rgba(236, 241, 255, 0.68);
+}
+
+.yazen-nav-link:hover,
+.yazen-nav-link.is-active {
+  color: #a2b3ff;
+}
+
+.yazen-contact-btn {
+  background: linear-gradient(92deg, rgba(77, 107, 255, 0.85) 0%, rgba(122, 60, 255, 0.88) 100%);
+  border-color: rgba(124, 88, 255, 0.72);
+  color: #f4f6ff;
+  box-shadow: 0 16px 30px rgba(68, 66, 212, 0.42), 0 0 24px rgba(122, 60, 255, 0.28);
+}
+
+.yazen-hero {
+  background: radial-gradient(circle at 74% 18%, rgba(96, 106, 255, 0.26), transparent 44%), #04070f;
+}
+
+.yazen-hero-overlay {
+  background: linear-gradient(90deg, rgba(4, 7, 15, 0.97) 0%, rgba(4, 7, 15, 0.84) 54%, rgba(8, 10, 20, 0.56) 100%);
+}
+
+.wix-card,
+.wix-empty,
+.wix-project-detail-card,
+.wix-contact-page-card,
+.wix-home-contact-card,
+.wix-contact-form {
+  background: linear-gradient(180deg, rgba(11, 15, 30, 0.96), rgba(7, 10, 22, 0.96));
+  border-color: rgba(255, 255, 255, 0.09);
+}
+
+.wix-card:hover {
+  border-color: rgba(123, 96, 255, 0.76);
+  box-shadow: 0 22px 44px rgba(2, 5, 16, 0.62), 0 0 30px rgba(103, 85, 255, 0.32);
+}
+
+.wix-link,
+.wix-card h3,
+.wix-project-info small {
+  color: #95a8ff;
+}
+
+/* CMS polish pass: spacing, hierarchy, and input ergonomics */
+.admin-theme {
+  --admin-surface: #11182d;
+  --admin-surface-soft: #17203a;
+  --admin-text: #ecf1ff;
+  --admin-muted: #9aa8cf;
+}
+
+.admin-theme main {
+  background:
+    radial-gradient(circle at 4% -10%, rgba(123, 93, 255, 0.22), transparent 34%),
+    radial-gradient(circle at 100% 0%, rgba(88, 110, 255, 0.2), transparent 28%),
+    linear-gradient(180deg, #0d1324 0%, #0b1120 100%);
+}
+
+.admin-theme .max-w-6xl,
+.admin-theme .max-w-5xl,
+.admin-theme .max-w-4xl {
+  max-width: 1100px;
+}
+
+.admin-theme h1,
+.admin-theme h2,
+.admin-theme h3 {
+  text-transform: none;
+  letter-spacing: 0.01em;
+  color: var(--admin-text);
+}
+
+.admin-theme h2 {
+  font-size: clamp(1.35rem, 1.15rem + 0.9vw, 2rem);
+}
+
+.admin-theme .ui-card,
+.admin-theme [class*="rounded-2xl"][class*="border"] {
+  border-radius: 16px !important;
+}
+
+.admin-theme .ui-card {
+  background: linear-gradient(180deg, rgba(21, 29, 51, 0.95), rgba(16, 22, 41, 0.95)) !important;
+  border: 1px solid rgba(255, 255, 255, 0.11) !important;
+  box-shadow: 0 14px 34px rgba(3, 7, 19, 0.42) !important;
+}
+
+.admin-theme .ui-card:hover {
+  box-shadow: 0 18px 42px rgba(2, 5, 16, 0.56), 0 0 20px rgba(109, 123, 255, 0.2) !important;
+}
+
+.admin-theme input,
+.admin-theme textarea,
+.admin-theme select {
+  min-height: 44px;
+  border-radius: 12px !important;
+  background: rgba(13, 20, 38, 0.88) !important;
+  color: #e8eeff !important;
+  border-color: rgba(255, 255, 255, 0.14) !important;
+  font-size: 0.95rem;
+}
+
+.admin-theme textarea {
+  line-height: 1.55;
+}
+
+.admin-theme input::placeholder,
+.admin-theme textarea::placeholder {
+  color: #8291bd;
+}
+
+.admin-theme input:focus,
+.admin-theme textarea:focus,
+.admin-theme select:focus {
+  border-color: rgba(121, 134, 255, 0.9) !important;
+  box-shadow: 0 0 0 3px rgba(100, 114, 255, 0.2) !important;
+}
+
+.admin-theme .ui-btn,
+.admin-theme button[class*="bg-brand-"],
+.admin-theme button[class*="border-[#6d7bff]"] {
+  border-radius: 12px !important;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.admin-theme button[class*="bg-brand-"],
+.admin-theme .admin-login-btn {
+  background: linear-gradient(94deg, #5c71ff 0%, #7b45ff 100%) !important;
+  color: #f7f9ff !important;
+  border: 1px solid rgba(133, 106, 255, 0.75) !important;
+  box-shadow: 0 10px 22px rgba(87, 85, 236, 0.32) !important;
+}
+
+.admin-theme button[class*="bg-brand-"]:hover,
+.admin-theme .admin-login-btn:hover {
+  box-shadow: 0 14px 30px rgba(86, 79, 241, 0.42) !important;
+}
+
+.admin-theme .text-black\/60,
+.admin-theme .text-black\/70,
+.admin-theme .text-white\/70 {
+  color: var(--admin-muted) !important;
+}
+
+.admin-theme .group .bg-black\/40 {
+  background: rgba(5, 9, 20, 0.62) !important;
+}
+
+.admin-theme [class*="overflow-hidden"][class*="border"] img {
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .admin-theme .p-6,
+  .admin-theme .sm\:p-6 {
+    padding: 1rem !important;
+  }
+
+  .admin-theme .ui-card {
+    border-radius: 14px !important;
+  }
+
+  .admin-theme input,
+  .admin-theme textarea,
+  .admin-theme select {
+    font-size: 16px;
+  }
+}
+
+/* Shared list/tile polish for CMS pages */
+.admin-list-card {
+  padding: 1rem 1rem !important;
+}
+
+.admin-list-title {
+  letter-spacing: 0.01em;
+  color: #eef3ff !important;
+}
+
+.admin-list-meta {
+  color: #acb7d9 !important;
+  line-height: 1.45;
+}
+
+.admin-list-submeta {
+  color: #8f9ec8 !important;
+  line-height: 1.35;
+}
+
+.admin-action-row {
+  align-items: flex-start;
+}
+
+.admin-action-btn {
+  min-height: 34px;
+  padding-left: 0.75rem !important;
+  padding-right: 0.75rem !important;
+  font-size: 0.78rem !important;
+  border-radius: 10px !important;
+}
+
+.admin-action-btn-sm {
+  min-height: 30px;
+  padding-left: 0.55rem !important;
+  padding-right: 0.55rem !important;
+  font-size: 0.72rem !important;
+  border-radius: 8px !important;
+}
+
+.admin-media-tile {
+  background: linear-gradient(180deg, rgba(16, 23, 43, 0.92), rgba(12, 17, 34, 0.92));
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 14px;
+  padding: 0.45rem;
+  box-shadow: 0 10px 24px rgba(3, 8, 20, 0.36);
+}
+
+.admin-media-overlay {
+  border-radius: 12px !important;
+}
+
+.admin-media-meta {
+  padding: 0.2rem 0.2rem 0.05rem;
+}
+
+@media (max-width: 768px) {
+  .admin-list-card {
+    padding: 0.9rem 0.85rem !important;
+  }
+
+  .admin-action-row {
+    width: 100%;
+    justify-content: flex-start;
+    flex-direction: row !important;
+    flex-wrap: wrap;
+  }
+}
+
 /* Mobile-specific motion tuning: faster, shorter travel for buttery feel on phones */
 @media (max-width: 768px) {
   .yazen-public a,
@@ -2470,12 +2999,12 @@
 
   .yazen-social-icon:hover {
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 10px 20px rgba(255, 95, 109, 0.16);
+    box-shadow: 0 10px 20px rgba(91, 109, 255, 0.16);
   }
 
   .yazen-primary-btn:hover {
     transform: translateY(-2px);
-    box-shadow: 0 12px 22px rgba(255, 95, 109, 0.24);
+    box-shadow: 0 12px 22px rgba(91, 109, 255, 0.24);
   }
 
   .yazen-service-card:hover,
@@ -2495,5 +3024,2172 @@
   .yazen-page-shell > .yazen-home-preview,
   .yazen-page-shell > .wix-contact-page-wrap {
     animation-duration: 0.42s;
+  }
+}
+
+/* Resume section inspired by provided reference image */
+.resume-shell {
+  width: min(1240px, 96vw);
+  margin: 0 auto 5.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: linear-gradient(120deg, rgba(8, 13, 28, 0.96), rgba(14, 20, 38, 0.94) 50%, rgba(10, 16, 30, 0.94));
+  box-shadow: 0 26px 52px rgba(1, 4, 14, 0.55);
+  padding: 2rem 2rem 2.2rem;
+}
+
+.resume-topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.resume-topbar-title {
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #f0f3ff;
+  font-weight: 700;
+}
+
+.resume-grid {
+  margin-top: 1.9rem;
+  display: grid;
+  gap: 2.8rem;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.resume-section {
+  margin-bottom: 2.4rem;
+}
+
+.resume-section h3 {
+  margin: 0 0 0.9rem;
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  color: #f0f3ff;
+}
+
+.resume-skill-item + .resume-skill-item {
+  margin-top: 0.8rem;
+}
+
+.resume-skill-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #e2e8ff;
+  font-size: 1rem;
+  margin-bottom: 0.35rem;
+}
+
+.resume-skill-icon {
+  width: 20px;
+  height: 20px;
+  display: grid;
+  place-items: center;
+  color: #9eb0ff;
+}
+
+.resume-bar {
+  width: 100%;
+  height: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.resume-bar i {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, #607fff, #7a48ff);
+}
+
+.resume-text-line,
+.resume-lines p {
+  color: #b9c4e8;
+  font-size: 1rem;
+  line-height: 1.8;
+  margin: 0;
+}
+
+.resume-lines p + p {
+  margin-top: 0.35rem;
+}
+
+.resume-exp-list {
+  display: grid;
+  gap: 1.25rem;
+}
+
+.resume-exp-item {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 0.8rem;
+  align-items: start;
+}
+
+.resume-exp-year {
+  width: 48px;
+  height: 48px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  font-size: 0.73rem;
+  color: #dce4ff;
+  background: radial-gradient(circle at 30% 30%, #6ea0ff, #405cff);
+  box-shadow: 0 0 0 3px rgba(92, 122, 255, 0.16);
+}
+
+.resume-exp-company {
+  color: #f0f4ff;
+  font-weight: 700;
+  font-size: 1rem;
+  line-height: 1.35;
+}
+
+.resume-exp-role {
+  color: #b2bedf;
+  font-size: 0.92rem;
+}
+
+.resume-edu-title {
+  color: #e5ebff;
+  font-weight: 700;
+  font-size: 1.05rem;
+  margin: 0;
+}
+
+.resume-edu-sub {
+  color: #aab7db;
+  margin: 0.35rem 0 0;
+  font-size: 0.95rem;
+}
+
+.resume-edu-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.8rem;
+  margin-bottom: 0.55rem;
+}
+
+.resume-edu-head h3 {
+  margin: 0 !important;
+}
+
+.resume-edu-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.6rem;
+  min-width: 0;
+  white-space: nowrap;
+}
+
+.resume-edu-actions-below {
+  margin-top: 1.45rem;
+  justify-content: flex-start;
+}
+
+.resume-edu-actions-mobile {
+  display: none;
+}
+
+.resume-edu-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  border: 1px solid rgba(109, 124, 255, 0.66);
+  background: rgba(93, 116, 255, 0.16);
+  color: #e8eeff;
+  text-decoration: none;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 0.6rem 0.85rem;
+}
+
+.resume-edu-btn:hover {
+  background: rgba(96, 122, 255, 0.26);
+  box-shadow: 0 0 16px rgba(87, 107, 255, 0.26);
+}
+
+.resume-hobby-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1.15rem;
+}
+
+.resume-hobby {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  color: #d7e0ff;
+  font-size: 0.95rem;
+}
+
+.resume-hobby span {
+  width: 30px;
+  height: 30px;
+  border-radius: 999px;
+  display: grid;
+  place-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  background: rgba(255, 255, 255, 0.04);
+}
+
+@media (max-width: 980px) {
+  .resume-shell {
+    padding: 1.3rem 1rem 1.3rem;
+    margin: 0 auto 3.2rem;
+  }
+
+  .resume-topbar-title {
+    font-size: 1.1rem;
+  }
+
+  .resume-section h3 {
+    font-size: 1.1rem;
+  }
+
+  .resume-skill-row,
+  .resume-text-line,
+  .resume-lines p {
+    font-size: 0.92rem;
+  }
+
+  .resume-grid {
+    grid-template-columns: 1fr;
+    gap: 1.35rem;
+  }
+
+  .resume-edu-actions {
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    white-space: normal;
+  }
+
+  .resume-edu-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.55rem;
+  }
+
+  .resume-edu-actions-below {
+    justify-content: flex-start;
+  }
+
+  .resume-edu-actions-desktop {
+    display: none !important;
+  }
+
+  .resume-edu-actions-mobile {
+    display: flex !important;
+    margin-top: 0.62rem !important;
+  }
+}
+
+
+/* ===============================
+   Dipak Public UI Refresh
+   =============================== */
+
+.yazen-hero-split {
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+  gap: 2.4rem;
+  align-items: center;
+  text-align: left;
+}
+
+.yazen-hero-copy {
+  max-width: 680px;
+}
+
+.yazen-hero-copy .yazen-kicker {
+  display: inline-block;
+  margin-bottom: 0.85rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.2em;
+}
+
+.yazen-hero-copy h1 {
+  font-size: clamp(2rem, 4.3vw, 3.65rem);
+  line-height: 1.08;
+  color: #f5f7ff;
+}
+
+.yazen-hero-copy h2 {
+  margin-top: 0.35rem !important;
+  font-size: clamp(1.2rem, 2.2vw, 1.9rem) !important;
+  color: #9fb0ff !important;
+  opacity: 0.95;
+}
+
+.yazen-hero-copy p {
+  margin-top: 1rem;
+  max-width: 58ch;
+}
+
+.yazen-hero-cta {
+  margin-top: 1.6rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+.yazen-primary-btn-ghost {
+  background: transparent !important;
+  color: #d7dfff !important;
+  border: 1px solid rgba(129, 146, 255, 0.7) !important;
+  box-shadow: none !important;
+}
+
+.yazen-primary-btn-ghost:hover {
+  background: rgba(110, 127, 255, 0.14) !important;
+}
+
+.yazen-hero-visual {
+  justify-self: end;
+  width: min(100%, 410px);
+  position: relative;
+}
+
+.yazen-hero-visual .yazen-avatar-wrap {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 3 / 4;
+  margin: 0;
+  border-radius: 24px;
+  border-width: 1px;
+  box-shadow: 0 26px 44px rgba(5, 11, 30, 0.62);
+}
+
+/* Blend hero profile image into background (no visible frame) */
+.yazen-hero-visual .yazen-avatar-wrap {
+  border: 0 !important;
+  background: transparent !important;
+  box-shadow: none !important;
+  backdrop-filter: none !important;
+  -webkit-backdrop-filter: none !important;
+  overflow: visible !important;
+}
+
+.yazen-hero-visual .yazen-avatar-wrap img {
+  background: transparent !important;
+  border: 0 !important;
+  box-shadow: none !important;
+  -webkit-mask-image: radial-gradient(120% 120% at 50% 50%, #000 72%, transparent 100%);
+  mask-image: radial-gradient(120% 120% at 50% 50%, #000 72%, transparent 100%);
+}
+
+.yazen-hero-chip {
+  position: absolute;
+  right: -8px;
+  bottom: -16px;
+  padding: 0.52rem 0.95rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: #e7ecff;
+  border: 1px solid rgba(130, 145, 255, 0.64);
+  background: rgba(13, 19, 39, 0.92);
+  box-shadow: 0 12px 26px rgba(4, 8, 22, 0.46);
+}
+
+.yazen-hero-split .yazen-scroll-cue {
+  grid-column: 1 / -1;
+  margin-top: 0.35rem;
+}
+
+.yazen-section-head {
+  margin-bottom: 1rem;
+  max-width: 760px;
+}
+
+.yazen-section-head .yazen-kicker {
+  display: inline-block;
+  margin-bottom: 0.35rem;
+  font-size: 0.76rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.yazen-section-head h2 {
+  margin: 0;
+}
+
+.yazen-section-head .yazen-title-line {
+  margin-top: 0.75rem;
+}
+
+.yazen-about-grid {
+  grid-template-columns: minmax(0, 1.24fr) minmax(260px, 0.9fr);
+  align-items: center;
+}
+
+.yazen-about-image {
+  max-width: 380px;
+  justify-self: end;
+}
+
+.yazen-services .yazen-section-head,
+.yazen-home-preview .yazen-section-head,
+.yazen-certifications-preview .yazen-section-head {
+  max-width: none;
+}
+
+.wix-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.wix-card .wix-card-img {
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+}
+
+.wix-card .wix-link {
+  margin-top: auto;
+  padding-top: 0.4rem;
+}
+
+.yazen-service-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.yazen-service-card .wix-card-img {
+  margin-bottom: 1rem;
+}
+
+.yazen-service-card .wix-link {
+  margin-top: auto;
+}
+
+@media (max-width: 980px) {
+  .yazen-hero-split {
+    grid-template-columns: 1fr;
+    text-align: center;
+    gap: 1.2rem;
+  }
+
+  .yazen-hero-copy {
+    max-width: none;
+  }
+
+  .yazen-hero-copy p {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .yazen-hero-cta {
+    justify-content: center;
+  }
+
+  .yazen-hero-visual {
+    width: min(100%, 320px);
+    justify-self: center;
+  }
+
+  .yazen-hero-chip {
+    right: 50%;
+    transform: translateX(50%);
+  }
+
+  .yazen-about-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .yazen-about-image {
+    max-width: 360px;
+    width: 100%;
+    justify-self: center;
+  }
+}
+
+/* ===============================
+   Navbar + Footer Refresh
+   =============================== */
+
+.yazen-header-shell {
+  min-height: 86px;
+}
+
+.yazen-logo {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1;
+  gap: 0.25rem;
+}
+
+.yazen-logo small {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(206, 216, 255, 0.74);
+}
+
+.yazen-nav-dock {
+  padding: 0.32rem 0.5rem;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(14, 20, 40, 0.72);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.yazen-nav-dock .yazen-nav-link {
+  padding: 0.45rem 0.62rem;
+  border-radius: 999px;
+  font-size: 0.86rem;
+}
+
+.yazen-nav-dock .yazen-nav-link.is-active,
+.yazen-nav-dock .yazen-nav-link:hover {
+  background: rgba(103, 123, 255, 0.18);
+  color: #dfe6ff;
+}
+
+.yazen-nav-dock .yazen-nav-link::after {
+  display: none;
+}
+
+.yazen-header-social {
+  padding-left: 0.6rem;
+  border-left: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.yazen-footer {
+  background:
+    radial-gradient(circle at 9% 0%, rgba(78, 104, 255, 0.18), transparent 36%),
+    linear-gradient(180deg, #12182f 0%, #0d1327 100%);
+}
+
+.yazen-footer-brand {
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: 0.01em;
+  color: #eef2ff;
+}
+
+.yazen-footer-links a {
+  text-decoration: none;
+  color: rgba(216, 225, 255, 0.82);
+  padding: 0.35rem 0.62rem;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.yazen-footer-links a:hover {
+  color: #f8faff;
+  border-color: rgba(122, 60, 255, 0.5);
+  background: rgba(122, 60, 255, 0.12);
+}
+
+@media (max-width: 1024px) {
+  .yazen-header-shell {
+    min-height: 78px;
+  }
+
+  /* Keep full brand text visible on tablet/mobile */
+  .yazen-header-inner .yazen-logo {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.38rem;
+    white-space: nowrap;
+  }
+
+  .yazen-header-inner .yazen-logo span {
+    font-size: 1.36rem !important;
+    line-height: 1;
+    letter-spacing: 0.01em;
+  }
+
+  .yazen-header-inner .yazen-logo small {
+    display: inline !important;
+    font-size: 0.94rem !important;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    opacity: 0.96;
+  }
+}
+
+/* Non-home pages use Contact-like background */
+.yazen-page-shell:not(.yazen-home-shell) {
+  background:
+    radial-gradient(circle at 8% -10%, rgba(100, 74, 255, 0.24), transparent 36%),
+    radial-gradient(circle at 98% 3%, rgba(58, 107, 255, 0.2), transparent 32%),
+    linear-gradient(180deg, #090d1d 0%, #060a16 48%, #070a16 100%);
+}
+
+.yazen-page-shell:not(.yazen-home-shell) .yazen-about,
+.yazen-page-shell:not(.yazen-home-shell) .yazen-services,
+.yazen-page-shell:not(.yazen-home-shell) .yazen-home-preview,
+.yazen-page-shell:not(.yazen-home-shell) .wix-section,
+.yazen-page-shell:not(.yazen-home-shell) .wix-contact-page-wrap,
+.yazen-page-shell:not(.yazen-home-shell) .wix-page {
+  background: transparent !important;
+}
+
+/* Hero text hierarchy update */
+.yazen-hero-owner {
+  margin: 0 0 0.45rem;
+  font-size: clamp(2.8rem, 5.2vw, 4.8rem) !important;
+  line-height: 0.95;
+  font-weight: 800;
+  color: #8ea2ff !important;
+}
+
+.yazen-hero-copy h1 {
+  font-size: clamp(1.7rem, 3.2vw, 2.9rem) !important;
+  line-height: 1.12;
+  color: #f5f7ff;
+}
+
+.yazen-hero-chip {
+  display: none !important;
+}
+
+@media (max-width: 980px) {
+  .yazen-hero-owner {
+    font-size: clamp(2.2rem, 10vw, 3.4rem) !important;
+  }
+
+  .yazen-hero-copy h1 {
+    font-size: clamp(1.4rem, 6.4vw, 2.1rem) !important;
+  }
+}
+
+/* Final hero hierarchy tweak: owner name bigger than title */
+.yazen-hero-copy .yazen-hero-owner {
+  font-size: clamp(3.6rem, 7vw, 6rem) !important;
+  line-height: 0.92 !important;
+  font-weight: 900 !important;
+}
+
+.yazen-hero-copy h1 {
+  font-size: clamp(1.45rem, 2.8vw, 2.35rem) !important;
+  line-height: 1.12 !important;
+}
+
+@media (max-width: 980px) {
+  .yazen-hero-copy .yazen-hero-owner {
+    font-size: clamp(2.6rem, 12vw, 4.2rem) !important;
+  }
+
+  .yazen-hero-copy h1 {
+    font-size: clamp(1.25rem, 6.2vw, 1.95rem) !important;
+  }
+}
+
+/* Slightly smaller owner name on hero */
+.yazen-hero-copy .yazen-hero-owner {
+  font-size: clamp(3rem, 6vw, 4.9rem) !important;
+}
+
+@media (max-width: 980px) {
+  .yazen-hero-copy .yazen-hero-owner {
+    font-size: clamp(2.25rem, 10vw, 3.7rem) !important;
+  }
+}
+
+/* Fix About image corner artifacts */
+.yazen-about-image {
+  border-radius: 18px !important;
+  overflow: hidden !important;
+}
+
+.yazen-about-image::before {
+  border-radius: 18px !important;
+}
+
+.yazen-about-image img {
+  border-radius: 16px !important;
+  display: block;
+}
+
+/* Footer enhancement without links/icons */
+.yazen-footer-line {
+  width: 88px;
+  height: 2px;
+  margin-top: 0.9rem;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #5f7cff, #8a4dff);
+}
+
+.yazen-footer-meta {
+  max-width: 360px;
+  padding: 0.72rem 0.82rem;
+  border-radius: 14px;
+  border: 1px solid rgba(164, 181, 255, 0.18);
+  background: rgba(18, 27, 52, 0.42);
+}
+
+.yazen-footer-pill {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.42rem 0.82rem;
+  border-radius: 999px;
+  border: 1px solid rgba(109, 124, 255, 0.62);
+  background: rgba(95, 116, 255, 0.16);
+  color: #eaf0ff;
+  font-size: 0.72rem;
+  font-weight: 650;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.yazen-footer-note {
+  margin-top: 0.72rem;
+  color: rgba(224, 232, 255, 0.68);
+  line-height: 1.52;
+}
+
+.yazen-footer-stack {
+  margin-top: 0.62rem;
+  color: rgba(194, 205, 245, 0.64);
+  font-size: 0.76rem;
+  letter-spacing: 0.03em;
+}
+
+.yazen-footer-kicker {
+  font-size: 0.68rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: rgba(168, 183, 240, 0.86);
+}
+
+.yazen-footer-desc {
+  margin-top: 0.45rem;
+  max-width: 56ch;
+  color: rgba(224, 232, 255, 0.72);
+  line-height: 1.55;
+}
+
+.yazen-footer-stats {
+  margin-top: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.yazen-footer-stat {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.28rem 0.6rem;
+  border-radius: 999px;
+  border: 1px solid rgba(166, 182, 255, 0.3);
+  background: rgba(97, 118, 255, 0.12);
+  color: rgba(236, 242, 255, 0.9);
+  font-size: 0.7rem;
+  letter-spacing: 0.03em;
+}
+
+.yazen-footer-cta {
+  margin-top: 0.78rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.yazen-footer-link-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 34px;
+  padding: 0.35rem 0.72rem;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #eef3ff;
+  border: 1px solid rgba(124, 141, 255, 0.58);
+  background: linear-gradient(92deg, rgba(95, 119, 255, 0.35), rgba(122, 79, 255, 0.28));
+}
+
+.yazen-footer-link-btn:hover {
+  background: linear-gradient(92deg, rgba(95, 119, 255, 0.45), rgba(122, 79, 255, 0.38));
+}
+
+.yazen-footer-link-btn-ghost {
+  background: rgba(16, 23, 48, 0.74);
+  border-color: rgba(164, 181, 255, 0.3);
+  color: rgba(229, 236, 255, 0.92);
+}
+
+.yazen-footer-copy {
+  margin-top: 0.6rem;
+  font-size: 0.82rem;
+  line-height: 1.45;
+  font-weight: 600;
+  color: rgba(223, 231, 255, 0.82);
+}
+
+@media (max-width: 980px) {
+  .yazen-footer-meta {
+    max-width: none;
+    padding: 0.58rem 0.62rem;
+    border-radius: 12px;
+  }
+}
+
+/* ===============================
+   Global Liquid Glass Theme
+   Safe final-layer override (no layout changes)
+   =============================== */
+
+.yazen-public,
+.admin-theme {
+  --glass-bg-strong: rgba(14, 22, 46, 0.62);
+  --glass-bg-soft: rgba(20, 30, 58, 0.44);
+  --glass-border: rgba(186, 206, 255, 0.28);
+  --glass-border-soft: rgba(186, 206, 255, 0.16);
+  --glass-highlight: rgba(255, 255, 255, 0.32);
+  --glass-shadow: 0 18px 40px rgba(4, 10, 26, 0.45);
+  --glass-blur: blur(18px) saturate(135%);
+}
+
+.yazen-public {
+  background:
+    radial-gradient(circle at 12% -18%, rgba(121, 156, 255, 0.28), transparent 42%),
+    radial-gradient(circle at 88% 3%, rgba(108, 86, 255, 0.2), transparent 36%),
+    linear-gradient(170deg, #050913 0%, #070d1a 52%, #050a15 100%);
+}
+
+.yazen-header,
+.yazen-mobile,
+.yazen-nav-dock,
+.yazen-footer,
+.resume-shell,
+.wix-card,
+.wix-empty,
+.wix-project-detail-card,
+.wix-contact-page-card,
+.wix-home-contact-card,
+.wix-contact-form,
+.yazen-service-card,
+.yazen-about-image,
+.yazen-info-grid,
+.admin-theme .ui-card,
+.admin-theme [class*="rounded-2xl"][class*="border"] {
+  background: linear-gradient(180deg, var(--glass-bg-strong), var(--glass-bg-soft)) !important;
+  border: 1px solid var(--glass-border-soft) !important;
+  box-shadow: var(--glass-shadow) !important;
+  backdrop-filter: var(--glass-blur);
+  -webkit-backdrop-filter: var(--glass-blur);
+  position: relative;
+}
+
+.yazen-header::before,
+.yazen-mobile::before,
+.yazen-nav-dock::before,
+.yazen-footer::before,
+.resume-shell::before,
+.wix-card::before,
+.wix-contact-page-card::before,
+.yazen-service-card::before,
+.admin-theme .ui-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  border-radius: inherit;
+  background: linear-gradient(145deg, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0.02) 46%, rgba(255, 255, 255, 0.01) 100%);
+}
+
+.yazen-public input,
+.yazen-public textarea,
+.yazen-public select,
+.admin-theme input,
+.admin-theme textarea,
+.admin-theme select {
+  background: rgba(10, 18, 36, 0.48) !important;
+  border: 1px solid var(--glass-border) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.12),
+    0 6px 16px rgba(2, 8, 22, 0.34);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.yazen-public input:focus,
+.yazen-public textarea:focus,
+.yazen-public select:focus,
+.admin-theme input:focus,
+.admin-theme textarea:focus,
+.admin-theme select:focus {
+  border-color: rgba(152, 177, 255, 0.8) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    0 0 0 3px rgba(121, 146, 255, 0.22),
+    0 10px 24px rgba(8, 16, 36, 0.42) !important;
+}
+
+.yazen-primary-btn,
+.wix-link-btn,
+.wix-home-contact-form button,
+.wix-contact-form button,
+.admin-theme .ui-btn,
+.admin-theme button[class*="bg-brand-"],
+.admin-theme button[class*="border-[#6d7bff]"] {
+  border: 1px solid rgba(193, 211, 255, 0.34) !important;
+  background: linear-gradient(135deg, rgba(107, 138, 255, 0.72), rgba(122, 88, 255, 0.68)) !important;
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.36),
+    0 10px 24px rgba(55, 70, 175, 0.42) !important;
+  color: #f5f8ff !important;
+}
+
+.yazen-primary-btn:hover,
+.wix-link-btn:hover,
+.wix-home-contact-form button:hover,
+.admin-theme .ui-btn:hover {
+  transform: translateY(-1px);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.44),
+    0 14px 30px rgba(63, 82, 205, 0.5) !important;
+}
+
+.yazen-nav-link,
+.yazen-mobile-link,
+.admin-theme .admin-nav-pill {
+  position: relative;
+}
+
+.yazen-nav-link.is-active,
+.yazen-nav-link:hover,
+.yazen-mobile-link.is-active,
+.yazen-mobile-link:hover,
+.admin-theme .admin-nav-pill[aria-current="page"],
+.admin-theme .admin-nav-pill:hover {
+  background: rgba(124, 146, 255, 0.2);
+  border-radius: 999px;
+}
+
+.yazen-about-image,
+.yazen-avatar-wrap,
+.wix-card-img,
+.wix-project-detail-image,
+.resume-shell,
+.admin-theme [class*="overflow-hidden"][class*="border"] img {
+  border-radius: 18px !important;
+}
+
+.resume-shell,
+.wix-card,
+.yazen-service-card,
+.wix-contact-page-card,
+.admin-theme .ui-card {
+  overflow: hidden;
+}
+
+.yazen-public ::selection,
+.admin-theme ::selection {
+  background: rgba(152, 177, 255, 0.32);
+  color: #fff;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .yazen-public *,
+  .admin-theme * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+@media (max-width: 980px) {
+  .yazen-header,
+  .yazen-mobile,
+  .yazen-footer,
+  .resume-shell,
+  .wix-card,
+  .yazen-service-card,
+  .admin-theme .ui-card {
+    backdrop-filter: blur(14px) saturate(125%);
+    -webkit-backdrop-filter: blur(14px) saturate(125%);
+  }
+}
+
+/* Navbar center fix */
+@media (min-width: 1024px) {
+  .yazen-header-shell .yazen-nav-dock {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+  }
+
+  .yazen-header-shell .yazen-header-social {
+    display: flex !important;
+    position: absolute !important;
+    right: 0 !important;
+  }
+}
+
+/* Force-muted colors for both hero CTA buttons */
+.yazen-hero-cta a.yazen-primary-btn:first-child {
+  background: rgba(28, 37, 77, 0.42) !important;
+  border: 1px solid rgba(108, 120, 185, 0.5) !important;
+  color: #d7def8 !important;
+  box-shadow: 0 6px 12px rgba(20, 26, 60, 0.22) !important;
+}
+
+.yazen-hero-cta a.yazen-primary-btn.yazen-primary-btn-ghost {
+  background: rgba(28, 37, 77, 0.42) !important;
+  border: 1px solid rgba(108, 120, 185, 0.5) !important;
+  color: #d7def8 !important;
+  box-shadow: 0 6px 12px rgba(20, 26, 60, 0.22) !important;
+}
+
+.yazen-hero-cta .yazen-primary-btn:hover {
+  filter: brightness(1.03);
+}
+
+.yazen-hero-cta-mobile {
+  display: none;
+}
+
+@media (max-width: 980px) {
+  .yazen-hero-copy .yazen-hero-cta {
+    display: none;
+  }
+
+  .yazen-hero-cta-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+    gap: 0.5rem;
+    width: 100%;
+    margin-top: 0.4rem;
+    order: 3;
+  }
+
+  .yazen-hero-visual {
+    order: 2;
+  }
+
+  .yazen-hero-cta-mobile .yazen-primary-btn {
+    flex: 1 1 0;
+    min-width: 0;
+    margin-top: 0 !important;
+    padding: 0.64rem 0.7rem;
+    font-size: 0.72rem;
+    text-align: center;
+    white-space: nowrap;
+    letter-spacing: 0.04em;
+  }
+
+  .yazen-hero-split .yazen-scroll-cue {
+    order: 4;
+    position: static !important;
+    left: auto !important;
+    bottom: auto !important;
+    transform: none !important;
+    margin: 0.75rem auto 0;
+    display: inline-flex;
+    justify-content: center;
+  }
+
+  .yazen-info-grid {
+    width: 100%;
+    padding: 0.95rem 0.95rem;
+    gap: 0.55rem;
+    border-radius: 22px;
+  }
+
+  .yazen-info-grid > div {
+    font-size: 0.95rem;
+    line-height: 1.38;
+    word-break: break-word;
+    overflow-wrap: anywhere;
+  }
+}
+
+/* -------------------------------------------------------
+   Mobile-first tuning pass (public site only)
+   Goal: smaller typography + tighter vertical rhythm
+   without impacting desktop layout.
+-------------------------------------------------------- */
+@media (max-width: 980px) {
+  .yazen-public {
+    --mobile-type-scale: 0.92;
+  }
+
+  /* Keep header fixed and usable while scrolling */
+  .yazen-header {
+    position: sticky;
+    top: 0;
+    z-index: 80;
+    backdrop-filter: blur(12px) saturate(118%);
+    -webkit-backdrop-filter: blur(12px) saturate(118%);
+  }
+
+  /* Global mobile text tuning */
+  .yazen-public p,
+  .yazen-public li,
+  .yazen-public a,
+  .yazen-public button,
+  .yazen-public input,
+  .yazen-public textarea,
+  .yazen-public label {
+    font-size: calc(0.98rem * var(--mobile-type-scale));
+    line-height: 1.46;
+  }
+
+  .yazen-public h1 {
+    font-size: clamp(1.9rem, 7.4vw, 2.35rem) !important;
+    line-height: 1.08;
+  }
+
+  .yazen-public h2 {
+    font-size: clamp(1.6rem, 6.4vw, 2rem) !important;
+    line-height: 1.12;
+  }
+
+  .yazen-public h3 {
+    font-size: clamp(1.05rem, 4.2vw, 1.3rem) !important;
+    line-height: 1.2;
+  }
+
+  .yazen-nav-link {
+    font-size: 0.78rem !important;
+  }
+
+  /* Homepage sections: reduce top/bottom spacing by ~half */
+  .yazen-page-shell > .yazen-about,
+  .yazen-page-shell > .yazen-services,
+  .yazen-page-shell > .yazen-home-preview,
+  .yazen-page-shell > .wix-contact-page-wrap {
+    padding-top: 2.4rem !important;
+    padding-bottom: 2.9rem !important;
+    min-height: auto !important;
+  }
+
+  .yazen-hero {
+    min-height: auto !important;
+  }
+
+  .yazen-hero-inner {
+    padding-top: 1.35rem !important;
+    padding-bottom: 1.75rem !important;
+    gap: 0.9rem;
+  }
+
+  .yazen-container,
+  .wix-section,
+  .wix-contact-page-card,
+  .resume-shell {
+    width: min(96vw, 100%);
+  }
+
+  /* Subtle motion polish for touch devices */
+  .yazen-public a,
+  .yazen-public button,
+  .yazen-public .wix-card,
+  .yazen-public .yazen-service-card,
+  .yazen-public .resume-shell,
+  .yazen-public .yazen-info-grid {
+    transition:
+      transform 220ms cubic-bezier(0.22, 1, 0.36, 1),
+      box-shadow 240ms ease,
+      background-color 220ms ease,
+      border-color 220ms ease,
+      opacity 220ms ease;
+  }
+
+  /* Mobile navbar brand: show full "Dipak Portfolio" clearly */
+  .yazen-header-inner .yazen-logo {
+    display: inline-flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 0.35rem;
+    white-space: nowrap;
+  }
+
+  .yazen-header-inner .yazen-logo span {
+    font-size: 1.28rem !important;
+    line-height: 1;
+    letter-spacing: 0.01em;
+  }
+
+  .yazen-header-inner .yazen-logo small {
+    display: inline !important;
+    font-size: 0.84rem !important;
+    line-height: 1;
+    letter-spacing: 0.08em;
+    opacity: 0.96;
+  }
+
+  /* Mobile footer: reduce extra height and keep clean hierarchy */
+  .yazen-footer {
+    margin-top: 1.25rem !important;
+  }
+
+  .yazen-footer .max-w-7xl {
+    gap: 0.62rem !important;
+    padding-top: 0.75rem !important;
+    padding-bottom: 0.75rem !important;
+  }
+
+  .yazen-footer-brand {
+    font-size: 1.12rem !important;
+    line-height: 1.1;
+    margin-bottom: 0.2rem;
+  }
+
+  .yazen-footer-kicker {
+    font-size: 0.64rem;
+    letter-spacing: 0.16em;
+  }
+
+  .yazen-footer-desc {
+    margin-top: 0.35rem;
+    font-size: 0.84rem;
+    line-height: 1.34;
+  }
+
+  .yazen-footer-stats {
+    margin-top: 0.5rem;
+    gap: 0.35rem;
+  }
+
+  .yazen-footer-stat {
+    padding: 0.24rem 0.5rem;
+    font-size: 0.64rem;
+  }
+
+  .yazen-footer-cta {
+    margin-top: 0.55rem;
+    gap: 0.35rem;
+  }
+
+  .yazen-footer-link-btn {
+    min-height: 30px;
+    padding: 0.28rem 0.58rem;
+    font-size: 0.68rem;
+  }
+
+  .yazen-footer-line {
+    margin: 0.5rem 0 !important;
+    width: 64px !important;
+  }
+
+  .yazen-footer .mt-2 {
+    margin-top: 0.25rem !important;
+    font-size: 0.88rem !important;
+    line-height: 1.32;
+  }
+
+  .yazen-footer .mt-4 {
+    margin-top: 0.38rem !important;
+    font-size: 0.86rem !important;
+    line-height: 1.3;
+  }
+
+  .yazen-footer-meta {
+    margin-top: 0.22rem !important;
+    gap: 0.3rem !important;
+  }
+
+  .yazen-footer-pill {
+    padding: 0.3rem 0.56rem !important;
+    font-size: 0.64rem !important;
+    letter-spacing: 0.03em !important;
+  }
+
+  .yazen-footer-note,
+  .yazen-footer-stack {
+    font-size: 0.8rem !important;
+    line-height: 1.24 !important;
+  }
+
+  .yazen-footer-copy {
+    margin-top: 0.58rem;
+    font-size: 0.74rem;
+    line-height: 1.32;
+  }
+
+  .wix-home-contact {
+    padding: 2.15rem 0.72rem 0.9rem !important;
+  }
+
+  .wix-contact-page-wrap {
+    min-height: auto !important;
+    padding: 2.05rem 0.72rem 0.95rem !important;
+  }
+
+  .wix-home-contact-card,
+  .wix-contact-page-card {
+    width: min(100%, 96vw) !important;
+    padding: 0.9rem 0.72rem 0.78rem !important;
+    gap: 0.62rem !important;
+  }
+
+  .wix-home-contact-left h3 {
+    font-size: 1.38rem !important;
+    line-height: 1.08;
+  }
+
+  .wix-home-contact-left p {
+    margin-top: 0.35rem !important;
+    font-size: 0.78rem !important;
+    line-height: 1.24 !important;
+  }
+
+  .wix-home-contact-form {
+    gap: 0.42rem !important;
+  }
+
+  .wix-home-contact-form label {
+    margin-bottom: 0.12rem !important;
+    font-size: 0.74rem !important;
+  }
+
+  .wix-home-contact-form input,
+  .wix-home-contact-form textarea {
+    min-height: 34px !important;
+    padding: 0.42rem 0.56rem !important;
+    border-radius: 9px !important;
+    line-height: 1.2 !important;
+  }
+
+  .wix-home-contact-form textarea {
+    min-height: 60px !important;
+  }
+
+  .wix-home-contact-form button {
+    min-height: 36px !important;
+    padding: 0.45rem 0.64rem !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .yazen-footer .max-w-7xl {
+    padding-top: 0.65rem !important;
+    padding-bottom: 0.65rem !important;
+  }
+
+  .yazen-footer-cta {
+    width: 100%;
+  }
+
+  .yazen-footer-link-btn {
+    flex: 1 1 0;
+  }
+
+  .yazen-footer-stack {
+    display: none !important;
+  }
+
+  .yazen-footer-meta {
+    padding: 0.5rem 0.52rem !important;
+  }
+
+  .wix-home-contact {
+    padding: 1.9rem 0.58rem 0.78rem !important;
+  }
+
+  .wix-contact-page-wrap {
+    padding: 1.85rem 0.58rem 0.82rem !important;
+  }
+
+  .wix-home-contact-card,
+  .wix-contact-page-card {
+    padding: 0.78rem 0.58rem 0.68rem !important;
+    gap: 0.55rem !important;
+  }
+
+  .wix-home-contact-form {
+    gap: 0.36rem !important;
+  }
+
+  .wix-home-contact-form label {
+    margin-bottom: 0.1rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  .wix-home-contact-form input,
+  .wix-home-contact-form textarea {
+    min-height: 32px !important;
+    padding: 0.38rem 0.5rem !important;
+  }
+
+  .wix-home-contact-form textarea {
+    min-height: 54px !important;
+  }
+
+  .wix-home-contact-form button {
+    min-height: 34px !important;
+    font-size: 0.76rem !important;
+  }
+}
+
+/* -------------------------------------------------------
+   Global compact responsive pass (all public pages)
+-------------------------------------------------------- */
+@media (max-width: 980px) {
+  .yazen-page-shell > section,
+  .yazen-page-shell > .wix-section,
+  .yazen-page-shell > .yazen-about,
+  .yazen-page-shell > .yazen-services,
+  .yazen-page-shell > .yazen-home-preview,
+  .yazen-page-shell > .yazen-home-preview-blog,
+  .yazen-page-shell > .wix-contact-page-wrap {
+    padding-top: 2rem !important;
+    padding-bottom: 2rem !important;
+    min-height: auto !important;
+  }
+
+  .yazen-container,
+  .wix-section,
+  .resume-shell,
+  .wix-contact-page-card,
+  .wix-home-contact-card {
+    width: min(96vw, 100%) !important;
+  }
+
+  .yazen-section-head {
+    margin-bottom: 0.72rem !important;
+  }
+
+  .yazen-section-head .yazen-kicker {
+    margin-bottom: 0.24rem !important;
+    font-size: 0.64rem !important;
+  }
+
+  .yazen-section-head .yazen-title-line {
+    margin-top: 0.5rem !important;
+  }
+
+  .wix-grid,
+  .yazen-services-grid,
+  .yazen-about-grid,
+  .yazen-info-grid {
+    gap: 0.68rem !important;
+  }
+
+  .wix-card,
+  .wix-empty,
+  .wix-project-detail-card,
+  .wix-contact-page-card,
+  .wix-home-contact-card,
+  .yazen-service-card,
+  .resume-shell {
+    padding: 0.82rem !important;
+    border-radius: 12px !important;
+  }
+
+  .wix-card h3,
+  .wix-card h4,
+  .wix-project-info h4,
+  .yazen-service-card h3 {
+    margin-top: 0.25rem !important;
+    margin-bottom: 0.25rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .wix-card p,
+  .wix-project-info p,
+  .yazen-about-copy p,
+  .resume-shell p {
+    margin-top: 0.28rem !important;
+    margin-bottom: 0.28rem !important;
+    line-height: 1.3 !important;
+  }
+
+  .wix-card .wix-link,
+  .wix-project-info .wix-link {
+    margin-top: 0.35rem !important;
+    padding-top: 0.1rem !important;
+  }
+
+  .wix-home-contact-form,
+  .wix-contact-form {
+    gap: 0.42rem !important;
+  }
+
+  .wix-home-contact-form label,
+  .wix-contact-form label {
+    margin-bottom: 0.12rem !important;
+    font-size: 0.74rem !important;
+  }
+
+  .wix-home-contact-form input,
+  .wix-home-contact-form textarea,
+  .wix-contact-form input,
+  .wix-contact-form textarea {
+    min-height: 34px !important;
+    padding: 0.42rem 0.56rem !important;
+    border-radius: 9px !important;
+    line-height: 1.2 !important;
+  }
+
+  .wix-home-contact-form textarea,
+  .wix-contact-form textarea {
+    min-height: 60px !important;
+  }
+
+  .yazen-primary-btn,
+  .wix-link-btn,
+  .wix-home-contact-form button,
+  .wix-contact-form button {
+    min-height: 36px !important;
+    padding: 0.45rem 0.64rem !important;
+    font-size: 0.8rem !important;
+  }
+
+  .resume-edu-actions,
+  .resume-edu-actions-below {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 0.46rem !important;
+  }
+
+  .resume-edu-btn {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    padding: 0.5rem 0.46rem !important;
+    font-size: 0.76rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .yazen-page-shell > section,
+  .yazen-page-shell > .wix-section,
+  .yazen-page-shell > .yazen-about,
+  .yazen-page-shell > .yazen-services,
+  .yazen-page-shell > .yazen-home-preview,
+  .yazen-page-shell > .yazen-home-preview-blog,
+  .yazen-page-shell > .wix-contact-page-wrap {
+    padding-top: 1.7rem !important;
+    padding-bottom: 1.7rem !important;
+  }
+
+  .wix-grid,
+  .yazen-services-grid,
+  .yazen-about-grid,
+  .yazen-info-grid {
+    gap: 0.55rem !important;
+  }
+
+  .wix-card,
+  .wix-empty,
+  .wix-project-detail-card,
+  .wix-contact-page-card,
+  .wix-home-contact-card,
+  .yazen-service-card,
+  .resume-shell {
+    padding: 0.72rem !important;
+    border-radius: 11px !important;
+  }
+
+  .wix-home-contact-form,
+  .wix-contact-form {
+    gap: 0.36rem !important;
+  }
+
+  .wix-home-contact-form label,
+  .wix-contact-form label {
+    margin-bottom: 0.1rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  .wix-home-contact-form input,
+  .wix-home-contact-form textarea,
+  .wix-contact-form input,
+  .wix-contact-form textarea {
+    min-height: 32px !important;
+    padding: 0.38rem 0.5rem !important;
+  }
+
+  .wix-home-contact-form textarea,
+  .wix-contact-form textarea {
+    min-height: 54px !important;
+  }
+
+  .yazen-primary-btn,
+  .wix-link-btn,
+  .wix-home-contact-form button,
+  .wix-contact-form button {
+    min-height: 34px !important;
+    font-size: 0.76rem !important;
+  }
+
+  .resume-edu-actions,
+  .resume-edu-actions-below {
+    gap: 0.4rem !important;
+  }
+
+  .resume-edu-btn {
+    padding: 0.46rem 0.4rem !important;
+    font-size: 0.7rem !important;
+  }
+}
+
+/* -------------------------------------------------------
+   Micro-pass: 375x812 class devices
+-------------------------------------------------------- */
+@media (max-width: 390px) and (min-height: 760px) {
+  .yazen-page-shell > section,
+  .yazen-page-shell > .wix-section,
+  .yazen-page-shell > .yazen-about,
+  .yazen-page-shell > .yazen-services,
+  .yazen-page-shell > .yazen-home-preview,
+  .yazen-page-shell > .yazen-home-preview-blog,
+  .yazen-page-shell > .wix-contact-page-wrap {
+    padding-top: 1.55rem !important;
+    padding-bottom: 1.55rem !important;
+  }
+
+  .yazen-section-head {
+    margin-bottom: 0.58rem !important;
+  }
+
+  .wix-grid,
+  .yazen-services-grid,
+  .yazen-about-grid,
+  .yazen-info-grid {
+    gap: 0.5rem !important;
+  }
+
+  .wix-card,
+  .wix-empty,
+  .wix-project-detail-card,
+  .wix-contact-page-card,
+  .wix-home-contact-card,
+  .yazen-service-card,
+  .resume-shell {
+    padding: 0.64rem !important;
+    border-radius: 10px !important;
+  }
+
+  .wix-home-contact,
+  .wix-contact-page-wrap {
+    padding-left: 0.5rem !important;
+    padding-right: 0.5rem !important;
+  }
+
+  .wix-home-contact-card,
+  .wix-contact-page-card {
+    padding: 0.72rem 0.54rem 0.62rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .wix-home-contact-form,
+  .wix-contact-form {
+    gap: 0.32rem !important;
+  }
+
+  .wix-home-contact-form label,
+  .wix-contact-form label {
+    font-size: 0.68rem !important;
+    margin-bottom: 0.08rem !important;
+  }
+
+  .wix-home-contact-form input,
+  .wix-home-contact-form textarea,
+  .wix-contact-form input,
+  .wix-contact-form textarea {
+    min-height: 30px !important;
+    padding: 0.34rem 0.46rem !important;
+  }
+
+  .wix-home-contact-form textarea,
+  .wix-contact-form textarea {
+    min-height: 50px !important;
+  }
+
+  .yazen-primary-btn,
+  .wix-link-btn,
+  .wix-home-contact-form button,
+  .wix-contact-form button {
+    min-height: 32px !important;
+    padding: 0.38rem 0.54rem !important;
+    font-size: 0.72rem !important;
+  }
+
+  .resume-edu-actions,
+  .resume-edu-actions-below {
+    display: flex !important;
+    flex-wrap: nowrap !important;
+    gap: 0.42rem !important;
+  }
+
+  .resume-edu-btn {
+    flex: 1 1 0 !important;
+    min-width: 0 !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    padding: 0.46rem 0.42rem !important;
+    font-size: 0.72rem !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  .yazen-footer .max-w-7xl {
+    gap: 0.5rem !important;
+    padding-top: 0.56rem !important;
+    padding-bottom: 0.56rem !important;
+  }
+
+  .yazen-footer-copy {
+    margin-top: 0.48rem !important;
+    font-size: 0.7rem !important;
+  }
+}
+
+/* Final visibility guard for Resume actions on responsive */
+@media (max-width: 980px) {
+  .resume-edu-actions.resume-edu-actions-desktop {
+    display: none !important;
+  }
+
+  .resume-edu-actions.resume-edu-actions-mobile {
+    display: flex !important;
+  }
+}
+
+/* -------------------------------------------------------
+   Resume page compact optimization (responsive only)
+-------------------------------------------------------- */
+@media (max-width: 980px) {
+  .resume-shell {
+    width: min(96vw, 100%) !important;
+    margin: 0 auto 1.25rem !important;
+    padding: 0.72rem !important;
+  }
+
+  .resume-topbar {
+    padding-bottom: 0.58rem !important;
+    gap: 0.5rem !important;
+  }
+
+  .resume-topbar-title {
+    font-size: 0.98rem !important;
+    letter-spacing: 0.02em !important;
+  }
+
+  .resume-grid {
+    margin-top: 0.72rem !important;
+    gap: 0.62rem !important;
+    grid-template-columns: 1fr !important;
+  }
+
+  .resume-col {
+    display: grid;
+    gap: 0.58rem;
+  }
+
+  .resume-section {
+    margin-bottom: 0 !important;
+    padding: 0.56rem 0.52rem !important;
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: rgba(10, 16, 33, 0.34);
+  }
+
+  .resume-section h3 {
+    margin: 0 0 0.42rem !important;
+    font-size: 0.98rem !important;
+    line-height: 1.1 !important;
+  }
+
+  .resume-skill-item + .resume-skill-item {
+    margin-top: 0.44rem !important;
+  }
+
+  .resume-skill-row {
+    gap: 0.4rem !important;
+    margin-bottom: 0.2rem !important;
+    font-size: 0.82rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .resume-skill-icon {
+    width: 16px !important;
+    height: 16px !important;
+  }
+
+  .resume-bar {
+    height: 6px !important;
+  }
+
+  .resume-text-line,
+  .resume-lines p {
+    font-size: 0.8rem !important;
+    line-height: 1.24 !important;
+    margin: 0 !important;
+  }
+
+  .resume-lines p + p {
+    margin-top: 0.2rem !important;
+  }
+
+  .resume-exp-list {
+    gap: 0.52rem !important;
+  }
+
+  .resume-exp-item {
+    grid-template-columns: 42px 1fr !important;
+    gap: 0.5rem !important;
+  }
+
+  .resume-exp-year {
+    width: 38px !important;
+    height: 38px !important;
+    font-size: 0.62rem !important;
+  }
+
+  .resume-exp-company {
+    font-size: 0.82rem !important;
+    line-height: 1.22 !important;
+  }
+
+  .resume-exp-role {
+    font-size: 0.74rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .resume-edu-title {
+    font-size: 0.86rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .resume-edu-sub {
+    margin-top: 0.2rem !important;
+    font-size: 0.76rem !important;
+    line-height: 1.2 !important;
+  }
+
+  .resume-hobby-grid {
+    gap: 0.44rem !important;
+  }
+
+  .resume-hobby {
+    gap: 0.34rem !important;
+    font-size: 0.78rem !important;
+    line-height: 1.15 !important;
+  }
+
+  .resume-hobby span {
+    width: 22px !important;
+    height: 22px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .resume-shell {
+    padding: 0.62rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .resume-grid {
+    margin-top: 0.62rem !important;
+    gap: 0.52rem !important;
+  }
+
+  .resume-col {
+    gap: 0.48rem;
+  }
+
+  .resume-section {
+    padding: 0.48rem 0.44rem !important;
+    border-radius: 9px !important;
+  }
+
+  .resume-section h3 {
+    font-size: 0.9rem !important;
+    margin-bottom: 0.34rem !important;
+  }
+
+  .resume-skill-row,
+  .resume-text-line,
+  .resume-lines p {
+    font-size: 0.76rem !important;
+  }
+
+  .resume-exp-item {
+    grid-template-columns: 38px 1fr !important;
+    gap: 0.42rem !important;
+  }
+
+  .resume-exp-year {
+    width: 34px !important;
+    height: 34px !important;
+    font-size: 0.58rem !important;
+  }
+
+  .resume-exp-company {
+    font-size: 0.76rem !important;
+  }
+
+  .resume-exp-role,
+  .resume-edu-sub {
+    font-size: 0.7rem !important;
+  }
+
+  .resume-edu-title {
+    font-size: 0.8rem !important;
+  }
+
+  .resume-hobby {
+    font-size: 0.72rem !important;
+  }
+
+  .resume-hobby span {
+    width: 20px !important;
+    height: 20px !important;
+  }
+}
+
+/* -------------------------------------------------------
+   Footer compact pass (~30% shorter)
+-------------------------------------------------------- */
+.yazen-footer .max-w-7xl {
+  gap: 0.5rem !important;
+  padding-top: 0.7rem !important;
+  padding-bottom: 0.7rem !important;
+}
+
+.yazen-footer-line {
+  width: 58px !important;
+  margin-top: 0.38rem !important;
+}
+
+.yazen-footer-kicker {
+  font-size: 0.58rem !important;
+}
+
+.yazen-footer-brand {
+  font-size: 1rem !important;
+  line-height: 1.05 !important;
+}
+
+.yazen-footer-desc {
+  margin-top: 0.2rem !important;
+  font-size: 0.72rem !important;
+  line-height: 1.2 !important;
+}
+
+.yazen-footer-stats {
+  margin-top: 0.3rem !important;
+  gap: 0.22rem !important;
+}
+
+.yazen-footer-stat {
+  padding: 0.16rem 0.38rem !important;
+  font-size: 0.6rem !important;
+}
+
+.yazen-footer-cta {
+  margin-top: 0.3rem !important;
+  gap: 0.22rem !important;
+}
+
+.yazen-footer-link-btn {
+  min-height: 24px !important;
+  padding: 0.18rem 0.42rem !important;
+  font-size: 0.58rem !important;
+}
+
+.yazen-footer-copy {
+  margin-top: 0.28rem !important;
+  font-size: 0.68rem !important;
+  line-height: 1.22 !important;
+}
+
+.yazen-footer-meta {
+  padding: 0.34rem 0.4rem !important;
+  border-radius: 10px !important;
+}
+
+.yazen-footer-pill {
+  padding: 0.2rem 0.34rem !important;
+  font-size: 0.56rem !important;
+}
+
+.yazen-footer-note,
+.yazen-footer-stack {
+  font-size: 0.72rem !important;
+  line-height: 1.2 !important;
+}
+
+@media (max-width: 980px) {
+  .yazen-footer .max-w-7xl {
+    gap: 0.38rem !important;
+    padding-top: 0.52rem !important;
+    padding-bottom: 0.52rem !important;
+  }
+
+  .yazen-footer-meta {
+    margin-top: 0.08rem !important;
+    padding: 0.3rem 0.34rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .yazen-footer .max-w-7xl {
+    gap: 0.3rem !important;
+    padding-top: 0.42rem !important;
+    padding-bottom: 0.42rem !important;
+  }
+
+  .yazen-footer-copy {
+    font-size: 0.62rem !important;
+    line-height: 1.18 !important;
+  }
+
+  .yazen-footer-note,
+  .yazen-footer-stack {
+    font-size: 0.68rem !important;
+    line-height: 1.16 !important;
+  }
+
+  .yazen-footer-pill {
+    font-size: 0.54rem !important;
+  }
+
+  .yazen-footer-stat {
+    font-size: 0.58rem !important;
+  }
+}
+
+/* -------------------------------------------------------
+   Non-contact/non-resume text-size alignment (responsive)
+-------------------------------------------------------- */
+@media (max-width: 980px) {
+  .yazen-page-shell > .yazen-about p,
+  .yazen-page-shell > .yazen-services p,
+  .yazen-page-shell > .yazen-home-preview p,
+  .yazen-page-shell > .yazen-home-preview-blog p,
+  .yazen-page-shell > .wix-section p,
+  .yazen-page-shell > .yazen-about li,
+  .yazen-page-shell > .yazen-services li,
+  .yazen-page-shell > .yazen-home-preview li,
+  .yazen-page-shell > .yazen-home-preview-blog li,
+  .yazen-page-shell > .wix-section li,
+  .yazen-page-shell > .yazen-about a,
+  .yazen-page-shell > .yazen-services a,
+  .yazen-page-shell > .yazen-home-preview a,
+  .yazen-page-shell > .yazen-home-preview-blog a,
+  .yazen-page-shell > .wix-section a,
+  .yazen-page-shell > .yazen-about button,
+  .yazen-page-shell > .yazen-services button,
+  .yazen-page-shell > .yazen-home-preview button,
+  .yazen-page-shell > .yazen-home-preview-blog button,
+  .yazen-page-shell > .wix-section button {
+    font-size: 0.86rem !important;
+    line-height: 1.28 !important;
+  }
+
+  .yazen-page-shell > .yazen-about h1,
+  .yazen-page-shell > .yazen-services h1,
+  .yazen-page-shell > .yazen-home-preview h1,
+  .yazen-page-shell > .yazen-home-preview-blog h1,
+  .yazen-page-shell > .wix-section h1 {
+    font-size: clamp(1.55rem, 6vw, 1.95rem) !important;
+    line-height: 1.06 !important;
+  }
+
+  .yazen-page-shell > .yazen-about h2,
+  .yazen-page-shell > .yazen-services h2,
+  .yazen-page-shell > .yazen-home-preview h2,
+  .yazen-page-shell > .yazen-home-preview-blog h2,
+  .yazen-page-shell > .wix-section h2 {
+    font-size: clamp(1.22rem, 4.9vw, 1.52rem) !important;
+    line-height: 1.1 !important;
+  }
+
+  .yazen-page-shell > .yazen-about h3,
+  .yazen-page-shell > .yazen-services h3,
+  .yazen-page-shell > .yazen-home-preview h3,
+  .yazen-page-shell > .yazen-home-preview-blog h3,
+  .yazen-page-shell > .wix-section h3 {
+    font-size: clamp(0.9rem, 3.6vw, 1.04rem) !important;
+    line-height: 1.14 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .yazen-page-shell > .yazen-about p,
+  .yazen-page-shell > .yazen-services p,
+  .yazen-page-shell > .yazen-home-preview p,
+  .yazen-page-shell > .yazen-home-preview-blog p,
+  .yazen-page-shell > .wix-section p,
+  .yazen-page-shell > .yazen-about li,
+  .yazen-page-shell > .yazen-services li,
+  .yazen-page-shell > .yazen-home-preview li,
+  .yazen-page-shell > .yazen-home-preview-blog li,
+  .yazen-page-shell > .wix-section li,
+  .yazen-page-shell > .yazen-about a,
+  .yazen-page-shell > .yazen-services a,
+  .yazen-page-shell > .yazen-home-preview a,
+  .yazen-page-shell > .yazen-home-preview-blog a,
+  .yazen-page-shell > .wix-section a,
+  .yazen-page-shell > .yazen-about button,
+  .yazen-page-shell > .yazen-services button,
+  .yazen-page-shell > .yazen-home-preview button,
+  .yazen-page-shell > .yazen-home-preview-blog button,
+  .yazen-page-shell > .wix-section button {
+    font-size: 0.8rem !important;
+    line-height: 1.22 !important;
+  }
+
+  .yazen-page-shell > .yazen-about h2,
+  .yazen-page-shell > .yazen-services h2,
+  .yazen-page-shell > .yazen-home-preview h2,
+  .yazen-page-shell > .yazen-home-preview-blog h2,
+  .yazen-page-shell > .wix-section h2 {
+    font-size: clamp(1.08rem, 4.6vw, 1.34rem) !important;
+  }
+}
+
+/* About info-box text alignment with other sections */
+@media (max-width: 980px) {
+  .yazen-about .yazen-info-grid > div {
+    font-size: 0.8rem !important;
+    line-height: 1.24 !important;
+  }
+
+  .yazen-about .yazen-info-grid > div strong {
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .yazen-about .yazen-info-grid > div {
+    font-size: 0.74rem !important;
+    line-height: 1.18 !important;
+  }
+
+  .yazen-about .yazen-info-grid > div strong {
+    font-size: 0.74rem !important;
+  }
+}
+
+/* Hero title hierarchy fix on responsive: role smaller than name */
+@media (max-width: 980px) {
+  .yazen-hero-copy h1 {
+    font-size: clamp(1.08rem, 4.9vw, 1.52rem) !important;
+    line-height: 1.12 !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .yazen-hero-copy h1 {
+    font-size: clamp(1rem, 4.7vw, 1.32rem) !important;
+    line-height: 1.1 !important;
   }
 }

@@ -17,6 +17,7 @@ const GalleryAdmin = lazy(() => import("../pages/admin/Gallery"));
 const Inbox = lazy(() => import("../pages/admin/Inbox"));
 const HomePageAdmin = lazy(() => import("../pages/admin/HomePage"));
 const AboutAdmin = lazy(() => import("../pages/admin/About"));
+const ResumeAdmin = lazy(() => import("../pages/admin/Resume"));
 const SocialLinksAdmin = lazy(() => import("../pages/admin/SocialLinks"));
 
 // Lazy public pages
@@ -55,7 +56,7 @@ export default function AppRoutes() {
         {/* Public */}
         <Route path="/" element={withTransition(<TemplatePage page="home" />)} />
         <Route path="/about" element={withTransition(<TemplatePage page="about" />)} />
-        <Route path="/resume" element={<Navigate to="/about" replace />} />
+        <Route path="/resume" element={withTransition(<TemplatePage page="resume" />)} />
         <Route path="/service" element={withTransition(<TemplatePage page="service" />)} />
         <Route path="/service/:slug" element={withTransition(<TemplatePage page="serviceDetails" />)} />
         <Route path="/project" element={withTransition(<TemplatePage page="project" />)} />
@@ -129,6 +130,14 @@ export default function AppRoutes() {
           element={
             <ProtectedRoute>
               {withAdminLayout(<AboutAdmin />)}
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/resume"
+          element={
+            <ProtectedRoute>
+              {withAdminLayout(<ResumeAdmin />)}
             </ProtectedRoute>
           }
         />

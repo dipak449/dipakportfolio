@@ -22,7 +22,7 @@ async function getOrCreate() {
 function toResponse(doc) {
   return normalizeImageFields(
     {
-      name: doc.name || "Rabina Dahal",
+      name: doc.name || "Dipak Sah",
       title: doc.title || "I AM FULL STACK DEVELOPER",
       subtitle: doc.subtitle || "A Creative Freelancer & Full Stack Developer",
       profileImageUrl: doc.profileImageUrl || "",
@@ -65,7 +65,7 @@ exports.updateAdmin = async (req, res, next) => {
     if (typeof req.body.profileImageUrl === "string") {
       const image = safeUrl(req.body.profileImageUrl);
       doc.profileImageUrl = image
-        ? await importImageToCloudinary(image, "rabina_portfolio/home")
+        ? await importImageToCloudinary(image, "dipak_portfolio/home")
         : "";
     }
 

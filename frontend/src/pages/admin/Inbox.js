@@ -102,19 +102,19 @@ export default function Inbox() {
 
         <div className="grid gap-3">
           {q.data.map((m)=>(
-            <Card key={m._id} className={`p-4 ${!m.isRead ? "border-l-4 border-brand-500" : ""}`}>
-              <div className="flex justify-between">
-                <div>
-                  <div className="font-bold">{m.name} ({m.email})</div>
-                  <div className="text-sm text-black/60">{m.subject}</div>
-                  <p className="mt-2 text-sm">{m.message}</p>
+            <Card key={m._id} className={`p-4 admin-list-card ${!m.isRead ? "border-l-4 border-brand-500" : ""}`}>
+              <div className="flex justify-between gap-4 flex-wrap md:flex-nowrap">
+                <div className="min-w-0">
+                  <div className="font-bold admin-list-title truncate">{m.name} ({m.email})</div>
+                  <div className="text-sm text-black/60 admin-list-submeta truncate">{m.subject || "No subject"}</div>
+                  <p className="mt-2 text-sm admin-list-meta whitespace-pre-line">{m.message}</p>
                 </div>
 
-                <div className="flex flex-col gap-2">
+                <div className="flex flex-col gap-2 admin-action-row">
                   {!m.isRead && (
-                    <Button onClick={()=>readM.mutate(m._id)}>Mark Read</Button>
+                    <Button className="admin-action-btn" onClick={()=>readM.mutate(m._id)}>Mark Read</Button>
                   )}
-                  <Button className="bg-black" onClick={()=>deleteM.mutate(m._id)}>Delete</Button>
+                  <Button className="bg-black admin-action-btn" onClick={()=>deleteM.mutate(m._id)}>Delete</Button>
                 </div>
               </div>
             </Card>

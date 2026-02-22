@@ -49,7 +49,7 @@ export default function SocialLinksAdmin() {
             <input className="rounded-2xl border border-black/10 px-4 py-3" placeholder="Instagram URL" value={instagramUrl} onChange={(e) => setInstagramUrl(e.target.value)} />
             <div className="flex justify-end">
               <Button
-                className="border border-[#4edc8b] bg-[#4edc8b]/10 text-[#7bf2ad]"
+                className="border border-[#6d7bff] bg-[#6d7bff]/10 text-[#d5dbff]"
                 onClick={() => saveM.mutate({ githubUrl, linkedinUrl, facebookUrl, instagramUrl })}
                 disabled={saveM.isPending}
               >
@@ -62,3 +62,4 @@ export default function SocialLinksAdmin() {
     </div>
   );
 }
+

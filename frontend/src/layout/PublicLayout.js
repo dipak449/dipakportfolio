@@ -12,6 +12,7 @@ function cx(...classes) {
 const defaultNavItems = [
   { to: "/", label: "Home" },
   { to: "/about", label: "About" },
+  { to: "/resume", label: "Resume" },
   { to: "/service", label: "Service" },
   { to: "/project", label: "Project" },
   { to: "/blog", label: "Blog" },
@@ -24,7 +25,7 @@ export default function PublicLayout({ children }) {
   const socialQ = useQuery({ queryKey: ["social-links-public"], queryFn: SocialLinksAPI.getPublic });
   const isAdmin = location.pathname.startsWith("/admin");
   const isHome = location.pathname === "/";
-  const siteName = "Rabina";
+  const siteName = "Dipak";
   const navItems = defaultNavItems;
   const social = socialQ.data || {};
 
@@ -48,12 +49,13 @@ export default function PublicLayout({ children }) {
   return (
     <div className="hafiz-theme yazen-public min-h-screen text-white">
       <header className={cx("yazen-header", isHome ? "is-home" : "is-inner")}>
-        <div className="yazen-header-inner relative">
+        <div className="yazen-header-inner yazen-header-shell relative">
           <Link to="/" className="yazen-logo">
             <span>{siteName}</span>
+            <small>Portfolio</small>
           </Link>
 
-          <nav className="hidden items-center gap-8 lg:flex lg:absolute lg:left-1/2 lg:-translate-x-1/2">
+          <nav className="yazen-nav-dock hidden items-center gap-8 lg:flex lg:absolute lg:left-1/2 lg:-translate-x-1/2">
             {navItems.map((item) => (
               <NavLink
                 key={item.to}
@@ -70,7 +72,7 @@ export default function PublicLayout({ children }) {
             ))}
           </nav>
 
-          <div className="hidden lg:flex items-center gap-5">
+          <div className="yazen-header-social hidden lg:flex lg:absolute lg:right-0 items-center gap-5">
             {social.githubUrl ? (
               <div className="yazen-social-tooltip yazen-social-tooltip--below">
                 <a

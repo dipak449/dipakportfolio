@@ -1,46 +1,34 @@
-import { useQuery } from "@tanstack/react-query";
-import { Facebook, Instagram } from "lucide-react";
-import { SocialLinksAPI } from "../services/social-links.service";
+import { Link } from "react-router-dom";
 
 export default function Footer() {
   const year = new Date().getFullYear();
-  const text = `Copyright ${year} Rabina Dahal Portfolio. All Rights Reserved.`;
-  const socialQ = useQuery({ queryKey: ["social-links-public"], queryFn: SocialLinksAPI.getPublic });
-  const social = socialQ.data || {};
+  const text = `© Copyright ${year} Dipak Portfolio. All rights reserved.`;
+
   return (
-    <footer className="relative mt-10 border-t border-white/10 bg-[#151a2f]">
-      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#ff5e73]/70 to-transparent" />
-      <div className="mx-auto flex max-w-7xl flex-wrap items-center justify-between gap-4 px-4 py-8 text-sm text-white/70">
-        <div className="font-medium tracking-[0.02em]">{text}</div>
-        <div className="flex items-center gap-5">
-          {social.facebookUrl ? (
-            <div className="yazen-social-tooltip">
-              <a
-                href={social.facebookUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="yazen-social-icon"
-                aria-label="Facebook"
-              >
-                <Facebook size={18} />
-              </a>
-              <span className="yazen-social-tooltip-label">Facebook</span>
-            </div>
-          ) : null}
-          {social.instagramUrl ? (
-            <div className="yazen-social-tooltip">
-              <a
-                href={social.instagramUrl}
-                target="_blank"
-                rel="noreferrer"
-                className="yazen-social-icon"
-                aria-label="Instagram"
-              >
-                <Instagram size={18} />
-              </a>
-              <span className="yazen-social-tooltip-label">Instagram</span>
-            </div>
-          ) : null}
+    <footer className="yazen-footer relative mt-10 border-t border-white/10 bg-[#151a2f]">
+      <div className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-[#7a3cff]/70 to-transparent" />
+      <div className="mx-auto grid max-w-7xl gap-3 px-4 py-6 text-sm text-white/70 lg:grid-cols-[1.4fr_1fr] lg:items-center">
+        <div className="yazen-footer-primary">
+          <div className="yazen-footer-kicker">Dipak Portfolio</div>
+          <div className="yazen-footer-brand">Dipak</div>
+          <div className="yazen-footer-desc">
+            Full Stack Developer building fast, practical, and scalable digital products with clean UX.
+          </div>
+          <div className="yazen-footer-stats">
+            <span className="yazen-footer-stat">MERN Stack</span>
+            <span className="yazen-footer-stat">REST APIs</span>
+            <span className="yazen-footer-stat">Responsive UI</span>
+          </div>
+          <div className="yazen-footer-cta">
+            <Link to="/contact" className="yazen-footer-link-btn">Open To Work</Link>
+          </div>
+          <div className="yazen-footer-line" />
+          <div className="yazen-footer-copy">{text}</div>
+        </div>
+        <div className="yazen-footer-meta lg:justify-self-end">
+          <div className="yazen-footer-pill">Available for freelance and full-time roles</div>
+          <div className="yazen-footer-note">Focused on business-ready web apps with reliable backend architecture and modern frontend quality.</div>
+          <div className="yazen-footer-stack">React | Node.js | MongoDB | Express</div>
         </div>
       </div>
     </footer>

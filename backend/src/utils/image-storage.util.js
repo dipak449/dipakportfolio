@@ -20,7 +20,7 @@ function isRemoteHttpUrl(value = "") {
   }
 }
 
-async function importImageToCloudinary(rawUrl = "", folder = "rabina_portfolio/misc") {
+async function importImageToCloudinary(rawUrl = "", folder = "dipak_portfolio/misc") {
   const normalized = normalizeImageUrl(rawUrl);
   if (!normalized) return "";
   if (normalized.startsWith("data:") || normalized.startsWith("blob:") || normalized.startsWith("/")) {

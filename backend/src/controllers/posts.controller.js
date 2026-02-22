@@ -59,7 +59,7 @@ exports.createPost = async (req, res, next) => {
       slug,
       content,
       excerpt,
-      coverImageUrl: await importImageToCloudinary(coverImageUrl, "rabina_portfolio/posts"),
+      coverImageUrl: await importImageToCloudinary(coverImageUrl, "dipak_portfolio/posts"),
       isPublished,
       isFeatured,
     });
@@ -81,7 +81,7 @@ exports.updatePost = async (req, res, next) => {
     if (typeof content === "string") post.content = content;
     if (typeof excerpt === "string") post.excerpt = excerpt;
     if (typeof coverImageUrl === "string") {
-      post.coverImageUrl = await importImageToCloudinary(coverImageUrl, "rabina_portfolio/posts");
+      post.coverImageUrl = await importImageToCloudinary(coverImageUrl, "dipak_portfolio/posts");
     }
     if (typeof isPublished === "boolean") post.isPublished = isPublished;
     if (typeof isFeatured === "boolean") post.isFeatured = isFeatured;

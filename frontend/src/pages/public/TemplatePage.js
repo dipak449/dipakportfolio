@@ -3,7 +3,22 @@ import { motion } from "framer-motion";
 import { useMutation, useQuery } from "@tanstack/react-query";
 import { Link, useParams } from "react-router-dom";
 import toast from "react-hot-toast";
-import { Facebook, Github, Instagram, Linkedin } from "lucide-react";
+import {
+  BookOpen,
+  Camera,
+  Clapperboard,
+  Code2,
+  Database,
+  Facebook,
+  FileImage,
+  Github,
+  Instagram,
+  Linkedin,
+  Palette,
+  PenTool,
+  Plane,
+  Server,
+} from "lucide-react";
 import PageHead from "../../components/common/PageHead";
 import { MessagesAPI } from "../../services/messages.service";
 import { GalleryAPI } from "../../services/gallery.service";
@@ -12,6 +27,7 @@ import { PostsAPI } from "../../services/posts.service";
 import { HomePageAPI } from "../../services/homepage.service";
 import { AboutAPI } from "../../services/about.service";
 import { SocialLinksAPI } from "../../services/social-links.service";
+import { ResumeAPI } from "../../services/resume.service";
 import { getImageFallbackCandidates } from "../../utils/imageUrl";
 
 function slugify(value = "") {
@@ -45,6 +61,34 @@ function setNextImageFallback(event) {
     img.dataset.tryIndex = String(tried + 1);
     img.src = next;
   }
+}
+
+function getSkillIconForName(name = "") {
+  const value = String(name || "").toLowerCase();
+
+  if (value.includes("react") || value.includes("javascript") || value.includes("typescript") || value.includes("frontend")) {
+    return Code2;
+  }
+  if (value.includes("node") || value.includes("express") || value.includes("api") || value.includes("backend")) {
+    return Server;
+  }
+  if (value.includes("mongo") || value.includes("sql") || value.includes("database")) {
+    return Database;
+  }
+  if (value.includes("python")) {
+    return Github;
+  }
+  if (value.includes("design") || value.includes("photoshop") || value.includes("illustrator") || value.includes("figma")) {
+    return PenTool;
+  }
+  if (value.includes("video") || value.includes("premiere") || value.includes("after effect")) {
+    return Clapperboard;
+  }
+  if (value.includes("image") || value.includes("indesign")) {
+    return FileImage;
+  }
+
+  return Palette;
 }
 
 export default function TemplatePage({ page = "home" }) {
@@ -83,6 +127,11 @@ export default function TemplatePage({ page = "home" }) {
     queryFn: SocialLinksAPI.getPublic,
     enabled: page === "home" || page === "contact",
   });
+  const resumeQ = useQuery({
+    queryKey: ["resume-public"],
+    queryFn: ResumeAPI.getPublic,
+    enabled: page === "resume",
+  });
 
   const sendMessageM = useMutation({
     mutationFn: MessagesAPI.send,
@@ -96,6 +145,7 @@ export default function TemplatePage({ page = "home" }) {
   const pageMeta = {
     home: { title: "Home", subtitle: "Portfolio", description: "Portfolio home" },
     about: { title: "About", subtitle: "Profile", description: "About page" },
+    resume: { title: "Resume", subtitle: "Resume", description: "Resume page" },
     service: { title: "Service", subtitle: "Services", description: "Service page" },
     project: { title: "Project", subtitle: "Projects", description: "Project page" },
     blog: { title: "Blog", subtitle: "Blog", description: "Blog page" },
@@ -109,7 +159,7 @@ export default function TemplatePage({ page = "home" }) {
   };
 
   const hero = {
-    name: homepageQ.data?.name || "Rabina Dahal",
+    name: homepageQ.data?.name || "Dipak Sah",
     title: homepageQ.data?.title || "I AM FULL STACK DEVELOPER",
     subtitle: homepageQ.data?.subtitle || "A Creative Freelancer & Full Stack Developer",
     backgroundImageUrl: "",
@@ -122,8 +172,8 @@ export default function TemplatePage({ page = "home" }) {
       : page === "certifications" && slug
         ? `/certifications/${slug}`
         : `/${resolvedPage === "project" ? "project" : page}`;
-  const profileName = hero.name || "Rabina Dahal";
-  const firstName = profileName.split(/\s+/).filter(Boolean)[0] || "Rabina";
+  const profileName = hero.name || "Dipak Sah";
+  const firstName = profileName.split(/\s+/).filter(Boolean)[0] || "Dipak";
   const aboutPrimary = {
     imageUrl: aboutQ.data?.imageUrl || "",
     description: aboutQ.data?.description || "",
@@ -188,7 +238,71 @@ export default function TemplatePage({ page = "home" }) {
     [blogItems]
   );
   const resumeDownloadUrl = aboutQ.data?.resumeUrl || "";
-  const resumeDownloadEndpoint = `${process.env.REACT_APP_API_URL || "http://localhost:8001/api"}/about/resume-download`;
+  const resumeDownloadEndpoint = `${process.env.REACT_APP_API_URL || "http://localhost:8002/api"}/about/resume-download`;
+  const resumeData = resumeQ.data || {};
+  const isProjectEntry = (entry = {}) => {
+    const v = `${entry?.company || ""} ${entry?.role || ""}`.toLowerCase();
+    return v.includes("project") || v.includes("portfolio") || v.includes("application") || v.includes("website") || v.includes("detection");
+  };
+  const baseExperiences = Array.isArray(resumeData.experiences) && resumeData.experiences.length
+    ? resumeData.experiences
+    : [
+        { year: "2024", company: "IIDT", role: "Full Stack Web Developer Intern" },
+      ];
+  const baseProjects = Array.isArray(resumeData.projects) && resumeData.projects.length
+    ? resumeData.projects
+    : baseExperiences.filter((x) => isProjectEntry(x)).length
+      ? baseExperiences.filter((x) => isProjectEntry(x))
+    : [
+        { year: "2024", company: "Blog Application (MERN)", role: "Built auth, CRUD, REST APIs, responsive UI" },
+        { year: "2024", company: "Sign Language Detection (AI/ML)", role: "Machine learning + computer vision workflow" },
+        { year: "2023", company: "Online Shopping Website", role: "Cart, checkout, secure payment integration" },
+        { year: "2023", company: "Personal Portfolio Website", role: "Responsive UI/UX, animations, performance optimization" },
+      ];
+
+  const resume = {
+    softwareSkills: Array.isArray(resumeData.softwareSkills) && resumeData.softwareSkills.length
+      ? resumeData.softwareSkills
+      : [
+          { name: "React.js", level: 90 },
+          { name: "Node.js / Express.js", level: 88 },
+          { name: "MongoDB", level: 86 },
+          { name: "Python", level: 82 },
+          { name: "REST API Development", level: 90 },
+        ],
+    personalSkillsText:
+      resumeData.personalSkillsText || "Clean Code - Team Work - Problem Solving",
+    experiences: baseExperiences.filter((x) => !isProjectEntry(x)),
+    projects: baseProjects,
+    whatCanIDo: Array.isArray(resumeData.whatCanIDo) && resumeData.whatCanIDo.length
+      ? resumeData.whatCanIDo
+      : [
+          "Build full-stack MERN web applications",
+          "Design and integrate RESTful APIs",
+          "Create responsive and accessible frontend UI",
+        ],
+    designSkills: Array.isArray(resumeData.designSkills) && resumeData.designSkills.length
+      ? resumeData.designSkills
+      : [
+          "Database design with MongoDB and MySQL",
+          "Git/GitHub collaborative development",
+          "Performance optimization and clean architecture",
+        ],
+    hobbies: Array.isArray(resumeData.hobbies) && resumeData.hobbies.length
+      ? resumeData.hobbies
+      : ["Reading", "Coding", "Travel", "Tech Research"],
+    educationTitle:
+      resumeData.educationTitle ||
+      "Bachelor of Computer Science and Engineering - Sri Venkateswara College of Engineering and Technology",
+    educationSubtitle: resumeData.educationSubtitle || "JNTUA (2022 - Present) | GPA: 3.48 / 4.0",
+  };
+
+  const hobbyIconMap = {
+    reading: BookOpen,
+    photography: Camera,
+    drawing: PenTool,
+    travel: Plane,
+  };
 
   const submitContact = (event) => {
     event.preventDefault();
@@ -209,13 +323,12 @@ export default function TemplatePage({ page = "home" }) {
     <section className="yazen-about" id="about">
       <div className="yazen-container">
         <div className="yazen-about-grid">
-          <motion.div className="yazen-about-image" initial={{ opacity: 0, x: -22 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }}>
-            <img src={aboutPrimary.imageUrl || ""} alt={profileName} loading="lazy" decoding="async" data-rawsrc={aboutPrimary.imageUrl || ""} data-try-index="0" onError={setNextImageFallback} />
-          </motion.div>
           <motion.div className="yazen-about-copy" initial={{ opacity: 0, x: 22 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }}>
-            <span className="yazen-kicker">Discover</span>
-            <h2>About Me</h2>
-            <div className="yazen-title-line" />
+            <div className="yazen-section-head">
+              <span className="yazen-kicker">Discover</span>
+              <h2>About Me</h2>
+              <div className="yazen-title-line" />
+            </div>
             <p>{aboutPrimary.description || "Learn more about my journey, profile, and background."}</p>
             <div className="yazen-info-grid">
               {aboutFacts.length ? aboutFacts.map((entry, index) => (
@@ -229,10 +342,9 @@ export default function TemplatePage({ page = "home" }) {
                 </>
               )}
             </div>
-            <div className="flex flex-wrap items-center gap-3">
-              {resumeDownloadUrl ? <a href={resumeDownloadEndpoint} className="yazen-primary-btn">Download CV</a> : <span className="yazen-primary-btn">Download CV</span>}
-              <Link className="yazen-primary-btn" to="/certifications">View All Certifications</Link>
-            </div>
+          </motion.div>
+          <motion.div className="yazen-about-image" initial={{ opacity: 0, x: -22 }} whileInView={{ opacity: 1, x: 0 }} viewport={{ once: true, amount: 0.2 }}>
+            <img src={aboutPrimary.imageUrl || ""} alt={profileName} loading="lazy" decoding="async" data-rawsrc={aboutPrimary.imageUrl || ""} data-try-index="0" onError={setNextImageFallback} />
           </motion.div>
         </div>
       </div>
@@ -242,7 +354,11 @@ export default function TemplatePage({ page = "home" }) {
   const certificationsBlock = (
     <section className="yazen-home-preview yazen-certifications-preview">
       <div className="yazen-container">
-        <h2>Certifications</h2>
+        <div className="yazen-section-head">
+          <span className="yazen-kicker">Highlights</span>
+          <h2>Certifications</h2>
+          <div className="yazen-title-line" />
+        </div>
         <div className="wix-grid">
           {certificationItems.length ? certificationItems.map((item, i) => (
             <motion.article key={`${item.title}-${i}`} className="wix-card" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ delay: i * 0.05 }}>
@@ -260,9 +376,11 @@ export default function TemplatePage({ page = "home" }) {
   const serviceBlock = (
     <section className="yazen-services" id="service">
       <div className="yazen-container">
-        <span className="yazen-kicker">What I Do</span>
-        <h2>My Services</h2>
-        <div className="yazen-title-line" />
+        <div className="yazen-section-head">
+          <span className="yazen-kicker">What I Do</span>
+          <h2>My Services</h2>
+          <div className="yazen-title-line" />
+        </div>
         <div className="yazen-service-grid">
           {serviceItems.length ? serviceItems.map((service, i) => (
             <motion.article key={`${service.title}-${i}`} className="yazen-service-card" initial={{ opacity: 0, y: 18 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ delay: i * 0.08 }}>
@@ -286,7 +404,11 @@ export default function TemplatePage({ page = "home" }) {
   const projectBlock = (
     <section className="yazen-home-preview">
       <div className="yazen-container">
-        <h2>Featured Projects</h2>
+        <div className="yazen-section-head">
+          <span className="yazen-kicker">Selected Work</span>
+          <h2>Featured Projects</h2>
+          <div className="yazen-title-line" />
+        </div>
         <div className="wix-grid">
           {projectItems.length ? projectItems.map((project, i) => (
             <motion.article key={`${project.title}-${i}`} className="wix-card" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ delay: i * 0.06 }}>
@@ -303,7 +425,11 @@ export default function TemplatePage({ page = "home" }) {
   const projectHomeBlock = (
     <section className="yazen-home-preview">
       <div className="yazen-container">
-        <h2>Featured Projects</h2>
+        <div className="yazen-section-head">
+          <span className="yazen-kicker">Selected Work</span>
+          <h2>Featured Projects</h2>
+          <div className="yazen-title-line" />
+        </div>
         <div className="wix-grid">
           {featuredProjectItems.length ? featuredProjectItems.map((project, i) => (
             <motion.article key={`${project.title}-${i}`} className="wix-card" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ delay: i * 0.06 }}>
@@ -323,7 +449,11 @@ export default function TemplatePage({ page = "home" }) {
   const blogBlock = (
     <section className="yazen-home-preview yazen-home-preview-blog">
       <div className="yazen-container">
-        <h2>Latest Blogs</h2>
+        <div className="yazen-section-head">
+          <span className="yazen-kicker">Insights</span>
+          <h2>Latest Blogs</h2>
+          <div className="yazen-title-line" />
+        </div>
         <div className="wix-grid">
           {blogItems.length ? blogItems.map((item, idx) => (
             <motion.article key={`${item.title}-${idx}`} className="wix-card" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ delay: idx * 0.05 }}>
@@ -341,7 +471,11 @@ export default function TemplatePage({ page = "home" }) {
   const blogHomeBlock = (
     <section className="yazen-home-preview yazen-home-preview-blog">
       <div className="yazen-container">
-        <h2>Latest Blogs</h2>
+        <div className="yazen-section-head">
+          <span className="yazen-kicker">Insights</span>
+          <h2>Latest Blogs</h2>
+          <div className="yazen-title-line" />
+        </div>
         <div className="wix-grid">
           {featuredBlogItems.length ? featuredBlogItems.map((item, idx) => (
             <motion.article key={`${item.title}-${idx}`} className="wix-card" initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true, amount: 0.2 }} transition={{ delay: idx * 0.05 }}>
@@ -359,24 +493,152 @@ export default function TemplatePage({ page = "home" }) {
     </section>
   );
 
+  const resumeBlock = (
+    <section className="resume-shell">
+      <div className="resume-topbar">
+        <div className="resume-topbar-title">Resume Snapshot</div>
+      </div>
+
+      <div className="resume-grid">
+        <div className="resume-col">
+          <div className="resume-section">
+            <h3>SOFTWARE SKILLS</h3>
+            <div className="resume-skill-list">
+              {(resume.softwareSkills || []).map((item, idx) => (
+                <div key={`${item.name}-${idx}`} className="resume-skill-item">
+                  <div className="resume-skill-row">
+                    <span className="resume-skill-icon">
+                      {(() => {
+                        const SkillIcon = getSkillIconForName(item?.name);
+                        return <SkillIcon size={13} />;
+                      })()}
+                    </span>
+                    <span>{item.name}</span>
+                  </div>
+                  <div className="resume-bar">
+                    <i style={{ width: `${Math.max(0, Math.min(100, Number(item.level || 0)))}%` }} />
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="resume-section">
+            <h3>PROJECTS</h3>
+            <div className="resume-exp-list">
+              {(resume.projects || []).map((item, idx) => (
+                <div key={`${item.company}-${idx}`} className="resume-exp-item">
+                  <div className="resume-exp-year">{item.year}</div>
+                  <div>
+                    <div className="resume-exp-company">{item.company}</div>
+                    <div className="resume-exp-role">{item.role}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="resume-col">
+          <div className="resume-section">
+            <h3>EXPERIENCE</h3>
+            <div className="resume-exp-list">
+              {(resume.experiences || []).map((item, idx) => (
+                <div key={`${item.company}-${idx}`} className="resume-exp-item">
+                  <div className="resume-exp-year">{item.year}</div>
+                  <div>
+                    <div className="resume-exp-company">{item.company}</div>
+                    <div className="resume-exp-role">{item.role}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <div className="resume-section">
+            <h3>EDUCATION</h3>
+            <p className="resume-edu-title">{resume.educationTitle || "BS/MS in Computer Science,"}</p>
+            <p className="resume-edu-sub">{resume.educationSubtitle || "University of Maryland"}</p>
+            <div className="resume-edu-actions resume-edu-actions-below resume-edu-actions-desktop">
+              {resumeDownloadUrl ? <a href={resumeDownloadEndpoint} className="resume-edu-btn">Download CV</a> : <span className="resume-edu-btn">Download CV</span>}
+              <Link className="resume-edu-btn" to="/certifications">View Certifications</Link>
+            </div>
+          </div>
+        </div>
+
+        <div className="resume-col">
+          <div className="resume-section">
+            <h3>WHAT CAN I DO ?</h3>
+            <div className="resume-lines">
+              {(resume.whatCanIDo || []).map((line, idx) => <p key={`${line}-${idx}`}>{line}</p>)}
+            </div>
+          </div>
+
+          <div className="resume-section">
+            <h3>DESIGN SKILLS</h3>
+            <div className="resume-lines">
+              {(resume.designSkills || []).map((line, idx) => <p key={`${line}-${idx}`}>{line}</p>)}
+            </div>
+          </div>
+
+          <div className="resume-section">
+            <h3>HOBBIES & INTERESTS</h3>
+            <div className="resume-hobby-grid">
+              {(resume.hobbies || []).map((item, idx) => {
+                const Icon = hobbyIconMap[String(item || "").toLowerCase()] || BookOpen;
+                return (
+                  <div key={`${item}-${idx}`} className="resume-hobby">
+                    <span><Icon size={14} /></span>
+                    <small>{item}</small>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+
+          <div className="resume-section">
+            <h3>PERSONAL SKILLS</h3>
+            <p className="resume-text-line">{resume.personalSkillsText || "Creativity - Team Work - organisation"}</p>
+            <div className="resume-edu-actions resume-edu-actions-below resume-edu-actions-mobile">
+              {resumeDownloadUrl ? <a href={resumeDownloadEndpoint} className="resume-edu-btn">Download CV</a> : <span className="resume-edu-btn">Download CV</span>}
+              <Link className="resume-edu-btn" to="/certifications">View Certifications</Link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+
   if (page === "home") {
     const homeBg = hero.backgroundImageUrl || "";
     const homeHeroTitle = hero.title || profileName;
     const homeHeroSubtitle = hero.subtitle || "A Creative Freelancer & Full Stack Developer";
     return (
-      <div className="yazen-page-shell">
+      <div className="yazen-page-shell yazen-home-shell">
         <PageHead title={`${firstName} Portfolio`} description={cfg.description || cfg.subtitle} path={path} />
         <section className="yazen-hero" style={homeBg ? { backgroundImage: `url(${homeBg})` } : undefined}>
           <div className="yazen-hero-overlay" />
-          <div className="yazen-hero-inner">
-            <div className="yazen-avatar-wrap">
-              <img src={hero.personImageUrl || aboutPrimary.imageUrl || ""} alt={profileName} loading="eager" fetchPriority="high" decoding="async" data-rawsrc={hero.personImageUrl || aboutPrimary.imageUrl || ""} data-try-index="0" onError={setNextImageFallback} />
+          <div className="yazen-hero-inner yazen-hero-split">
+            <motion.div initial={{ opacity: 0, x: -24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.5 }} className="yazen-hero-copy">
+              <motion.h2 initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }} className="yazen-hero-owner">
+                {profileName}
+              </motion.h2>
+              <motion.h1 initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>{homeHeroTitle || profileName}</motion.h1>
+              <motion.p initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.12 }}>{homeHeroSubtitle}</motion.p>
+              <div className="yazen-hero-cta">
+                <Link className="yazen-primary-btn" to="/project">Explore Projects</Link>
+                <Link className="yazen-primary-btn yazen-primary-btn-ghost" to="/resume">Resume</Link>
+              </div>
+            </motion.div>
+            <motion.div initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.52 }} className="yazen-hero-visual">
+              <div className="yazen-avatar-wrap">
+                <img src={hero.personImageUrl || aboutPrimary.imageUrl || ""} alt={profileName} loading="eager" fetchPriority="high" decoding="async" data-rawsrc={hero.personImageUrl || aboutPrimary.imageUrl || ""} data-try-index="0" onError={setNextImageFallback} />
+              </div>
+            </motion.div>
+            <div className="yazen-hero-cta yazen-hero-cta-mobile">
+              <Link className="yazen-primary-btn" to="/project">Explore Projects</Link>
+              <Link className="yazen-primary-btn yazen-primary-btn-ghost" to="/resume">Resume</Link>
             </div>
-            <motion.h2 initial={{ opacity: 0, y: 18 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.45 }} className="text-[38px] sm:text-[56px] leading-none font-extrabold text-white mt-6">
-              {profileName}
-            </motion.h2>
-            <motion.h1 initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}>{homeHeroTitle || profileName}</motion.h1>
-            <motion.p initial={{ opacity: 0, y: 22 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.12 }}>{homeHeroSubtitle}</motion.p>
             <a className="yazen-scroll-cue" href="#about">Scroll Down</a>
           </div>
         </section>
@@ -444,6 +706,9 @@ export default function TemplatePage({ page = "home" }) {
 
   if (page === "about") {
     return <div className="yazen-page-shell"><PageHead title={cfg.title} description={cfg.description || cfg.subtitle} path={path} />{aboutBlock}</div>;
+  }
+  if (page === "resume") {
+    return <div className="yazen-page-shell"><PageHead title={cfg.title} description={cfg.description || cfg.subtitle} path={path} />{resumeBlock}</div>;
   }
   if (page === "service") {
     return <div className="yazen-page-shell"><PageHead title={cfg.title} description={cfg.description || cfg.subtitle} path={path} />{serviceBlock}</div>;

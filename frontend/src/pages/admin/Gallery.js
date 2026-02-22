@@ -244,7 +244,7 @@ export default function GalleryAdmin() {
         {/* Gallery Grid */}
         <div className="mt-6 flex flex-wrap gap-3">
           {q.data.map((x) => (
-            <div key={x._id} className="relative group w-44">
+            <div key={x._id} className="relative group w-44 admin-media-tile">
               <img
                 src={x.imageUrl}
                 alt=""
@@ -262,19 +262,19 @@ export default function GalleryAdmin() {
               )}
 
               {/* Actions */}
-              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-end justify-between p-2 rounded-2xl">
+              <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition flex items-end justify-between p-2 rounded-2xl admin-media-overlay">
                 
-                <div className="flex gap-1 flex-wrap">
+                <div className="flex gap-1 flex-wrap admin-action-row">
                   <button
                     onClick={() => startEdit(x)}
-                    className="text-xs font-semibold px-2 py-1 rounded-lg bg-white text-black"
+                    className="text-xs font-semibold px-2 py-1 rounded-lg bg-white text-black admin-action-btn-sm"
                   >
                     Edit
                   </button>
                   <button
                     onClick={() => featureM.mutate(x._id)}
                     className={
-                      "text-xs font-semibold px-2 py-1 rounded-lg " +
+                      "text-xs font-semibold px-2 py-1 rounded-lg admin-action-btn-sm " +
                       (x.isFeatured ? "bg-yellow-500 text-white" : "bg-white text-black")
                     }
                   >
@@ -282,16 +282,16 @@ export default function GalleryAdmin() {
                   </button>
                   <button
                     onClick={() => deleteM.mutate(x._id)}
-                    className="bg-red-600 text-white text-xs px-2 py-1 rounded-lg"
+                    className="bg-indigo-700 text-white text-xs px-2 py-1 rounded-lg admin-action-btn-sm"
                   >
                     Delete
                   </button>
                 </div>
               </div>
-              <div className="mt-2 px-1">
-                <p className="text-sm font-semibold text-black truncate">{x.title || "Untitled project"}</p>
-                {x.album ? <p className="text-xs text-black/60 truncate">{x.album}</p> : null}
-                {x.summary ? <p className="text-xs text-black/70 truncate">{x.summary}</p> : null}
+              <div className="mt-2 px-1 admin-media-meta">
+                <p className="text-sm font-semibold text-black truncate admin-list-title">{x.title || "Untitled project"}</p>
+                {x.album ? <p className="text-xs text-black/60 truncate admin-list-submeta">{x.album}</p> : null}
+                {x.summary ? <p className="text-xs text-black/70 truncate admin-list-meta">{x.summary}</p> : null}
               </div>
             </div>
           ))}

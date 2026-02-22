@@ -4,15 +4,15 @@
  */
 
 export const SITE_CONFIG = {
-  title: "Rabina Dahal Portfolio",
-  description: "Portfolio of Rabina Dahal, a fresher full stack developer showcasing projects, services, resume, and blog updates.",
+  title: "Dipak Portfolio",
+  description: "Portfolio of Dipak, a fresher full stack developer showcasing projects, services, resume, and blog updates.",
   url:
     process.env.REACT_APP_SITE_URL ||
     (typeof window !== "undefined" ? window.location.origin : "http://localhost:3001"),
   image: "/og-image.png",
-  twitterHandle: "@rabinadahal",
-  author: "Rabina Dahal",
-  email: "rabinadahal64@gmail.com",
+  twitterHandle: "@dipak",
+  author: "Dipak Sah",
+  email: "shahdipak449@gmail.com",
 };
 
 function toAbsoluteUrl(value) {
@@ -59,9 +59,9 @@ export function createStructuredData(type = "Person", data = {}) {
     email: SITE_CONFIG.email,
     image: toAbsoluteUrl(SITE_CONFIG.image),
     sameAs: [
-      "https://facebook.com/rabinadahal",
-      "https://instagram.com/rabinadahal",
-      "https://linkedin.com/in/rabinadahal",
+      "https://facebook.com/dipak",
+      "https://instagram.com/dipak",
+      "https://linkedin.com/in/dipak",
     ],
   };
 
@@ -75,14 +75,14 @@ export function createOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
-    name: "Rabina Dahal Portfolio",
+    name: "Dipak Portfolio",
     url: SITE_CONFIG.url,
     logo: `${SITE_CONFIG.url}/logo192.png`,
     description: SITE_CONFIG.description,
     sameAs: [
-      "https://facebook.com/rabinadahal",
-      "https://instagram.com/rabinadahal",
-      "https://linkedin.com/in/rabinadahal",
+      "https://facebook.com/dipak",
+      "https://instagram.com/dipak",
+      "https://linkedin.com/in/dipak",
     ],
   };
 }
@@ -97,7 +97,7 @@ export function createArticleSchema(article = {}) {
     image = SITE_CONFIG.image,
     datePublished = new Date().toISOString(),
     dateModified = new Date().toISOString(),
-    author = "Rabina Dahal",
+    author = "Dipak Sah",
     slug = "article",
   } = article;
 

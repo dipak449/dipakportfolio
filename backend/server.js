@@ -14,6 +14,7 @@ const messagesRoutes = require("./src/routes/messages.routes");
 const homepageRoutes = require("./src/routes/homepage.routes");
 const aboutRoutes = require("./src/routes/about.routes");
 const socialLinksRoutes = require("./src/routes/social-links.routes");
+const resumeRoutes = require("./src/routes/resume.routes");
 
 const app = express();
 app.disable("x-powered-by");
@@ -33,13 +34,13 @@ function toOrigin(value = "") {
   }
 }
 
-const corsOrigins = (process.env.CORS_ORIGINS || "http://localhost:3001")
+const corsOrigins = (process.env.CORS_ORIGINS || "http://localhost:3002")
   .split(",")
   .map((x) => toOrigin(x))
   .filter(Boolean);
 const fallbackAllowedOrigins = [
-  "http://localhost:3001",
-  "https://dynamic-portfolio-website-with-cms.vercel.app",
+  "http://localhost:3002",
+  "https://your-domain.com",
 ];
 const allowVercelPreviews = String(process.env.CORS_ALLOW_VERCEL_PREVIEWS || "").toLowerCase() === "true";
 
@@ -118,6 +119,7 @@ app.use("/api/messages", messagesRoutes);
 app.use("/api/homepage", homepageRoutes);
 app.use("/api/about", aboutRoutes);
 app.use("/api/social-links", socialLinksRoutes);
+app.use("/api/resume", resumeRoutes);
 
 /* =========================
    HEALTH CHECK
@@ -146,7 +148,7 @@ app.use((err, req, res, next) => {
 /* =========================
    SERVER START
 ========================= */
-const PORT = process.env.PORT || 8001;
+const PORT = process.env.PORT || 8002;
 
 connectDB().then(() => {
   const server = app.listen(PORT, () => {

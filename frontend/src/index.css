@@ -1,13 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Manrope:wght@400;500;600;700;800&display=swap');
 
 html { scroll-behavior: smooth; }
-body { @apply bg-white text-black dark:bg-slate-900 dark:text-white; overflow-x: hidden; font-family: "Montserrat", sans-serif; }
+body { @apply bg-white text-black dark:bg-slate-900 dark:text-white; overflow-x: hidden; font-family: "Sora", "Manrope", sans-serif; }
 img, video, canvas, svg { max-width: 100%; }
 
-::selection { background: rgba(239, 68, 68, 0.25); }
+::selection { background: rgba(91, 109, 255, 0.25); }
 
 /* Kabiraj-style title treatment: uppercase for major headings/big display text */
 h1, h2, h3, h4,

@@ -216,7 +216,7 @@ export default function Posts() {
           </div>
 
           {items.map((p) => (
-            <Card key={p._id} className="p-4">
+            <Card key={p._id} className="p-4 admin-list-card">
               <div className="flex items-start justify-between gap-4 flex-wrap md:flex-nowrap">
                 <div className="flex items-start gap-4 min-w-0">
                   <div className="h-20 w-28 rounded-xl overflow-hidden border border-black/10 bg-black/5 shrink-0">
@@ -231,9 +231,9 @@ export default function Posts() {
 
                   <div className="min-w-0">
                   <div className="flex items-center gap-2">
-                    <div className="font-bold">{p.title}</div>
+                    <div className="font-bold admin-list-title">{p.title}</div>
                     {p.isFeatured ? (
-                      <span className="text-xs px-2 py-1 rounded-full border border-fuchsia-300 bg-fuchsia-50 text-fuchsia-700">
+                      <span className="text-xs px-2 py-1 rounded-full border border-indigo-300 bg-indigo-50 text-indigo-700">
                         Featured
                       </span>
                     ) : null}
@@ -248,21 +248,21 @@ export default function Posts() {
                       {p.isPublished ? "Published" : "Draft"}
                     </span>
                   </div>
-                  <div className="text-sm text-black/60 mt-1">{p.excerpt || "-"}</div>
-                  <div className="text-xs text-black/40 mt-1">/{p.slug}</div>
+                  <div className="text-sm text-black/60 mt-1 admin-list-meta">{p.excerpt || "-"}</div>
+                  <div className="text-xs text-black/40 mt-1 admin-list-submeta">/{p.slug}</div>
                 </div>
                 </div>
 
-                <div className="flex gap-2 flex-wrap justify-end">
+                <div className="flex gap-2 flex-wrap justify-end admin-action-row">
                   <Button
                     type="button"
                     onClick={() => featureM.mutate(p._id)}
-                    className={p.isFeatured ? "bg-fuchsia-600 text-white" : ""}
+                    className={p.isFeatured ? "bg-indigo-600 text-white admin-action-btn" : "admin-action-btn"}
                   >
                     {p.isFeatured ? "Unfeature" : "Set Featured"}
                   </Button>
-                  <Button type="button" onClick={() => startEdit(p)}>Edit</Button>
-                  <Button type="button" className="bg-black" onClick={() => deleteM.mutate(p._id)}>
+                  <Button type="button" className="admin-action-btn" onClick={() => startEdit(p)}>Edit</Button>
+                  <Button type="button" className="bg-black admin-action-btn" onClick={() => deleteM.mutate(p._id)}>
                     Delete
                   </Button>
                 </div>

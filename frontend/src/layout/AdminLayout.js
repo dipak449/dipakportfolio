@@ -9,6 +9,7 @@ const items = [
   { to: "/admin/dashboard", label: "Dashboard" },
   { to: "/admin/homepage", label: "HomePage" },
   { to: "/admin/about", label: "About" },
+  { to: "/admin/resume", label: "Resume" },
   { to: "/admin/social-links", label: "Social Links" },
   { to: "/admin/posts", label: "Blog" },
   { to: "/admin/gallery", label: "Project" },
@@ -30,13 +31,13 @@ export default function AdminLayout({ children }) {
         <div className="mx-auto flex max-w-7xl items-center justify-between gap-3 px-3 py-3 sm:px-4 sm:py-4">
           <Link
             to="/admin/dashboard"
-            className="max-w-[65vw] truncate text-xl font-extrabold tracking-wide text-[#4edc8b] sm:max-w-none sm:text-2xl"
+            className="max-w-[65vw] truncate text-xl font-extrabold tracking-wide text-[#6d7bff] sm:max-w-none sm:text-2xl"
           >
-            Rabina Admin
+            Dipak Admin
           </Link>
           <button
             onClick={logout}
-            className="admin-ghost-btn rounded-full border border-[#4edc8b]/70 px-4 py-2 text-sm font-semibold text-[#4edc8b] transition hover:bg-[#4edc8b]/10 sm:px-5"
+            className="admin-ghost-btn rounded-full border border-[#6d7bff]/70 px-4 py-2 text-sm font-semibold text-[#6d7bff] transition hover:bg-[#6d7bff]/10 sm:px-5"
           >
             Logout
           </button>
@@ -50,8 +51,8 @@ export default function AdminLayout({ children }) {
                 cx(
                   "admin-nav-pill rounded-full border px-3 py-1.5 text-sm font-semibold transition sm:px-4",
                   isActive
-                    ? "border-[#4edc8b] bg-[#4edc8b]/15 text-[#7bf2ad]"
-                    : "border-white/15 text-white/75 hover:border-[#4edc8b]/60 hover:text-[#7bf2ad]"
+                    ? "border-[#6d7bff] bg-[#6d7bff]/15 text-[#d5dbff]"
+                    : "border-white/15 text-white/75 hover:border-[#6d7bff]/60 hover:text-[#d5dbff]"
                 )
               }
             >
@@ -64,3 +65,4 @@ export default function AdminLayout({ children }) {
     </div>
   );
 }
+

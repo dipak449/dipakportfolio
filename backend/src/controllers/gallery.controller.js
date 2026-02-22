@@ -74,7 +74,7 @@ exports.createFromUrl = async (req, res, next) => {
       techStack,
       liveUrl,
       sourceUrl,
-      imageUrl: await importImageToCloudinary(String(imageUrl).trim(), "rabina_portfolio/gallery"),
+      imageUrl: await importImageToCloudinary(String(imageUrl).trim(), "dipak_portfolio/gallery"),
       publicId: "",
       isPublished,
     });
@@ -108,7 +108,7 @@ exports.update = async (req, res, next) => {
     if (typeof liveUrl === "string") item.liveUrl = liveUrl;
     if (typeof sourceUrl === "string") item.sourceUrl = sourceUrl;
     if (typeof imageUrl === "string" && imageUrl.trim()) {
-      item.imageUrl = await importImageToCloudinary(imageUrl.trim(), "rabina_portfolio/gallery");
+      item.imageUrl = await importImageToCloudinary(imageUrl.trim(), "dipak_portfolio/gallery");
       // keep publicId empty for URL-based replacement; do not destroy existing asset here
       if (!item.publicId) item.publicId = "";
     }

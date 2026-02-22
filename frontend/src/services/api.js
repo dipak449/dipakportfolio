@@ -2,7 +2,7 @@ import axios from "axios";
 import { clearAdminToken, getAdminToken } from "../utils/adminAuth";
 
 const api = axios.create({
-  baseURL: process.env.REACT_APP_API_URL || "http://localhost:8001/api",
+  baseURL: process.env.REACT_APP_API_URL || "http://localhost:8002/api",
   timeout: 15000,
 });
 

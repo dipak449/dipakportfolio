@@ -79,7 +79,7 @@ export default function HomePageAdmin() {
             ) : null}
             <div className="flex justify-end">
               <Button
-                className="border border-[#4edc8b] bg-[#4edc8b]/10 text-[#7bf2ad]"
+                className="border border-[#6d7bff] bg-[#6d7bff]/10 text-[#d5dbff]"
                 onClick={() => saveM.mutate({ name, title, subtitle, profileImageUrl })}
                 disabled={saveM.isPending}
               >
@@ -92,3 +92,4 @@ export default function HomePageAdmin() {
     </div>
   );
 }
+

@@ -33,27 +33,28 @@ export default function Login() {
       >
         <div className="text-sm text-white/60">Admin Panel</div>
         <h1 className="mt-1 text-2xl font-extrabold">
-          Sign in<span className="text-[#4edc8b]">.</span>
+          Sign in<span className="text-[#6d7bff]">.</span>
         </h1>
 
         <form onSubmit={onSubmit} className="mt-6 grid gap-3">
           <input
-            className="admin-login-input w-full rounded-2xl border border-white/15 bg-[#15151c] px-4 py-3 outline-none focus:ring-2 focus:ring-[#4edc8b]/30"
+            className="admin-login-input w-full rounded-2xl border border-white/15 bg-[#15151c] px-4 py-3 outline-none focus:ring-2 focus:ring-[#6d7bff]/30"
             placeholder="Email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
           />
           <input
-            className="admin-login-input w-full rounded-2xl border border-white/15 bg-[#15151c] px-4 py-3 outline-none focus:ring-2 focus:ring-[#4edc8b]/30"
+            className="admin-login-input w-full rounded-2xl border border-white/15 bg-[#15151c] px-4 py-3 outline-none focus:ring-2 focus:ring-[#6d7bff]/30"
             placeholder="Password"
             type="password"
             value={password}
             onChange={(e) => setPassword(e.target.value)}
           />
-          <Button className="admin-login-btn w-full bg-[#4edc8b] text-[#101418]">Login</Button>
+          <Button className="admin-login-btn w-full bg-[#6d7bff] text-[#101418]">Login</Button>
           <p className="text-xs text-white/50">Only site owner can access CMS.</p>
         </form>
       </motion.div>
     </div>
   );
 }
+

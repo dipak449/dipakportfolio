@@ -68,7 +68,7 @@ exports.updateAdmin = async (req, res, next) => {
     if (typeof req.body.imageUrl === "string") {
       const image = safeUrl(req.body.imageUrl);
       doc.imageUrl = image
-        ? await importImageToCloudinary(image, "rabina_portfolio/about")
+        ? await importImageToCloudinary(image, "dipak_portfolio/about")
         : "";
     }
     if (typeof req.body.resumeUrl === "string") {
@@ -156,7 +156,7 @@ exports.downloadResume = async (req, res, next) => {
       timeout: 30000,
       validateStatus: (status) => status >= 200 && status < 400,
       headers: {
-        "User-Agent": "Rabina-Portfolio-Resume-Downloader",
+        "User-Agent": "Dipak-Portfolio-Resume-Downloader",
       },
     });
 

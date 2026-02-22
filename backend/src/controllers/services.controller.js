@@ -47,7 +47,7 @@ exports.create = async (req, res, next) => {
       title,
       category,
       launchDate,
-      imageUrl: await importImageToCloudinary(imageUrl, "rabina_portfolio/services"),
+      imageUrl: await importImageToCloudinary(imageUrl, "dipak_portfolio/services"),
       description,
       isPublished,
     });
@@ -66,7 +66,7 @@ exports.update = async (req, res, next) => {
       if (typeof req.body[k] !== "undefined") item[k] = req.body[k];
     });
     if (typeof req.body.imageUrl === "string") {
-      item.imageUrl = await importImageToCloudinary(req.body.imageUrl, "rabina_portfolio/services");
+      item.imageUrl = await importImageToCloudinary(req.body.imageUrl, "dipak_portfolio/services");
     }
     await item.save();
     res.json(normalizeImageFields(item.toObject(), ["imageUrl"]));

@@ -2,4 +2,4 @@ User-agent: *
 Disallow:
 Disallow: /admin/
 
-Sitemap: https://dynamic-portfolio-website-with-cms.vercel.app/sitemap.xml
+Sitemap: https://your-domain.com/sitemap.xml
