@@ -632,7 +632,7 @@ export default function TemplatePage({ page = "home" }) {
             </motion.div>
             <motion.div initial={{ opacity: 0, x: 24 }} animate={{ opacity: 1, x: 0 }} transition={{ duration: 0.52 }} className="yazen-hero-visual">
               <div className="yazen-avatar-wrap">
-                <img src={hero.personImageUrl || aboutPrimary.imageUrl || ""} alt={profileName} loading="eager" fetchPriority="high" decoding="async" data-rawsrc={hero.personImageUrl || aboutPrimary.imageUrl || ""} data-try-index="0" onError={setNextImageFallback} />
+                <img src={hero.personImageUrl || aboutPrimary.imageUrl || ""} alt={profileName} loading="eager" decoding="async" data-rawsrc={hero.personImageUrl || aboutPrimary.imageUrl || ""} data-try-index="0" onError={setNextImageFallback} />
               </div>
             </motion.div>
             <div className="yazen-hero-cta yazen-hero-cta-mobile">
